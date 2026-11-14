@@ -1,0 +1,1915 @@
+/* ==========================================================================
+   CHARTE GRAPHIQUE JOYU SCIENCE — CALM DESIGN ÉDITORIAL & LUXE AÉRÉ
+   Neurosciences • Leadership • Corps • Esprit
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES & SYSTÈME DE DESIGN CALME
+   -------------------------------------------------------------------------- */
+:root {
+    /* Palette officielle JoYu Science */
+    --joyu-green: #0f4a38;             /* Vert profond principal (20%) */
+    --joyu-green-dark: #093124;        /* Vert ombre forêt */
+    --joyu-green-soft: rgba(15, 74, 56, 0.05);
+    --joyu-green-mist: rgba(15, 74, 56, 0.035);
+    --joyu-green-subtle: rgba(15, 74, 56, 0.12);
+
+    --joyu-plum: #452e57;              /* Violet prune EXCLUSIF Entreprises (10%) */
+    --joyu-plum-dark: #311f3f;         /* Prune profond */
+    --joyu-plum-soft: rgba(69, 46, 87, 0.06);
+    --joyu-plum-mist: rgba(69, 46, 87, 0.035);
+
+    --joyu-gold: #b89961;              /* Doré mat intemporel (5%) */
+    --joyu-gold-light: #d4bc8b;        /* Doré lumineux doux */
+    --joyu-gold-soft: rgba(184, 153, 97, 0.22);
+    --joyu-gold-mist: rgba(184, 153, 97, 0.10);
+    --joyu-gold-hairline: rgba(184, 153, 97, 0.32);
+
+    --joyu-white: #ffffff;             /* Blanc pur dominant (65%) */
+    --joyu-ivory: #f7f4ec;             /* Ivoire doux chaud */
+    --joyu-ivory-light: #faf8f3;       /* Crème respirante */
+    --joyu-cashmere: #fbf9f4;          /* Teinte cachemire ultra-douce */
+
+    /* Neutres & Lecture reposante (Calm Design : réduction de la fatigue oculaire) */
+    --text-dark: #1b2622;              /* Anthracite minéral adouci */
+    --text-body: #485450;              /* Gris ardoise naturel */
+    --text-muted: #72807b;             /* Sourdine douce */
+    --border-light: #eae5d9;           /* Filet chaud et discret */
+    --border-hairline: rgba(234, 229, 217, 0.85);
+
+    /* Dégradés d'ambiance organiques Calm Design (lumière naturelle diffuse) */
+    --joyu-calm-gradient: radial-gradient(circle at 85% 15%, #fdfcf9 0%, #f7f4ec 55%, #f2ece0 100%);
+    --joyu-calm-light-grad: linear-gradient(180deg, #ffffff 0%, #faf8f3 45%, #ffffff 100%);
+    --joyu-calm-banner: radial-gradient(circle at 80% 25%, #fbf9f4 0%, #f7f4ec 50%, #ffffff 100%);
+    --joyu-green-gradient: linear-gradient(160deg, #0f4a38 0%, #0c3d2e 60%, #08281e 100%);
+    --joyu-plum-gradient: linear-gradient(160deg, #452e57 0%, #362245 60%, #261631 100%);
+
+    /* Typographies éditoriales */
+    --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* Géométrie & Respirations organiques */
+    --container-width: 1200px;
+    --radius-xl: 26px;
+    --radius-card: 22px;               /* Rondeur apaisante Calm Design */
+    --radius-md: 16px;
+    --radius-sm: 10px;
+    --radius-pill: 9999px;             /* Boutons et badges en galet poli */
+
+    /* Ombres étagées en lumière diffuse (jamais de coupures dures) */
+    --shadow-ambient: 0 4px 20px -2px rgba(15, 74, 56, 0.03), 0 1px 3px rgba(15, 74, 56, 0.02);
+    --shadow-card: 0 12px 34px -6px rgba(15, 74, 56, 0.045), 0 4px 12px -2px rgba(15, 74, 56, 0.025);
+    --shadow-hover: 0 22px 50px -10px rgba(15, 74, 56, 0.09), 0 8px 18px -4px rgba(15, 74, 56, 0.035);
+    --shadow-elevated: 0 30px 60px -12px rgba(15, 74, 56, 0.12);
+
+    /* Transitions organiques lentes et apaisantes */
+    --ease-calm: cubic-bezier(0.16, 1, 0.3, 1);
+    --transition: all 0.4s var(--ease-calm);
+    --transition-fast: all 0.24s ease-out;
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET, FONDATIONS & ATMOSPHÈRE GÉNÉRALE
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: var(--joyu-white);
+    background-image:
+        radial-gradient(circle at 10% 12%, rgba(247, 244, 236, 0.75) 0%, rgba(255, 255, 255, 0) 45%),
+        radial-gradient(circle at 90% 40%, rgba(247, 244, 236, 0.6) 0%, rgba(255, 255, 255, 0) 50%),
+        radial-gradient(circle at 20% 85%, rgba(247, 244, 236, 0.5) 0%, rgba(255, 255, 255, 0) 40%);
+    background-attachment: fixed;
+    color: var(--text-dark);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.78;
+    font-weight: 400;
+    letter-spacing: 0.005em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+/* Sélection de texte apaisante */
+::selection {
+    background: rgba(184, 153, 97, 0.25);
+    color: var(--joyu-green);
+}
+
+/* Barre de défilement discrète */
+::-webkit-scrollbar {
+    width: 9px;
+}
+::-webkit-scrollbar-track {
+    background: var(--joyu-ivory-light);
+}
+::-webkit-scrollbar-thumb {
+    background: #ded7c6;
+    border-radius: var(--radius-pill);
+    border: 2px solid var(--joyu-ivory-light);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--joyu-gold);
+}
+
+/* Masquage strict des contrôles radio/checkbox CSS */
+.css-state-input {
+    position: absolute !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    clip: rect(0, 0, 0, 0) !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. HEADER SOBRE, ÉDITORIAL & GLASSMORPHISM APPAISANT
+   -------------------------------------------------------------------------- */
+.site-header {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(234, 229, 217, 0.75);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    transition: var(--transition-fast);
+}
+
+.header-inner {
+    max-width: var(--container-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 32px;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+/* Logo image & SVG */
+.brand-logo-link {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+    padding: 4px 0;
+    transition: opacity 0.3s ease;
+}
+
+.brand-logo-link:hover {
+    opacity: 0.9;
+}
+
+.brand-logo-img {
+    height: 52px;
+    width: auto;
+    max-width: 240px;
+    object-fit: contain;
+    display: block;
+    mix-blend-mode: multiply;
+}
+
+/* Navigation principale Desktop */
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 0;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: nowrap;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: 14.5px;
+    font-weight: 500;
+    letter-spacing: 0.015em;
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 10px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    transition: var(--transition-fast);
+    white-space: nowrap;
+}
+
+/* Soulignement calme en doré mat avec ouverture douce par le centre */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--joyu-gold);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s var(--ease-calm);
+    border-radius: var(--radius-pill);
+}
+
+.nav-link:hover {
+    color: var(--joyu-green);
+}
+
+.nav-link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.nav-chevron {
+    width: 10px;
+    height: 10px;
+    stroke: currentColor;
+    transition: transform 0.3s ease;
+    opacity: 0.7;
+}
+
+/* Menu déroulant sobre & aérien "Programmes" */
+.nav-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.nav-item-dropdown:hover .nav-chevron {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    list-style: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: -20px;
+    min-width: 290px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--border-light);
+    border-top: 2px solid var(--joyu-gold);
+    border-radius: var(--radius-md);
+    box-shadow: 0 16px 40px -8px rgba(15, 74, 56, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
+    padding: 10px 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: var(--transition);
+    z-index: 1100;
+    pointer-events: none;
+}
+
+.dropdown-link {
+    cursor: pointer;
+    display: block;
+    padding: 10px 16px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.dropdown-link:hover {
+    background-color: var(--joyu-ivory);
+    transform: translateX(3px);
+}
+
+.dropdown-title {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--joyu-green);
+    letter-spacing: 0.01em;
+}
+
+.dropdown-link.plum-item .dropdown-title {
+    color: var(--joyu-plum);
+}
+
+.dropdown-sub {
+    display: block;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 3px;
+    line-height: 1.45;
+}
+
+/* État actif dans le menu de navigation (par radio CSS) */
+#page-1:checked ~ .site-wrapper .nav-link-home,
+#page-2:checked ~ .site-wrapper .nav-link-particuliers,
+#page-4:checked ~ .site-wrapper .nav-link-boutique,
+#page-5:checked ~ .site-wrapper .nav-link-reserver {
+    color: var(--joyu-green);
+    font-weight: 600;
+}
+
+#page-3:checked ~ .site-wrapper .nav-link-entreprises {
+    color: var(--joyu-plum);
+    font-weight: 600;
+}
+
+#page-1:checked ~ .site-wrapper .nav-link-home::after,
+#page-2:checked ~ .site-wrapper .nav-link-particuliers::after,
+#page-4:checked ~ .site-wrapper .nav-link-boutique::after {
+    transform: translateX(-50%) scaleX(1);
+    background-color: var(--joyu-gold);
+}
+
+#page-3:checked ~ .site-wrapper .nav-link-entreprises::after {
+    transform: translateX(-50%) scaleX(1);
+    background-color: var(--joyu-plum);
+}
+
+/* Bouton d'action droit Desktop : sobre, rond, galet poli */
+.header-cta-wrap {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.btn-header {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--joyu-green);
+    color: var(--joyu-white);
+    font-family: var(--font-sans);
+    font-size: 13.5px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 10px 22px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--joyu-green);
+    text-decoration: none;
+    transition: var(--transition);
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(15, 74, 56, 0.12);
+}
+
+.btn-header:hover {
+    background-color: var(--joyu-green-dark);
+    border-color: var(--joyu-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 74, 56, 0.2);
+}
+
+/* Déclencheur Burger Mobile */
+.burger-trigger {
+    display: none;
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-pill);
+    background-color: var(--joyu-white);
+    color: var(--joyu-green);
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+}
+
+.burger-trigger:hover {
+    border-color: var(--joyu-gold);
+    background-color: var(--joyu-ivory);
+}
+
+.drawer-header-mobile,
+.drawer-footer-mobile,
+.mobile-backdrop {
+    display: none;
+}
+
+/* --------------------------------------------------------------------------
+   4. COMPOSANTS DE BASE & PRIMITIVES CALM DESIGN
+   -------------------------------------------------------------------------- */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 32px;
+    width: 100%;
+}
+
+/* Espacement vertical généreux (Calm Design = sensation d'espace et d'air) */
+.section-pad {
+    padding: 116px 0;
+}
+
+/* Variantes d'arrière-plan de section */
+.bg-ivory {
+    background: var(--joyu-calm-gradient);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.bg-green {
+    background: var(--joyu-green-gradient);
+    color: var(--joyu-white);
+}
+
+.bg-plum {
+    background: var(--joyu-plum-gradient);
+    color: var(--joyu-white);
+}
+
+/* Micro-typographie des chapeaux & surtitres (Eyebrow) */
+.eyebrow {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--joyu-gold);
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.eyebrow.plum {
+    color: var(--joyu-plum);
+}
+
+/* Titres Playfair Display fluides et équilibrés */
+.heading-xl {
+    font-family: var(--font-heading);
+    font-size: clamp(2.35rem, 4.4vw, 3.6rem);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.018em;
+    color: var(--joyu-green);
+}
+
+.heading-lg {
+    font-family: var(--font-heading);
+    font-size: clamp(1.85rem, 2.9vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.22;
+    letter-spacing: -0.015em;
+    color: var(--joyu-green);
+}
+
+.heading-md {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 500;
+    line-height: 1.34;
+    letter-spacing: -0.01em;
+    color: var(--joyu-green);
+}
+
+/* Accents italiques dorés et colorés */
+.gold-italic {
+    color: var(--joyu-gold);
+    font-style: italic;
+    font-family: var(--font-heading);
+}
+
+.green-italic {
+    color: var(--joyu-green);
+    font-style: italic;
+    font-family: var(--font-heading);
+}
+
+.plum-italic {
+    color: var(--joyu-plum);
+    font-style: italic;
+    font-family: var(--font-heading);
+}
+
+/* Filet séparateur doré discret et délicat */
+.gold-divider {
+    width: 48px;
+    height: 1.5px;
+    background-color: var(--joyu-gold);
+    margin: 22px 0 26px;
+    border-radius: var(--radius-pill);
+    opacity: 0.85;
+}
+
+.gold-divider.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* En-tête centré de section */
+.section-header-center {
+    max-width: 720px;
+    margin: 0 auto 58px;
+    text-align: center;
+}
+
+/* Boutons galets polis (arrondi pilule, compacts, confortables) */
+.btn {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    font-family: var(--font-sans);
+    font-size: 13.5px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 12px 26px;
+    border-radius: var(--radius-pill);
+    border: 1px solid transparent;
+    text-decoration: none;
+    transition: var(--transition);
+    width: auto;
+    user-select: none;
+}
+
+.btn-green {
+    background-color: var(--joyu-green);
+    color: var(--joyu-white);
+    border-color: var(--joyu-green);
+    box-shadow: 0 4px 14px rgba(15, 74, 56, 0.15);
+}
+
+.btn-green:hover {
+    background-color: var(--joyu-green-dark);
+    border-color: var(--joyu-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(15, 74, 56, 0.22);
+}
+
+.btn-plum {
+    background-color: var(--joyu-plum);
+    color: var(--joyu-white);
+    border-color: var(--joyu-plum);
+    box-shadow: 0 4px 14px rgba(69, 46, 87, 0.16);
+}
+
+.btn-plum:hover {
+    background-color: var(--joyu-plum-dark);
+    border-color: var(--joyu-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(69, 46, 87, 0.25);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--joyu-green);
+    border-color: var(--joyu-gold);
+}
+
+.btn-outline:hover {
+    background-color: var(--joyu-ivory);
+    border-color: var(--joyu-green);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(15, 74, 56, 0.08);
+}
+
+.btn-light {
+    background-color: var(--joyu-white);
+    color: var(--joyu-green);
+    border-color: var(--joyu-gold);
+    box-shadow: var(--shadow-ambient);
+}
+
+.btn-light:hover {
+    background-color: var(--joyu-ivory);
+    border-color: var(--joyu-gold);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+}
+
+/* --------------------------------------------------------------------------
+   5. NAVIGATION ENTRE LES 5 PAGES (100% PUR CSS AVEC FONDU APAISANT)
+   -------------------------------------------------------------------------- */
+.page-view {
+    display: none;
+    animation: calmFadeIn 0.45s var(--ease-calm);
+}
+
+@keyframes calmFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#page-1:checked ~ .site-wrapper #view-page-1,
+#page-2:checked ~ .site-wrapper #view-page-2,
+#page-3:checked ~ .site-wrapper #view-page-3,
+#page-4:checked ~ .site-wrapper #view-page-4,
+#page-5:checked ~ .site-wrapper #view-page-5 {
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   6. PAGE 1 : ACCUEIL — HERO SEREIN & IMMERSIF
+   -------------------------------------------------------------------------- */
+
+/* Section 1 : Hero grand format avec atmosphère vert profond & or */
+.hero-full-image {
+    position: relative;
+    min-height: 82vh;
+    display: flex;
+    align-items: center;
+    background-image:
+        radial-gradient(circle at 80% 30%, rgba(184, 153, 97, 0.22) 0%, transparent 55%),
+        linear-gradient(135deg, rgba(9, 49, 36, 0.94) 0%, rgba(15, 74, 56, 0.86) 52%, rgba(15, 74, 56, 0.68) 100%),
+        url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=85');
+    background-size: cover;
+    background-position: center;
+    color: var(--joyu-white);
+    padding: 104px 0 112px;
+    overflow: hidden;
+}
+
+/* Voile d'ombrage doux en bas du Hero pour fusionner avec la suite */
+.hero-full-image::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.08), transparent);
+    pointer-events: none;
+}
+
+.hero-overlay-content {
+    max-width: 760px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-kicker {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--joyu-gold);
+    margin-bottom: 20px;
+    padding: 6px 14px;
+    background: rgba(184, 153, 97, 0.12);
+    border: 1px solid rgba(184, 153, 97, 0.28);
+    border-radius: var(--radius-pill);
+    backdrop-filter: blur(8px);
+}
+
+.hero-main-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 4.8vw, 4rem);
+    font-weight: 400;
+    line-height: 1.14;
+    letter-spacing: -0.02em;
+    color: var(--joyu-white);
+    margin-bottom: 18px;
+}
+
+.hero-main-title span {
+    color: var(--joyu-gold);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.hero-subtitle {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: clamp(1.2rem, 2vw, 1.55rem);
+    color: rgba(255, 255, 255, 0.94);
+    margin-bottom: 24px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
+
+.hero-lead {
+    font-size: 1.05rem;
+    line-height: 1.84;
+    color: rgba(255, 255, 255, 0.88);
+    max-width: 640px;
+    margin-bottom: 40px;
+}
+
+/* Portails d'accès Particuliers & Entreprises (Frosted Glass & Galets Polis) */
+.hero-portals-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+}
+
+.portal-card {
+    cursor: pointer;
+    padding: 13px 26px;
+    border-radius: var(--radius-pill);
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    text-decoration: none;
+    color: var(--joyu-white);
+    transition: var(--transition);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    user-select: none;
+}
+
+.portal-card.particuliers {
+    background-color: rgba(15, 74, 56, 0.86);
+    border: 1px solid var(--joyu-gold);
+}
+
+.portal-card.particuliers:hover {
+    background-color: var(--joyu-green);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(15, 74, 56, 0.35);
+}
+
+.portal-card.entreprises {
+    background-color: rgba(69, 46, 87, 0.86);
+    border: 1px solid rgba(184, 153, 97, 0.7);
+}
+
+.portal-card.entreprises:hover {
+    background-color: var(--joyu-plum);
+    border-color: var(--joyu-gold);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(69, 46, 87, 0.38);
+}
+
+.portal-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    line-height: 1.25;
+}
+
+.portal-desc {
+    display: block;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.2;
+}
+
+.portal-arrow {
+    font-size: 1.15rem;
+    color: var(--joyu-gold);
+    transition: transform 0.3s ease;
+}
+
+.portal-card:hover .portal-arrow {
+    transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 2 : LE CONSTAT (2 COLONNES ÉDITORIALES & PUCES TACTILES)
+   -------------------------------------------------------------------------- */
+.split-2col {
+    display: grid;
+    grid-template-columns: 1fr 1.08fr;
+    gap: 76px;
+    align-items: center;
+}
+
+.editorial-photo-frame {
+    position: relative;
+}
+
+.editorial-photo-frame img {
+    width: 100%;
+    height: 490px;
+    object-fit: cover;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-card);
+    display: block;
+    border: 1px solid rgba(184, 153, 97, 0.18);
+    transition: var(--transition);
+}
+
+.editorial-photo-frame:hover img {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+.editorial-photo-caption {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 13.5px;
+    color: var(--text-muted);
+    margin-top: 14px;
+    line-height: 1.6;
+    padding-left: 6px;
+    border-left: 2px solid var(--joyu-gold);
+}
+
+/* Grille des 2 listes de constats côte à côte */
+.elementor-element-16072e4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 28px 0 36px;
+}
+
+.elementor-icon-list-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Puces tactiles apaisantes Calm Design */
+.elementor-icon-list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--text-dark);
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    background: rgba(247, 244, 236, 0.55);
+    border: 1px solid rgba(234, 229, 217, 0.7);
+    transition: var(--transition-fast);
+}
+
+.elementor-icon-list-item:hover {
+    background: var(--joyu-white);
+    border-color: var(--joyu-gold);
+    transform: translateX(3px);
+    box-shadow: var(--shadow-ambient);
+}
+
+.elementor-icon-list-icon {
+    flex-shrink: 0;
+    color: var(--joyu-gold);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.elementor-icon-list-icon svg {
+    width: 17px;
+    height: 17px;
+    fill: var(--joyu-gold);
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 3 : CADRE MÉTHODOLOGIQUE EN 6 ÉTAPES
+   -------------------------------------------------------------------------- */
+.elementor-element-f5bcdcf {
+    background: var(--joyu-calm-gradient);
+    padding: 116px 0;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+    position: relative;
+}
+
+.elementor-element-08e4880 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    width: 100%;
+}
+
+.elementor-widget-icon-box.elementor-view-framed {
+    background-color: var(--joyu-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-card);
+    padding: 42px 32px;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow-card);
+    position: relative;
+    overflow: hidden;
+}
+
+.elementor-widget-icon-box.elementor-view-framed::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: transparent;
+    transition: var(--transition-fast);
+}
+
+.elementor-widget-icon-box.elementor-view-framed:hover {
+    transform: translateY(-5px);
+    border-color: var(--joyu-gold);
+    box-shadow: var(--shadow-hover);
+}
+
+.elementor-widget-icon-box.elementor-view-framed:hover::before {
+    background: var(--joyu-gold);
+}
+
+.elementor-view-framed .elementor-icon-box-icon {
+    margin-bottom: 22px;
+    display: inline-flex;
+}
+
+/* Pastille icône circulaire double bague or & ivoire */
+.elementor-view-framed.elementor-shape-circle .elementor-icon {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    border: 2px solid var(--joyu-gold);
+    background-color: var(--joyu-cashmere);
+    color: var(--joyu-green);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    box-shadow: 0 4px 14px rgba(184, 153, 97, 0.15);
+}
+
+.elementor-widget-icon-box.elementor-view-framed:hover .elementor-icon {
+    background-color: var(--joyu-green);
+    color: var(--joyu-white);
+    border-color: var(--joyu-green);
+    transform: scale(1.05);
+    box-shadow: 0 8px 22px rgba(15, 74, 56, 0.25);
+}
+
+.elementor-view-framed .elementor-icon svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+    transition: fill 0.3s ease;
+}
+
+.elementor-icon-box-title {
+    font-family: var(--font-sans);
+    font-size: 1.02rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--joyu-green);
+    margin-bottom: 12px;
+}
+
+.elementor-icon-box-description {
+    font-size: 14.5px;
+    color: var(--text-body);
+    line-height: 1.72;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 4 : DOMAINES D'IMPACT (6 CARTES AÉRÉES BICOLORES)
+   -------------------------------------------------------------------------- */
+.elementor-element-7167631 {
+    padding: 116px 0;
+    background-color: var(--joyu-white);
+}
+
+.elementor-element-d5cd4d4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    width: 100%;
+}
+
+.elementor-widget-image-box {
+    background-color: var(--joyu-cashmere);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-card);
+    padding: 38px 30px;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow-ambient);
+}
+
+.elementor-widget-image-box:hover {
+    background-color: var(--joyu-white);
+    border-color: var(--joyu-gold);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-5px);
+}
+
+.elementor-image-box-img {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background-color: var(--joyu-white);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--joyu-gold-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(15, 74, 56, 0.04);
+    transition: var(--transition);
+}
+
+.elementor-widget-image-box:hover .elementor-image-box-img {
+    border-color: var(--joyu-gold);
+    transform: translateY(-2px);
+}
+
+.elementor-image-box-img svg {
+    width: 34px;
+    height: 34px;
+}
+
+.elementor-image-box-title {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--joyu-green);
+    margin-bottom: 12px;
+    line-height: 1.35;
+}
+
+/* Violet prune EXCLUSIF aux cartes d'impact B2B Entreprises */
+.elementor-widget-image-box.b2b-impact-card .elementor-image-box-title {
+    color: var(--joyu-plum);
+}
+
+.elementor-widget-image-box.b2b-impact-card:hover {
+    border-color: rgba(69, 46, 87, 0.4);
+}
+
+.elementor-image-box-description {
+    font-size: 14.5px;
+    color: var(--text-body);
+    line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 5 : POURQUOI CETTE APPROCHE FONCTIONNE DURABLEMENT
+   (STACK ÉLÉGANT & PROGRESSION D'IDÉES EN HARMONIE CALME)
+   -------------------------------------------------------------------------- */
+.calm-reasons-section {
+    background: var(--joyu-calm-gradient);
+    padding: 116px 0;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.reason-banners-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.reason-banner-row {
+    background: var(--joyu-white);
+    border: 1px solid var(--border-light);
+    border-left: 4px solid var(--joyu-gold);
+    border-radius: var(--radius-card);
+    padding: 26px 36px;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+.reason-banner-row:hover {
+    transform: translateX(6px);
+    border-color: var(--joyu-gold);
+    box-shadow: var(--shadow-hover);
+}
+
+.reason-banner-row.highlight-green {
+    background: linear-gradient(135deg, #0f4a38 0%, #0c3d2e 100%);
+    border-color: var(--joyu-green);
+    border-left: 4px solid var(--joyu-gold);
+    box-shadow: 0 10px 28px rgba(15, 74, 56, 0.18);
+}
+
+.reason-banner-row.highlight-green:hover {
+    box-shadow: 0 14px 34px rgba(15, 74, 56, 0.28);
+}
+
+.reason-banner-row h3 {
+    color: var(--joyu-green);
+    font-family: var(--font-heading);
+    font-size: clamp(1.15rem, 1.8vw, 1.42rem);
+    font-weight: 400;
+    line-height: 1.45;
+}
+
+.reason-banner-row.highlight-green h3 {
+    color: var(--joyu-white);
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 6 : CHIFFRES CLÉS & MESURE D'IMPACT
+   -------------------------------------------------------------------------- */
+.elementor-element-cbf9cfe {
+    padding: 108px 0;
+    background-color: var(--joyu-white);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.elementor-element-39b585d {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    width: 100%;
+}
+
+.counter-card-con {
+    background-color: var(--joyu-cashmere);
+    border: 1px solid var(--border-light);
+    border-bottom: 3px solid var(--joyu-gold);
+    border-radius: var(--radius-card);
+    padding: 38px 24px;
+    text-align: center;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+.counter-card-con:hover {
+    transform: translateY(-5px);
+    border-color: var(--joyu-gold);
+    background-color: var(--joyu-white);
+    box-shadow: var(--shadow-hover);
+}
+
+.counter-card-con .elementor-icon {
+    color: var(--joyu-gold);
+    margin-bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter-card-con .elementor-icon svg {
+    width: 32px;
+    height: 32px;
+    fill: var(--joyu-gold);
+}
+
+.elementor-counter-title {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+}
+
+.elementor-counter-number-wrapper {
+    font-family: var(--font-heading);
+    font-size: 2.85rem;
+    font-weight: 500;
+    color: var(--joyu-green);
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.elementor-counter-number-suffix {
+    color: var(--joyu-gold);
+    margin-left: 2px;
+    font-family: var(--font-heading);
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 7 : TÉMOIGNAGES ÉDITORIAUX & CITATIONS SEREINES
+   -------------------------------------------------------------------------- */
+.testimonials-3grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.quote-card {
+    background-color: var(--joyu-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-card);
+    padding: 40px 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.quote-card::before {
+    content: "“";
+    position: absolute;
+    top: 10px;
+    left: 24px;
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    line-height: 1;
+    color: rgba(184, 153, 97, 0.16);
+    pointer-events: none;
+}
+
+.quote-card:hover {
+    border-color: var(--joyu-gold);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.quote-text {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.06rem;
+    line-height: 1.78;
+    color: var(--text-dark);
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 1;
+}
+
+.quote-author {
+    border-top: 1px solid var(--border-light);
+    padding-top: 18px;
+    position: relative;
+    z-index: 1;
+}
+
+.quote-name {
+    display: block;
+    font-weight: 600;
+    font-size: 14.5px;
+    color: var(--joyu-green);
+    letter-spacing: 0.01em;
+}
+
+.quote-role {
+    display: block;
+    font-size: 12.5px;
+    color: var(--text-muted);
+    margin-top: 3px;
+    line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 8 : BANDEAU DE CLÔTURE & PARCOURS
+   -------------------------------------------------------------------------- */
+.closing-calm-section {
+    background: var(--joyu-calm-gradient);
+    border-top: 1px solid var(--border-light);
+    padding: 112px 0;
+    text-align: center;
+}
+
+.closing-pillars-4grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 44px 0 48px;
+}
+
+.closing-pillar-link {
+    cursor: pointer;
+    padding: 22px 20px;
+    border-radius: var(--radius-card);
+    border: 1px solid var(--border-light);
+    background-color: var(--joyu-white);
+    color: var(--joyu-green);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-align: left;
+    font-size: 13.5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+.closing-pillar-link:hover {
+    border-color: var(--joyu-gold);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Accent violet prune exclusif aux piliers B2B */
+.closing-pillar-link.b2b-pillar {
+    color: var(--joyu-plum);
+    border-color: rgba(69, 46, 87, 0.22);
+}
+
+.closing-pillar-link.b2b-pillar:hover {
+    border-color: var(--joyu-plum);
+}
+
+.closing-pillar-link svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--joyu-gold);
+    flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   7. PAGES 2, 3, 4 & 5 (PARTICULIERS, ENTREPRISES, BOUTIQUE, RÉSERVATION)
+   -------------------------------------------------------------------------- */
+
+/* Bannières hautes des sous-pages */
+.page-banner {
+    background: var(--joyu-calm-banner);
+    border-bottom: 1px solid var(--border-light);
+    padding: 92px 0 72px;
+}
+
+/* Teinte prune réservée exclusivement à la Page 3 Entreprises */
+.page-banner.plum-tint {
+    background: radial-gradient(circle at 85% 20%, #f7f3f9 0%, #eee8f3 65%, #ffffff 100%);
+}
+
+.cards-3grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+    margin: 48px 0;
+}
+
+/* Fiches d'offres & programmes */
+.offer-card {
+    background-color: var(--joyu-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+.offer-card:hover {
+    border-color: var(--joyu-gold);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.offer-card.highlighted {
+    border-top: 3px solid var(--joyu-green);
+}
+
+.offer-card img {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s var(--ease-calm);
+}
+
+.offer-card:hover img {
+    transform: scale(1.03);
+}
+
+.offer-card-content {
+    padding: 32px 28px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.offer-meta {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--joyu-gold);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.offer-price {
+    font-family: var(--font-heading);
+    font-size: 1.85rem;
+    font-weight: 500;
+    color: var(--joyu-green);
+    margin: 22px 0 20px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border-light);
+    letter-spacing: -0.01em;
+}
+
+.offer-price small {
+    font-family: var(--font-sans);
+    font-size: 12.5px;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* Avis & Mentions éditoriales */
+.editorial-notice {
+    background-color: var(--joyu-cashmere);
+    border: 1px solid var(--border-light);
+    border-left: 4px solid var(--joyu-gold);
+    border-radius: var(--radius-card);
+    padding: 26px 32px;
+    margin: 36px 0;
+    font-size: 14.5px;
+    color: var(--text-body);
+    line-height: 1.74;
+}
+
+/* Fiches Formations Entreprises (Page 3 — Univers Violet Prune) */
+.formation-row {
+    background-color: var(--joyu-white);
+    border: 1px solid var(--border-light);
+    border-left: 4px solid var(--joyu-plum);
+    border-radius: var(--radius-card);
+    padding: 38px 40px;
+    margin-bottom: 26px;
+    display: grid;
+    grid-template-columns: 2.1fr auto;
+    gap: 40px;
+    align-items: center;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+.formation-row:hover {
+    border-color: rgba(69, 46, 87, 0.4);
+    border-left-color: var(--joyu-plum);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.formation-row.green-accent {
+    border-left-color: var(--joyu-green);
+}
+
+.formation-row.green-accent:hover {
+    border-left-color: var(--joyu-green);
+    border-color: var(--joyu-gold);
+}
+
+/* Section 5 : Réservation & Paiement (Checkout 2 colonnes apaisant) */
+.checkout-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 44px;
+    margin: 52px 0 96px;
+    align-items: flex-start;
+}
+
+.checkout-box {
+    background-color: var(--joyu-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-card);
+    padding: 40px 36px;
+    box-shadow: var(--shadow-card);
+}
+
+.checkout-box.ivory {
+    background: var(--joyu-calm-gradient);
+}
+
+.field-group {
+    margin-bottom: 20px;
+}
+
+.field-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    letter-spacing: 0.01em;
+}
+
+.field-input {
+    width: 100%;
+    padding: 12px 18px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    font-family: var(--font-sans);
+    font-size: 14.5px;
+    color: var(--text-dark);
+    background-color: var(--joyu-white);
+    transition: var(--transition-fast);
+}
+
+.field-input:focus {
+    outline: none;
+    border-color: var(--joyu-gold);
+    box-shadow: 0 0 0 3px rgba(184, 153, 97, 0.2);
+}
+
+/* Sélecteur de créneaux horaires en pilules */
+.slot-selector-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.slot-option {
+    cursor: pointer;
+    padding: 10px 14px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-pill);
+    background-color: var(--joyu-white);
+    font-size: 13px;
+    text-align: center;
+    transition: var(--transition-fast);
+    user-select: none;
+}
+
+.slot-option:hover {
+    border-color: var(--joyu-gold);
+    background-color: var(--joyu-ivory);
+}
+
+#slot-a:checked ~ .slot-selector-grid label[for="slot-a"],
+#slot-b:checked ~ .slot-selector-grid label[for="slot-b"],
+#slot-c:checked ~ .slot-selector-grid label[for="slot-c"],
+#slot-d:checked ~ .slot-selector-grid label[for="slot-d"] {
+    background-color: var(--joyu-green);
+    color: var(--joyu-white);
+    border-color: var(--joyu-green);
+    box-shadow: 0 4px 12px rgba(15, 74, 56, 0.2);
+}
+
+/* Switcher de méthode de paiement */
+.payment-switcher {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 18px 0 24px;
+}
+
+.pay-method-label {
+    cursor: pointer;
+    padding: 12px 18px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-pill);
+    background-color: var(--joyu-cashmere);
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    transition: var(--transition-fast);
+    user-select: none;
+}
+
+.pay-method-label:hover {
+    border-color: var(--joyu-gold);
+}
+
+#pay-cb:checked ~ .payment-switcher label[for="pay-cb"],
+#pay-paypal:checked ~ .payment-switcher label[for="pay-paypal"] {
+    background-color: var(--joyu-white);
+    border-color: var(--joyu-green);
+    color: var(--joyu-green);
+    box-shadow: 0 4px 14px rgba(15, 74, 56, 0.1);
+}
+
+.pay-pane {
+    display: none;
+}
+
+#pay-cb:checked ~ #pane-cb,
+#pay-paypal:checked ~ #pane-paypal {
+    display: block;
+}
+
+.order-confirm-msg {
+    display: none;
+    margin-top: 24px;
+    padding: 22px 24px;
+    border-radius: var(--radius-md);
+    background-color: var(--joyu-cashmere);
+    border-left: 3px solid var(--joyu-green);
+    font-size: 14px;
+    line-height: 1.65;
+    animation: calmFadeIn 0.35s var(--ease-calm);
+}
+
+#confirm-order-toggle:checked ~ .order-confirm-msg {
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   8. FOOTER NOBLE & APAISANT (VERT PROFOND & ACCENTS OR)
+   -------------------------------------------------------------------------- */
+.site-footer {
+    background: linear-gradient(165deg, #0f4a38 0%, #0a3528 100%);
+    color: var(--joyu-white);
+    padding: 72px 0 36px;
+    border-top: 1px solid rgba(184, 153, 97, 0.3);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-logo-box {
+    display: inline-block;
+    background-color: var(--joyu-white);
+    padding: 10px 18px;
+    border-radius: var(--radius-md);
+    margin-bottom: 18px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.footer-logo-box img {
+    height: 44px;
+    width: auto;
+    display: block;
+}
+
+.footer-heading {
+    font-family: var(--font-heading);
+    color: var(--joyu-gold);
+    font-size: 1.12rem;
+    font-weight: 400;
+    margin-bottom: 18px;
+    letter-spacing: 0.02em;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.footer-links label,
+.footer-links a {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.84);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.footer-links label:hover,
+.footer-links a:hover {
+    color: var(--joyu-gold);
+    transform: translateX(2px);
+    display: inline-block;
+}
+
+.footer-bottom {
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+/* --------------------------------------------------------------------------
+   9. RESPONSIVE & MENU BURGER MOBILE (<= 960PX)
+   -------------------------------------------------------------------------- */
+@media (max-width: 960px) {
+    .header-inner {
+        height: 76px;
+        padding: 0 20px;
+    }
+
+    .brand-logo-img {
+        height: 44px;
+    }
+
+    .header-cta-wrap {
+        display: none;
+    }
+
+    .burger-trigger {
+        display: inline-flex;
+    }
+
+    /* Tiroir latéral Mobile avec flou et respiration */
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 320px;
+        max-width: 88vw;
+        height: 100vh;
+        background-color: var(--joyu-white);
+        border-left: 1px solid var(--border-light);
+        box-shadow: -16px 0 44px rgba(0, 0, 0, 0.16);
+        padding: 24px 26px 36px;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        overflow-y: auto;
+        transform: translateX(105%);
+        visibility: hidden;
+        transition: transform 0.4s var(--ease-calm), visibility 0.4s var(--ease-calm);
+        z-index: 2000;
+    }
+
+    #mobile-menu-toggle:checked ~ .site-wrapper .main-nav {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    .mobile-backdrop {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(9, 49, 36, 0.45);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition-fast);
+        z-index: 1900;
+        cursor: pointer;
+    }
+
+    #mobile-menu-toggle:checked ~ .site-wrapper .mobile-backdrop {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .drawer-header-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 18px;
+        margin-bottom: 18px;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .drawer-close-btn {
+        cursor: pointer;
+        width: 38px;
+        height: 38px;
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-sm);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--joyu-green);
+        transition: var(--transition-fast);
+    }
+
+    .drawer-close-btn:hover {
+        border-color: var(--joyu-gold);
+        background-color: var(--joyu-ivory);
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+    }
+
+    .nav-link {
+        width: 100%;
+        justify-content: space-between;
+        padding: 13px 6px;
+        font-size: 15.5px;
+        border-bottom: 1px solid #f2ede3;
+    }
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        border-left: 2px solid var(--joyu-gold);
+        padding: 8px 0 8px 14px;
+        margin: 6px 0 10px 8px;
+        min-width: 100%;
+        pointer-events: auto;
+    }
+
+    .drawer-footer-mobile {
+        display: block;
+        padding-top: 22px;
+        margin-top: 22px;
+        border-top: 1px solid var(--border-light);
+    }
+
+    .hero-full-image {
+        min-height: 74vh;
+        padding: 72px 0 80px;
+    }
+
+    .hero-portals-grid,
+    .split-2col,
+    .elementor-element-16072e4,
+    .elementor-element-08e4880,
+    .elementor-element-d5cd4d4,
+    .elementor-element-39b585d,
+    .testimonials-3grid,
+    .closing-pillars-4grid,
+    .cards-3grid,
+    .formation-row,
+    .checkout-layout,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-pad {
+        padding: 72px 0;
+    }
+
+    .editorial-photo-frame img {
+        height: 360px;
+    }
+
+    .formation-row {
+        padding: 30px 24px;
+    }
+
+    .formation-row > div:last-child {
+        align-items: flex-start !important;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .hero-main-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-lead {
+        font-size: 0.98rem;
+    }
+
+    .portal-card {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .elementor-element-16072e4 {
+        grid-template-columns: 1fr;
+    }
+
+    .counter-card-con {
+        padding: 28px 18px;
+    }
+
+    .quote-card {
+        padding: 32px 24px;
+    }
+
+    .checkout-box {
+        padding: 28px 20px;
+    }
+
+    .slot-selector-grid,
+    .payment-switcher {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   10. ACCESSIBILITÉ & RESPECT DES PRÉFÉRENCES UTILISATEUR
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
