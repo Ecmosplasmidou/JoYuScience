@@ -99,7 +99,7 @@ img {
    1. HEADER ÉDITORIAL & NAVIGATION
    -------------------------------------------------------------------------- */
 .site-header {
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.94);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(234, 229, 217, 0.75);
@@ -118,7 +118,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
+    gap: 20px;
 }
 
 .brand-logo-link {
@@ -131,8 +131,8 @@ img {
 
 .brand-logo-img {
     width: auto;
-    height: 52px;
-    max-width: 230px;
+    height: 50px;
+    max-width: 220px;
     object-fit: contain;
     display: block;
     mix-blend-mode: multiply;
@@ -149,7 +149,7 @@ img {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 14px;
 }
 
 .nav-item {
@@ -158,10 +158,10 @@ img {
 
 .nav-link {
     cursor: pointer;
-    font-size: 14.5px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--text-dark);
-    padding: 8px 16px;
+    padding: 8px 14px;
     border-radius: var(--radius-pill);
     display: inline-flex;
     align-items: center;
@@ -246,7 +246,6 @@ img {
     margin-top: 2px;
 }
 
-/* Pastille active dans le menu */
 .nav-link.active {
     background-color: var(--joyu-green);
     color: var(--joyu-white);
@@ -263,13 +262,13 @@ img {
     flex-shrink: 0;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .header-cart-btn {
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
     border-radius: var(--radius-pill);
     border: 1px solid var(--border-light);
     background: var(--joyu-white);
@@ -293,9 +292,9 @@ img {
     justify-content: center;
     background-color: var(--joyu-green);
     color: var(--joyu-white);
-    font-size: 13.5px;
+    font-size: 13px;
     font-weight: 500;
-    padding: 10px 22px;
+    padding: 9px 20px;
     border-radius: var(--radius-pill);
     border: 1px solid var(--joyu-green);
     text-decoration: none;
@@ -329,7 +328,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   2. COMPOSANTS GÉNÉRAUX & BOUTONS GALETS POLIS
+   2. COMPOSANTS GÉNÉRAUX & TYPOGRAPHIE ACCESSIBLE
    -------------------------------------------------------------------------- */
 .container {
     max-width: var(--container-width);
@@ -339,11 +338,11 @@ img {
 }
 
 .section-pad {
-    padding: 104px 0;
+    padding: 96px 0;
 }
 
 .section-pad-sm {
-    padding: 44px 0;
+    padding: 40px 0;
 }
 
 .bg-ivory {
@@ -359,33 +358,34 @@ img {
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--joyu-gold);
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 
 .eyebrow.plum {
     color: var(--joyu-plum);
 }
 
+/* Taille affinée pour plus de cohérence et de lisibilité */
 .heading-xl {
     font-family: var(--font-heading);
-    font-size: clamp(2.15rem, 4.1vw, 3.35rem);
+    font-size: clamp(1.75rem, 3.1vw, 2.55rem);
     font-weight: 500;
-    line-height: 1.18;
-    letter-spacing: -0.015em;
+    line-height: 1.24;
+    letter-spacing: -0.01em;
     color: var(--joyu-green);
 }
 
 .heading-lg {
     font-family: var(--font-heading);
-    font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+    font-size: clamp(1.6rem, 2.5vw, 2.15rem);
     font-weight: 500;
-    line-height: 1.24;
+    line-height: 1.26;
     color: var(--joyu-green);
 }
 
 .heading-md {
     font-family: var(--font-heading);
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     font-weight: 500;
     line-height: 1.34;
     color: var(--joyu-green);
@@ -400,7 +400,7 @@ img {
     width: 52px;
     height: 2px;
     background-color: var(--joyu-gold);
-    margin: 20px 0 24px;
+    margin: 18px 0 22px;
     border-radius: var(--radius-pill);
 }
 
@@ -411,7 +411,7 @@ img {
 
 .section-header-center {
     max-width: 760px;
-    margin: 0 auto 52px;
+    margin: 0 auto 42px;
     text-align: center;
 }
 
@@ -425,7 +425,7 @@ img {
     font-size: 13.5px;
     font-weight: 500;
     letter-spacing: 0.02em;
-    padding: 12px 26px;
+    padding: 11px 24px;
     border-radius: var(--radius-pill);
     border: 1px solid transparent;
     text-decoration: none;
@@ -472,6 +472,19 @@ img {
     transform: translateY(-2px);
 }
 
+.btn-gold-solid {
+    background-color: var(--joyu-gold);
+    color: #16221e;
+    font-weight: 700;
+    border-color: var(--joyu-gold);
+    box-shadow: 0 6px 20px rgba(184, 153, 97, 0.35);
+}
+
+.btn-gold-solid:hover {
+    background-color: var(--joyu-gold-light);
+    transform: translateY(-2px);
+}
+
 .page-view {
     display: block;
     animation: calmFadeIn 0.4s var(--ease-calm);
@@ -483,8 +496,103 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   3. HERO PLEINE LARGEUR (HAUTEUR 500PX) & IMAGES COHÉRENTES
+   3. HERO PLEIN ÉCRAN (ACCUEIL) & HEROS PANORAMIQUES (PARTICULIERS / ENTREPRISES)
    -------------------------------------------------------------------------- */
+.fullscreen-hero {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 84px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 56px 0;
+}
+
+.fullscreen-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    z-index: 0;
+}
+
+.fullscreen-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(9, 49, 36, 0.62) 0%,
+        rgba(15, 74, 56, 0.72) 55%,
+        rgba(9, 49, 36, 0.84) 100%
+    );
+    z-index: 1;
+}
+
+.fullscreen-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 860px;
+    margin: 0 auto;
+    color: var(--joyu-white);
+}
+
+.hero-title-light {
+    color: var(--joyu-white);
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
+    margin-bottom: 18px;
+}
+
+/* Sous-titre droit (sans italique) pour une lisibilité optimale */
+.visual-hero-sub,
+.hero-sub-accessible {
+    font-family: var(--font-sans);
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(0.98rem, 1.45vw, 1.12rem);
+    line-height: 1.65;
+    max-width: 720px;
+    margin: 0 auto 28px;
+}
+
+.hero-sub-accessible {
+    color: rgba(255, 255, 255, 0.94);
+}
+
+/* Une seule ligne garantie même sur smartphone */
+.home-pillars-line {
+    font-size: clamp(0.68rem, 2.7vw, 0.88rem);
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--joyu-gold-light);
+    margin-bottom: 18px;
+    white-space: nowrap;
+}
+
+.home-pillars-line span {
+    color: var(--joyu-gold);
+    margin: 0 6px;
+}
+
+.home-dual-cta {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.home-portal-pill {
+    min-width: 195px;
+    padding: 12px 26px;
+    font-size: 14.5px;
+    font-weight: 600;
+}
+
+/* Heros des pages Particuliers et Entreprises */
 .visual-hero-section {
     padding: 0 0 36px;
     width: 100%;
@@ -498,8 +606,7 @@ img {
 .visual-hero-media {
     position: relative;
     width: 100%;
-    height: 500px;
-    border-radius: 0;
+    height: 440px;
     overflow: visible;
     box-shadow: var(--shadow-card);
     background-color: var(--joyu-ivory);
@@ -510,8 +617,6 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: center 25%;
-    border-radius: 0;
-    display: block;
 }
 
 .hero-overlap-badge {
@@ -538,112 +643,99 @@ img {
     padding: 0 32px;
 }
 
-.visual-hero-sub {
-    font-family: var(--font-heading);
-    font-style: italic;
-    font-size: clamp(1.15rem, 2vw, 1.45rem);
-    color: var(--text-dark);
-    margin-top: 10px;
-}
-
-/* Signature des 4 piliers & Double pilule Particuliers / Entreprises sur l'accueil */
-.home-pillars-line {
-    font-size: 14.5px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    color: var(--text-dark);
-    margin-bottom: 24px;
-}
-
-.home-pillars-line span {
-    color: var(--joyu-gold);
-    margin: 0 8px;
-}
-
-.home-dual-cta {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    flex-wrap: wrap;
-}
-
-.home-portal-pill {
-    min-width: 210px;
-    padding: 12px 28px;
-    font-size: 15px;
-    font-weight: 600;
-}
-
-/* Carrousel 6 cartes Offres JoYu Science (Accueil) */
-.home-carousel-shell {
+/* --------------------------------------------------------------------------
+   4. CARROUSELS HORIZONTAUX TACTILES (OFFRES & TÉMOIGNAGES)
+   -------------------------------------------------------------------------- */
+.horizontal-carousel-wrapper {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-.cards-6grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 14px;
+.horizontal-scroll-track {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 8px 4px 16px;
     width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--joyu-gold) var(--joyu-ivory);
 }
 
-.cards-6grid .compact-card {
-    padding: 10px;
+.horizontal-scroll-track::-webkit-scrollbar {
+    height: 6px;
 }
 
-.cards-6grid .compact-card-media {
-    width: 100%;
-    height: 124px;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    background-color: var(--joyu-cashmere);
+.horizontal-scroll-track::-webkit-scrollbar-track {
+    background: var(--joyu-ivory);
+    border-radius: var(--radius-pill);
 }
 
-.cards-6grid .compact-card-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 25%;
-    display: block;
+.horizontal-scroll-track::-webkit-scrollbar-thumb {
+    background: var(--joyu-gold);
+    border-radius: var(--radius-pill);
 }
 
-.cards-6grid .compact-card-title {
-    font-size: 14px;
+.carousel-offer-card {
+    flex: 0 0 calc(25% - 14px);
+    min-width: 230px;
+    scroll-snap-align: start;
+    cursor: pointer;
+    background: var(--joyu-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-card);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
 }
 
-.cards-6grid .compact-card-desc {
-    font-size: 12px;
+.carousel-offer-card:hover {
+    border-color: var(--joyu-gold);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
 }
 
 .carousel-nav-circle {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 34px;
-    height: 34px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
     background-color: var(--joyu-white);
     border: 1px solid var(--border-light);
     box-shadow: var(--shadow-card);
-    color: var(--text-dark);
+    color: var(--joyu-green);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 20px;
+    text-decoration: none;
     z-index: 5;
-    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.carousel-nav-circle:hover {
+    background-color: var(--joyu-green);
+    color: var(--joyu-white);
+    border-color: var(--joyu-green);
 }
 
 .carousel-nav-circle.left {
-    left: -16px;
+    left: -18px;
 }
 
 .carousel-nav-circle.right {
-    right: -16px;
+    right: -18px;
 }
 
-/* Grille de 5 cartes (Accompagnements Particuliers & Solutions Entreprises) */
+/* Grille de 5 cartes (Particuliers & Entreprises) */
 .cards-5grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -682,7 +774,6 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: center 25%;
-    display: block;
 }
 
 .compact-card-body {
@@ -698,14 +789,14 @@ img {
     font-weight: 700;
     line-height: 1.3;
     color: var(--joyu-green);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .compact-card-desc {
     font-size: 13px;
-    line-height: 1.5;
+    line-height: 1.48;
     color: var(--text-body);
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     flex: 1;
 }
 
@@ -716,6 +807,7 @@ img {
     transition: transform 0.25s ease;
 }
 
+.carousel-offer-card:hover .compact-card-arrow,
 .compact-card:hover .compact-card-arrow {
     transform: translateX(4px);
     color: var(--joyu-gold);
@@ -754,7 +846,6 @@ img {
     object-fit: cover;
     object-position: center 25%;
     border-radius: var(--radius-card) var(--radius-card) 0 0;
-    display: block;
 }
 
 .solution-badge {
@@ -773,13 +864,8 @@ img {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
 }
 
-.solution-badge.green {
-    background-color: var(--joyu-green);
-}
-
-.solution-badge.plum {
-    background-color: var(--joyu-plum);
-}
+.solution-badge.green { background-color: var(--joyu-green); }
+.solution-badge.plum { background-color: var(--joyu-plum); }
 
 .solution-b2b-body {
     padding: 30px 14px 18px;
@@ -798,9 +884,7 @@ img {
     margin-bottom: 8px;
 }
 
-.solution-b2b-body h3.plum-title {
-    color: var(--joyu-plum);
-}
+.solution-b2b-body h3.plum-title { color: var(--joyu-plum); }
 
 .solution-b2b-body p {
     font-size: 12.5px;
@@ -843,32 +927,30 @@ img {
     background-color: #dcd6c8;
 }
 
-.carousel-dots .dot.active-green {
-    background-color: var(--joyu-green);
-}
+.carousel-dots .dot.active-green { background-color: var(--joyu-green); }
 
 /* --------------------------------------------------------------------------
-   4. ENCADRÉ MÉTHODE JOYU SCIENCE & SCHÉMA VITRUVE
+   5. ENCADRÉ MÉTHODE JOYU SCIENCE & SCHÉMA AUX 3 CERCLES CHEVAUCHANTS
    -------------------------------------------------------------------------- */
 .method-panel-ivory {
     background: var(--joyu-ivory);
     border: 1px solid var(--border-light);
     border-radius: var(--radius-xl);
-    padding: 40px 36px;
+    padding: 36px 32px;
     box-shadow: var(--shadow-ambient);
 }
 
 .method-particulier-layout {
     display: grid;
-    grid-template-columns: 1.6fr 1fr;
-    gap: 36px;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 32px;
     align-items: center;
 }
 
 .method-3steps-flow {
     display: grid;
     grid-template-columns: 1fr auto 1fr auto 1fr;
-    gap: 12px;
+    gap: 10px;
     align-items: center;
 }
 
@@ -876,17 +958,17 @@ img {
     background: var(--joyu-white);
     border: 1px solid var(--border-light);
     border-radius: var(--radius-card);
-    padding: 22px 16px;
+    padding: 18px 14px;
     text-align: center;
     box-shadow: var(--shadow-ambient);
     height: 100%;
 }
 
 .step-icon-circle {
-    width: 46px;
-    height: 46px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-    margin: 0 auto 12px;
+    margin: 0 auto 10px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -903,20 +985,20 @@ img {
 }
 
 .step-icon-circle svg {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
 }
 
 .method-step-box h4 {
-    font-size: 14.5px;
+    font-size: 14px;
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 }
 
 .method-step-box p {
     font-size: 12.5px;
-    line-height: 1.48;
+    line-height: 1.45;
     color: var(--text-body);
 }
 
@@ -924,6 +1006,18 @@ img {
     font-size: 18px;
     color: var(--joyu-green);
     font-weight: 600;
+}
+
+.venn-vitruvian-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.venn-vitruvian-svg {
+    width: 100%;
+    max-width: 310px;
+    height: auto;
 }
 
 /* Layout Méthode Entreprises : 3 colonnes */
@@ -997,7 +1091,6 @@ img {
     color: var(--text-body);
 }
 
-/* Schéma Vitruve à 3 pôles (Cerveau / Corps / Interactions) */
 .vitruvian-diagram {
     display: flex;
     flex-direction: column;
@@ -1058,7 +1151,198 @@ img {
     max-width: 280px;
 }
 
-/* Section L'accompagnement Christie (Page Particuliers) — Taille cohérente */
+/* --------------------------------------------------------------------------
+   6. CHIFFRES CLÉS ANIMÉS & TÉMOIGNAGES DÉFILANTS
+   -------------------------------------------------------------------------- */
+
+/* Effet de recalcul dynamique des compteurs à l'arrivée sur la section */
+@property --num-exp {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+@property --num-people {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+@property --num-corp {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+@keyframes countTo20 {
+    from { --num-exp: 0; }
+    to   { --num-exp: 20; }
+}
+
+@keyframes countTo1500 {
+    from { --num-people: 0; }
+    to   { --num-people: 1500; }
+}
+
+@keyframes countTo120 {
+    from { --num-corp: 0; }
+    to   { --num-corp: 120; }
+}
+
+.key-figure-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 3.6vw, 2.9rem);
+    font-weight: 600;
+    color: var(--joyu-green);
+    line-height: 1.1;
+    margin-bottom: 8px;
+    font-variant-numeric: tabular-nums;
+}
+
+.recalc-num {
+    display: inline-block;
+}
+
+.recalc-num[data-target="20"] {
+    counter-reset: val var(--num-exp);
+    animation: countTo20 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-timeline: view();
+    animation-range: entry 15% cover 45%;
+}
+
+.recalc-num[data-target="1500"] {
+    counter-reset: val var(--num-people);
+    animation: countTo1500 2.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-timeline: view();
+    animation-range: entry 15% cover 45%;
+}
+
+.recalc-num[data-target="120"] {
+    counter-reset: val var(--num-corp);
+    animation: countTo120 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-timeline: view();
+    animation-range: entry 15% cover 45%;
+}
+
+.recalc-num::after {
+    content: counter(val);
+}
+
+/* Repli automatique si le navigateur ne prend pas encore en charge animation-timeline: view() */
+@supports not (animation-timeline: view()) {
+    .recalc-num[data-target="20"] { animation: countTo20 2s ease-out forwards; }
+    .recalc-num[data-target="1500"] { animation: countTo1500 2.2s ease-out forwards; }
+    .recalc-num[data-target="120"] { animation: countTo120 2s ease-out forwards; }
+}
+@keyframes floatUpFade {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.key-figures-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.key-figure-card {
+    background: var(--joyu-cashmere);
+    border: 1px solid var(--border-light);
+    border-bottom: 3px solid var(--joyu-gold);
+    border-radius: var(--radius-card);
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: var(--shadow-ambient);
+    animation: floatUpFade 0.65s var(--ease-calm) backwards;
+    animation-delay: var(--delay, 0s);
+    transition: var(--transition);
+}
+
+.key-figure-card:hover {
+    background: var(--joyu-white);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.key-figure-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 3.6vw, 2.9rem);
+    font-weight: 600;
+    color: var(--joyu-green);
+    line-height: 1.1;
+    margin-bottom: 8px;
+}
+
+.gold-plus {
+    color: var(--joyu-gold);
+    margin-left: 2px;
+}
+
+.key-figure-label {
+    display: block;
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.key-figure-sub {
+    display: block;
+    font-size: 12.5px;
+    color: var(--text-muted);
+}
+
+/* Témoignages clients défilants horizontalement */
+.carousel-quote-card {
+    flex: 0 0 calc(33.333% - 12px);
+    min-width: 270px;
+    scroll-snap-align: start;
+    background: var(--joyu-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-card);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+.carousel-quote-card:hover {
+    border-color: var(--joyu-gold);
+    transform: translateY(-3px);
+}
+
+.quote-text {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--text-dark);
+    margin-bottom: 18px;
+}
+
+.quote-author {
+    border-top: 1px solid var(--border-light);
+    padding-top: 12px;
+}
+
+.quote-name {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--joyu-green);
+}
+
+.quote-role {
+    display: block;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   7. L'ACCOMPAGNEMENT CHRISTIE, B2B BANNER & CALENDRIER MIS EN VALEUR
+   -------------------------------------------------------------------------- */
 .christie-2col {
     display: grid;
     grid-template-columns: 0.72fr 1.28fr;
@@ -1080,7 +1364,6 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: center 20%;
-    display: block;
 }
 
 .christie-checklist {
@@ -1099,26 +1382,11 @@ img {
     line-height: 1.65;
 }
 
-.check-badge-green {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: var(--joyu-green);
-    color: var(--joyu-white);
-    font-size: 12px;
-    font-weight: 700;
-    flex-shrink: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 3px;
-}
-
+.check-badge-green,
 .check-badge-plum {
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: var(--joyu-plum);
     color: var(--joyu-white);
     font-size: 12px;
     font-weight: 700;
@@ -1129,7 +1397,9 @@ img {
     margin-top: 3px;
 }
 
-/* Encadrés dépliables au clic (<details>) */
+.check-badge-green { background-color: var(--joyu-green); }
+.check-badge-plum { background-color: var(--joyu-plum); }
+
 .calm-accordion {
     border-top: 1px solid var(--border-light);
     padding-top: 14px;
@@ -1178,7 +1448,6 @@ img {
     border-left: 2px solid var(--joyu-gold);
 }
 
-/* Bandeau Dégradé Vert -> Violet Prune (Page Entreprises) */
 .b2b-results-banner {
     background: linear-gradient(90deg, #0f4a38 0%, #2a3c48 48%, #452e57 100%);
     color: var(--joyu-white);
@@ -1215,7 +1484,7 @@ img {
     padding-left: 0;
 }
 
-/* Barre inférieure de prise de rendez-vous */
+/* Barre de réservation standard & version mise en valeur (Vert profond & Or) */
 .booking-bar-card {
     background: var(--joyu-white);
     border: 1px solid var(--border-light);
@@ -1225,6 +1494,13 @@ img {
     display: grid;
     align-items: center;
     gap: 28px;
+}
+
+.booking-bar-card.featured-booking-bar {
+    background: linear-gradient(135deg, #0f4a38 0%, #0a3528 100%);
+    border: 1.5px solid var(--joyu-gold);
+    color: var(--joyu-white);
+    box-shadow: 0 18px 44px rgba(15, 74, 56, 0.22);
 }
 
 .booking-bar-card.particulier-bar {
@@ -1253,6 +1529,12 @@ img {
     flex-shrink: 0;
 }
 
+.booking-cal-icon.gold-badge {
+    background: rgba(184, 153, 97, 0.18);
+    border: 1px solid var(--joyu-gold);
+    color: var(--joyu-gold);
+}
+
 .mini-week-cal {
     text-align: center;
 }
@@ -1265,6 +1547,10 @@ img {
     margin: 0 auto 10px;
     font-size: 14.5px;
     color: var(--text-dark);
+}
+
+.mini-week-cal.dark-theme .mini-cal-header {
+    color: var(--joyu-white);
 }
 
 .mini-cal-days {
@@ -1287,6 +1573,10 @@ img {
     font-size: 11px;
 }
 
+.mini-week-cal.dark-theme .mini-cal-days span {
+    color: rgba(255, 255, 255, 0.7);
+}
+
 .mini-cal-days b {
     width: 28px;
     height: 28px;
@@ -1298,6 +1588,10 @@ img {
     color: var(--text-dark);
 }
 
+.mini-week-cal.dark-theme .mini-cal-days b {
+    color: var(--joyu-white);
+}
+
 .mini-cal-days .selected-green b {
     background-color: var(--joyu-green);
     color: var(--joyu-white);
@@ -1306,6 +1600,11 @@ img {
 .mini-cal-days .selected-plum b {
     background-color: var(--joyu-plum);
     color: var(--joyu-white);
+}
+
+.mini-cal-days .selected-gold b {
+    background-color: var(--joyu-gold);
+    color: #16221e;
 }
 
 .mini-time-slots {
@@ -1324,6 +1623,11 @@ img {
     color: var(--text-dark);
 }
 
+.time-pill.dark {
+    border-color: rgba(255, 255, 255, 0.25);
+    color: var(--joyu-white);
+}
+
 .time-pill.active-green {
     background-color: var(--joyu-green);
     border-color: var(--joyu-green);
@@ -1336,13 +1640,19 @@ img {
     color: var(--joyu-white);
 }
 
+.time-pill.active-gold {
+    background-color: var(--joyu-gold);
+    border-color: var(--joyu-gold);
+    color: #16221e;
+}
+
 /* --------------------------------------------------------------------------
-   5. PAGES BOUTIQUE, MÉTHODE & RÉSERVATION (CHECKOUT)
+   8. PAGES BOUTIQUE, MÉTHODE & RÉSERVATION (CHECKOUT)
    -------------------------------------------------------------------------- */
 .page-banner {
     background: var(--joyu-calm-banner);
     border-bottom: 1px solid var(--border-light);
-    padding: 80px 0 64px;
+    padding: 72px 0 56px;
 }
 
 .split-2col {
@@ -1386,7 +1696,6 @@ img {
     height: 225px;
     object-fit: cover;
     object-position: center 30%;
-    display: block;
 }
 
 .offer-card-content {
@@ -1552,7 +1861,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   6. FOOTER
+   9. FOOTER
    -------------------------------------------------------------------------- */
 .site-footer {
     background: linear-gradient(165deg, #0f4a38 0%, #0a3528 100%);
@@ -1581,7 +1890,6 @@ img {
     width: auto;
     height: 44px;
     object-fit: contain;
-    display: block;
 }
 
 .footer-heading {
@@ -1622,19 +1930,19 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   7. RESPONSIVE TABLETTE (<= 1024PX) & MOBILE (<= 960PX / 640PX)
+   10. RESPONSIVE TABLETTE & MOBILE (<= 960PX / 640PX)
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
     .visual-hero-media {
-        height: 380px;
-    }
-
-    .cards-6grid {
-        grid-template-columns: repeat(3, 1fr);
+        height: 360px;
     }
 
     .cards-5grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .carousel-offer-card {
+        flex: 0 0 calc(33.333% - 12px);
     }
 }
 
@@ -1750,37 +2058,65 @@ img {
         border-top: 1px solid var(--border-light);
     }
 
+    .fullscreen-hero {
+        min-height: calc(100vh - 76px);
+        padding: 40px 0;
+    }
+
     .visual-hero-media {
-        height: 320px;
+        height: 290px;
+    }
+
+    /* Sur mobile, les 3 étapes de la méthode défilent horizontalement pour gagner en hauteur */
+    .method-particulier-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .method-3steps-flow {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 12px;
+        padding-bottom: 10px;
+    }
+
+    .method-step-box {
+        flex: 0 0 82%;
+        scroll-snap-align: start;
+    }
+
+    .step-flow-arrow {
+        display: none;
     }
 
     .split-2col,
-    .method-particulier-layout,
-    .method-3steps-flow,
     .method-b2b-3col,
     .christie-2col,
     .b2b-results-banner,
     .b2b-results-metrics,
     .booking-bar-card.particulier-bar,
     .booking-bar-card.b2b-bar,
+    .key-figures-grid,
     .cards-3grid,
     .checkout-layout,
     .footer-grid {
         grid-template-columns: 1fr;
     }
 
-    .cards-6grid,
     .cards-5grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .carousel-nav-circle {
-        display: none;
+    .carousel-offer-card {
+        flex: 0 0 78%;
     }
 
-    .step-flow-arrow {
-        transform: rotate(90deg);
-        margin: 0 auto;
+    .carousel-quote-card {
+        flex: 0 0 84%;
+    }
+
+    .carousel-nav-circle {
+        display: none;
     }
 
     .method-b2b-steps {
@@ -1791,7 +2127,7 @@ img {
     }
 
     .christie-photo {
-        height: 320px;
+        height: 310px;
     }
 
     .result-metric-item {
@@ -1801,28 +2137,30 @@ img {
 }
 
 @media (max-width: 640px) {
-    .visual-hero-media {
-        height: 250px;
+    .container {
+        padding: 0 20px;
     }
 
-    .cards-6grid,
+    .visual-hero-media {
+        height: 240px;
+    }
+
     .cards-5grid {
         grid-template-columns: 1fr;
     }
 
     .compact-card-media,
-    .cards-6grid .compact-card-media,
     .solution-b2b-media {
-        height: 190px;
+        height: 185px;
     }
 
     .christie-photo {
-        height: 270px;
+        height: 260px;
     }
 }
 
 /* --------------------------------------------------------------------------
-   8. ACCESSIBILITÉ & RESPECT DES PRÉFÉRENCES UTILISATEUR
+   11. ACCESSIBILITÉ & RESPECT DES PRÉFÉRENCES UTILISATEUR
    -------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
