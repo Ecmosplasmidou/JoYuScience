@@ -4,58 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JoYu Science</title>
+    <title>JoYu Science — Neurosciences, Leadership, Corps &amp; Esprit</title>
     <meta name="description"
-        content="JoYu Science accompagne les particuliers et les entreprises : développer ses capacités, révéler son potentiel pour plus de réussite et de cohésion humaine.">
+        content="Développer ses capacités et son leadership personnel pour plus de sérénité, de cohésion, d’impact et de performance durable.">
 
     <link rel="stylesheet" href="style.css">
-    <!-- Typographies officielles de la charte graphique : Playfair Display & DM Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
-
 </head>
 
 <body id="top-anchor">
-
-    <!-- Contrôles d'état CSS (Navigation entre les 5 pages + Ouverture du menu Burger) -->
-    <input type="radio" name="page-nav" id="page-1" class="css-state-input" checked>
-    <input type="radio" name="page-nav" id="page-2" class="css-state-input">
-    <input type="radio" name="page-nav" id="page-3" class="css-state-input">
-    <input type="radio" name="page-nav" id="page-4" class="css-state-input">
-    <input type="radio" name="page-nav" id="page-5" class="css-state-input">
 
     <input type="checkbox" id="mobile-menu-toggle" class="css-state-input">
 
     <div class="site-wrapper">
 
         <!-- ======================================================================
-         HEADER PRINCIPAL (CONTENU DANS 1200PX SUR DESKTOP + BURGER SUR MOBILE)
-         ====================================================================== -->
+             HEADER PRINCIPAL (IDENTIQUE À PARTICULIERS & ENTREPRISES)
+             ====================================================================== -->
         <header class="site-header">
             <div class="header-inner">
-
-                <!-- Logo officiel utilisant le vecteur JoYu Science -->
-                <label for="page-1" class="brand-logo-link" title="JoYu Science — Accueil">
+                <a href="index.html" class="brand-logo-link" title="JoYu Science — Accueil">
                     <img src="logo.svg" alt="JoYu Science — Neuroscience • Leadership • Corps • Esprit"
-                        class="brand-logo-img"
-                        onerror="this.onerror=null;this.src='1000008343_2.jpg';">
-                </label>
+                        class="brand-logo-img" onerror="this.onerror=null;this.src='1000008343_2.jpg';">
+                </a>
 
-                <!-- Menu de navigation principal (Horizontal sur Desktop / Tiroir latéral sur Mobile) -->
                 <nav class="main-nav" aria-label="Navigation principale">
                     <div>
-                        <!-- En-tête du tiroir mobile -->
                         <div class="drawer-header-mobile">
-                            <span
-                                style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--joyu-green);">
+                            <span style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--joyu-green);">
                                 JoYu <span style="color: var(--joyu-gold); font-style: italic;">Science</span>
                             </span>
                             <label for="mobile-menu-toggle" class="drawer-close-btn" aria-label="Fermer le menu">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="1.8">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                                     <path d="M18 6L6 18M6 6l12 12" />
                                 </svg>
                             </label>
@@ -63,383 +47,215 @@
 
                         <ul class="nav-list">
                             <li class="nav-item">
-                                <label for="page-1" class="nav-link nav-link-home"
-                                    onclick="document.getElementById('mobile-menu-toggle').checked=false;">Accueil</label>
+                                <a href="index.html" class="nav-link nav-link-home active">Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <label for="page-2" class="nav-link nav-link-particuliers"
-                                    onclick="document.getElementById('mobile-menu-toggle').checked=false;">Particuliers</label>
+                                <a href="particuliers.html" class="nav-link nav-link-particuliers">Particuliers</a>
                             </li>
                             <li class="nav-item">
-                                <label for="page-3" class="nav-link nav-link-entreprises"
-                                    onclick="document.getElementById('mobile-menu-toggle').checked=false;">Entreprises</label>
+                                <a href="entreprises.html" class="nav-link nav-link-entreprises">Entreprises</a>
                             </li>
                             <li class="nav-item nav-item-dropdown">
                                 <span class="nav-link">
-                                    Programmes
+                                    Offres
                                     <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2">
                                         <path d="M6 9l6 6 6-6" />
                                     </svg>
                                 </span>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <label for="page-2" class="dropdown-link"
-                                            onclick="document.getElementById('mobile-menu-toggle').checked=false;">
-                                            <span class="dropdown-title">Accompagnement &amp; Retraites</span>
-                                            <span class="dropdown-sub">Séance découverte, package 5 séances,
-                                                séjours</span>
-                                        </label>
+                                        <a href="particuliers.html" class="dropdown-link">
+                                            <span class="dropdown-title">Accompagnements &amp; Retraites</span>
+                                            <span class="dropdown-sub">Packages JoYu Coaching, Retraites, Breathwork</span>
+                                        </a>
                                     </li>
                                     <li>
-                                        <label for="page-3" class="dropdown-link plum-item"
-                                            onclick="document.getElementById('mobile-menu-toggle').checked=false;">
-                                            <span class="dropdown-title">Formations Entreprises</span>
-                                            <span class="dropdown-sub">Nouveau Management, Communication 3.0,
-                                                Stress</span>
-                                        </label>
+                                        <a href="entreprises.html" class="dropdown-link plum-item">
+                                            <span class="dropdown-title">Solutions Entreprises</span>
+                                            <span class="dropdown-sub">Formations, Team Building, Séminaires &amp; QVT</span>
+                                        </a>
                                     </li>
                                     <li>
-                                        <label for="page-4" class="dropdown-link"
-                                            onclick="document.getElementById('mobile-menu-toggle').checked=false;">
-                                            <span class="dropdown-title">E-books JOY FOOD &amp; Cours en ligne</span>
-                                            <span class="dropdown-sub">Guides nutritionnels et modules numériques</span>
-                                        </label>
+                                        <a href="boutique.html" class="dropdown-link">
+                                            <span class="dropdown-title">Boutique &amp; iBook Joy Food®</span>
+                                            <span class="dropdown-sub">70 Clés healthy Joy Food® et formations vidéo</span>
+                                        </a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <label for="page-4" class="nav-link nav-link-boutique"
-                                    onclick="document.getElementById('mobile-menu-toggle').checked=false;">Boutique</label>
+                                <a href="boutique.html" class="nav-link nav-link-boutique">Boutique</a>
                             </li>
                             <li class="nav-item">
-                                <label for="page-1" class="nav-link"
-                                    onclick="document.getElementById('mobile-menu-toggle').checked=false; document.getElementById('section-fondatrice').scrollIntoView({behavior:'smooth'});">À
-                                    propos</label>
+                                <a href="#section-methode" class="nav-link">La méthode</a>
                             </li>
                         </ul>
                     </div>
 
                     <div class="drawer-footer-mobile">
-                        <label for="page-5" class="btn btn-green"
-                            onclick="document.getElementById('mobile-menu-toggle').checked=false;">
-                            Réserver une séance
-                        </label>
+                        <a href="reservation.html" class="btn btn-green">Réserver une séance</a>
                     </div>
                 </nav>
 
-                <!-- Bouton d'action Desktop -->
                 <div class="header-cta-wrap">
-                    <label for="page-5" class="btn-header nav-link-reserver">Réserver &amp; payer</label>
+                    <a href="reservation.html" class="header-cart-btn" title="Votre panier &amp; réservation">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <circle cx="9" cy="21" r="1" />
+                            <circle cx="20" cy="21" r="1" />
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
+                    </a>
+                    <a href="reservation.html" class="btn-header nav-link-reserver">Réserver &amp; payer</a>
                 </div>
 
-                <!-- Bouton Burger Mobile -->
                 <label for="mobile-menu-toggle" class="burger-trigger" aria-label="Ouvrir le menu">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="1.8">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                         <path d="M3 7h18M3 12h18M3 17h18" />
                     </svg>
                 </label>
-
             </div>
 
-            <!-- Toile de fond mobile -->
             <label for="mobile-menu-toggle" class="mobile-backdrop" aria-label="Fermer le menu"></label>
         </header>
 
         <!-- ======================================================================
-         PAGE 1 : ACCUEIL COMMUN
-         ====================================================================== -->
-        <main id="view-page-1" class="page-view">
+             CONTENU PAGE D'ACCUEIL (FIDÈLE À PAGE-ACCUEIL_2.JPG)
+             ====================================================================== -->
+        <main class="page-view">
 
-            <!-- 1. HERO PLEINE IMAGE AVEC TEXTE PAR-DESSUS -->
-            <section class="hero-full-image">
+            <!-- 1. HERO PANORAMIQUE & DOUBLE PORTAIL PARTICULIERS / ENTREPRISES -->
+            <section class="visual-hero-section">
                 <div class="container">
-                    <div class="hero-overlay-content">
-                        <span class="hero-kicker">Neurosciences &bull; Leadership &bull; Corps &bull; Esprit</span>
-                        <h1 class="hero-main-title">
-                            Développer ses capacités,<br>
-                            <span>révéler son potentiel.</span>
+                    <div class="visual-hero-media">
+                        <img src="assets/accueil/Hero_accueil.jpg"
+                            alt="Échange naturel et souriant en terrasse ouverte sur la nature tropicale"
+                            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=85';">
+                    </div>
+
+                    <div class="visual-hero-intro" style="max-width: 900px;">
+                        <h1 class="heading-xl" style="font-size: clamp(2rem, 3.7vw, 3.05rem);">
+                            Développer ses capacités et son leadership personnel pour plus de sérénité, de cohésion, d’impact et de performance durable.
                         </h1>
-                        <p class="hero-subtitle">Pour plus de réussite et de cohésion humaine.</p>
-                        <p class="hero-lead">
-                            Le monde change. Nos repères aussi. Pression, perte de sens, relations fragilisées : il est
-                            temps de repenser nos façons d’agir, de communiquer et d’interagir.
+
+                        <p class="visual-hero-sub" style="max-width: 780px; margin: 16px auto 22px; color: var(--text-body);">
+                            Face à l’accélération du monde, à la pression et à la perte de repères, il devient essentiel de renforcer nos ressources intérieures pour mieux vivre, agir et interagir.
                         </p>
 
-                        <!-- Deux accès directs Particuliers & Entreprises -->
-                        <div class="hero-portals-grid">
-                            <label for="page-2" class="portal-card particuliers">
-                                <div>
-                                    <span class="portal-label">Particuliers</span>
-                                    <span class="portal-desc">Prendre soin de soi</span>
-                                </div>
-                                <span class="portal-arrow">&rarr;</span>
-                            </label>
+                        <p class="home-pillars-line">
+                            Neurosciences <span>&bull;</span> Leadership <span>&bull;</span> Corps <span>&bull;</span> Esprit
+                        </p>
 
-                            <label for="page-3" class="portal-card entreprises">
-                                <div>
-                                    <span class="portal-label">Entreprises</span>
-                                    <span class="portal-desc">Évoluer ensemble</span>
-                                </div>
-                                <span class="portal-arrow">&rarr;</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 2. LE CONSTAT (2 COLONNES — INSPIRÉ DE REENA JABRAN) -->
-            <section class="section-pad">
-                <div class="container">
-                    <div class="split-2col">
-                        <div class="editorial-photo-frame">
-                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=85"
-                                alt="Échange naturel et écoute au sein d'un groupe">
-                            <p class="editorial-photo-caption">
-                                Allier compréhension des mécanismes humains, qualité de présence et clarté d’action.
-                            </p>
-                        </div>
-
-                        <div>
-                            <span class="eyebrow">Le constat que nous partageons tous</span>
-                            <h2 class="heading-lg">
-                                Pourquoi des personnes compétentes <span class="gold-italic">répètent-elles les mêmes
-                                    schémas ?</span>
-                            </h2>
-                            <div class="gold-divider"></div>
-                            <p style="color: var(--text-body); margin-bottom: 12px;">
-                                Malgré les connaissances, l’expérience et de bonnes intentions, particuliers comme
-                                équipes dirigeantes se retrouvent souvent à répéter les mêmes :
-                            </p>
-
-                            <!-- 2 listes d'icônes côte à côte (4 items + 3 items) avec les flèches circulaires dorées -->
-                            <div class="elementor-element-16072e4">
-                                <ul class="elementor-icon-list-items">
-                                    <li class="elementor-icon-list-item">
-                                        <span class="elementor-icon-list-icon">
-                                            <svg aria-hidden="true" viewBox="0 0 512 512"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z">
-                                                </path>
-                                            </svg>
-                                        </span>
-                                        <span class="elementor-icon-list-text">Conflits relationnels</span>
-                                    </li>
-                                    <li class="elementor-icon-list-item">
-                                        <span class="elementor-icon-list-icon">
-                                            <svg aria-hidden="true" viewBox="0 0 512 512"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z">
-                                                </path>
-                                            </svg>
-                                        </span>
-                                        <span class="elementor-icon-list-text">Incompréhensions &amp; non-dits</span>
-                                    </li>
-                                    <li class="elementor-icon-list-item">
-                                        <span class="elementor-icon-list-icon">
-                                            <svg aria-hidden="true" viewBox="0 0 512 512"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z">
-                                                </path>
-                                            </svg>
-                                        </span>
-                                        <span class="elementor-icon-list-text">Réactions émotionnelles</span>
-                                    </li>
-                                    <li class="elementor-icon-list-item">
-                                        <span class="elementor-icon-list-icon">
-                                            <svg aria-hidden="true" viewBox="0 0 512 512"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z">
-                                                </path>
-                                            </svg>
-                                        </span>
-                                        <span class="elementor-icon-list-text">Défis de posture &amp; leadership</span>
-                                    </li>
-                                </ul>
-
-                                <ul class="elementor-icon-list-items">
-                                    <li class="elementor-icon-list-item">
-                                        <span class="elementor-icon-list-icon">
-                                            <svg aria-hidden="true" viewBox="0 0 512 512"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z">
-                                                </path>
-                                            </svg>
-                                        </span>
-                                        <span class="elementor-icon-list-text">Freins à l’engagement &amp;
-                                            fatigue</span>
-                                    </li>
-                                    <li class="elementor-icon-list-item">
-                                        <span class="elementor-icon-list-icon">
-                                            <svg aria-hidden="true" viewBox="0 0 512 512"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z">
-                                                </path>
-                                            </svg>
-                                        </span>
-                                        <span class="elementor-icon-list-text">Schémas relationnels répétitifs</span>
-                                    </li>
-                                    <li class="elementor-icon-list-item">
-                                        <span class="elementor-icon-list-icon">
-                                            <svg aria-hidden="true" viewBox="0 0 512 512"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z">
-                                                </path>
-                                            </svg>
-                                        </span>
-                                        <span class="elementor-icon-list-text">Biais de prise de décision</span>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <a href="#section-methode" class="btn btn-green">
-                                Le problème n’est pas la situation. C’est notre prisme intérieur &rarr;
+                        <!-- Double bouton pilule d'accès (Vert profond pour Particuliers, Violet prune pour Entreprises) -->
+                        <div class="home-dual-cta">
+                            <a href="particuliers.html" class="btn btn-green home-portal-pill">
+                                Particuliers &rarr;
+                            </a>
+                            <a href="entreprises.html" class="btn btn-plum home-portal-pill">
+                                Entreprises &rarr;
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 3. LE CADRE MÉTHODOLOGIQUE EN 6 ÉTAPES (ICÔNES CIRCULAIRES & COULEURS RESTAURÉES) -->
-            <section id="section-methode" class="elementor-element-f5bcdcf">
+            <!-- 2. ENCADRÉ MÉTHODE JOYU SCIENCE (3 ÉTAPES + BOUTON + SCHÉMA VITRUVE) -->
+            <section id="section-methode" class="section-pad-sm">
                 <div class="container">
-                    <div class="section-header-center">
-                        <span class="eyebrow">L’Architecture JoYu Science</span>
-                        <h2 class="heading-lg">La Méthodologie JoYu Science en <span class="gold-italic">6 Étapes</span>
-                        </h2>
-                        <div class="gold-divider center"></div>
-                    </div>
-
-                    <div class="elementor-element-08e4880">
-                        <!-- 1. OBSERVER -->
-                        <div class="elementor-widget-icon-box elementor-view-framed elementor-shape-circle">
-                            <div class="elementor-icon-box-wrapper">
-                                <div class="elementor-icon-box-icon">
-                                    <span class="elementor-icon">
-                                        <svg aria-hidden="true" viewBox="0 0 576 512"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z">
-                                            </path>
-                                        </svg>
-                                    </span>
+                    <div class="method-panel-ivory">
+                        <div class="method-particulier-layout">
+                            <div>
+                                <div style="margin-bottom: 24px;">
+                                    <h2 class="heading-lg" style="margin-bottom: 6px;">La méthode JoYu Science</h2>
+                                    <p style="font-size: 15.5px; color: var(--text-body);">Et si le changement commençait de l’intérieur ?</p>
                                 </div>
-                                <div class="elementor-icon-box-content">
-                                    <h3 class="elementor-icon-box-title"><span>1. OBSERVER</span></h3>
-                                    <p class="elementor-icon-box-description">Prendre conscience avec clarté de ce qui
-                                        se joue en soi, dans son corps et dans son environnement.</p>
+
+                                <div class="method-3steps-flow">
+                                    <!-- Étape 1 : Discerner -->
+                                    <div class="method-step-box">
+                                        <span class="step-icon-circle green">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                                <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.54Z" />
+                                                <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.54Z" />
+                                            </svg>
+                                        </span>
+                                        <h4>Discerner</h4>
+                                        <p>Affiner ses perceptions et développer sa lucidité.</p>
+                                    </div>
+
+                                    <span class="step-flow-arrow">&rarr;</span>
+
+                                    <!-- Étape 2 : Aligner & Ancrer -->
+                                    <div class="method-step-box">
+                                        <span class="step-icon-circle gold">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                                <path d="M3 8c3-2 6 2 9 0s6 2 9 0M3 12c3-2 6 2 9 0s6 2 9 0M3 16c3-2 6 2 9 0s6 2 9 0" />
+                                            </svg>
+                                        </span>
+                                        <h4>Aligner &amp; Ancrer</h4>
+                                        <p>Mobiliser ses ressources neurocorporelles et renforcer sa présence.</p>
+                                    </div>
+
+                                    <span class="step-flow-arrow">&rarr;</span>
+
+                                    <!-- Étape 3 : Transformer & Interagir -->
+                                    <div class="method-step-box">
+                                        <span class="step-icon-circle green">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                                <circle cx="12" cy="7" r="3" />
+                                                <circle cx="6" cy="10" r="2.2" />
+                                                <circle cx="18" cy="10" r="2.2" />
+                                                <path d="M7 19c0-2.8 2.2-5 5-5s5 2.2 5 5" />
+                                            </svg>
+                                        </span>
+                                        <h4>Transformer &amp; Interagir</h4>
+                                        <p>Développer son leadership personnel et son impact relationnel.</p>
+                                    </div>
+                                </div>
+
+                                <div style="text-align: center; margin-top: 24px;">
+                                    <a href="methode.html" class="btn btn-outline">Découvrir la méthode &rarr;</a>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- 2. RECONNAÎTRE -->
-                        <div class="elementor-widget-icon-box elementor-view-framed elementor-shape-circle">
-                            <div class="elementor-icon-box-wrapper">
-                                <div class="elementor-icon-box-icon">
-                                    <span class="elementor-icon">
-                                        <svg aria-hidden="true" viewBox="0 0 512 512"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
-                                            </path>
-                                        </svg>
-                                    </span>
+                            <!-- Schéma circulaire à 3 pôles (Cerveau / Corps / Interactions) -->
+                            <div class="vitruvian-diagram">
+                                <div class="vitruvian-pole top">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--joyu-green)" stroke-width="1.8">
+                                        <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.54Z" />
+                                        <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.54Z" />
+                                    </svg>
+                                    <strong>Cerveau</strong>
+                                    <span>Neurosciences</span>
                                 </div>
-                                <div class="elementor-icon-box-content">
-                                    <h3 class="elementor-icon-box-title"><span>2. RECONNAÎTRE</span></h3>
-                                    <p class="elementor-icon-box-description">Identifier les récits internes, les
-                                        suppositions automatiques et les réactions émotionnelles.</p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- 3. DÉCODER -->
-                        <div class="elementor-widget-icon-box elementor-view-framed elementor-shape-circle">
-                            <div class="elementor-icon-box-wrapper">
-                                <div class="elementor-icon-box-icon">
-                                    <span class="elementor-icon">
-                                        <svg aria-hidden="true" viewBox="0 0 512 512"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M184 0c30.9 0 56 25.1 56 56V456c0 30.9-25.1 56-56 56c-28.9 0-52.7-21.9-55.7-50.1c-5.2 1.4-10.7 2.1-16.3 2.1c-35.3 0-64-28.7-64-64c0-7.4 1.3-14.6 3.6-21.2C21.4 367.4 0 338.2 0 304c0-31.9 18.7-59.5 45.8-72.3C37.1 220.8 32 207 32 192c0-30.7 21.6-56.3 50.4-62.6C80.8 123.9 80 118 80 112c0-29.9 20.6-55.1 48.3-62.1C131.3 21.9 155.1 0 184 0zM328 0c28.9 0 52.7 21.9 55.7 49.9C411.4 56.9 432 82.1 432 112c0 6-.8 11.9-2.4 17.4c28.8 6.3 50.4 31.9 50.4 62.6c0 15-5.1 28.8-13.8 39.7C493.3 244.5 512 272.1 512 304c0 34.2-21.4 63.4-51.6 74.8c2.3 6.6 3.6 13.8 3.6 21.2c0 35.3-28.7 64-64 64c-5.6 0-11.1-.7-16.3-2.1c-3 28.2-26.8 50.1-55.7 50.1c-30.9 0-56-25.1-56-56V56c0-30.9 25.1-56 56-56z">
-                                            </path>
-                                        </svg>
-                                    </span>
+                                <div class="vitruvian-center-ring green-core">
+                                    <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="60" cy="60" r="54" stroke="#b89961" stroke-width="1.5" />
+                                        <circle cx="60" cy="34" r="7" fill="#b89961" />
+                                        <path d="M26 48L60 54L94 48M34 38L60 52L86 38M60 52V76M60 76L42 102M60 76L78 102"
+                                            stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" />
+                                    </svg>
                                 </div>
-                                <div class="elementor-icon-box-content">
-                                    <h3 class="elementor-icon-box-title"><span>3. DÉCODER</span></h3>
-                                    <p class="elementor-icon-box-description">Comprendre les mécanismes
-                                        neuroscientifiques, les croyances et les conditionnements passés.</p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- 4. RÉALIGNER -->
-                        <div class="elementor-widget-icon-box elementor-view-framed elementor-shape-circle">
-                            <div class="elementor-icon-box-wrapper">
-                                <div class="elementor-icon-box-icon">
-                                    <span class="elementor-icon">
-                                        <svg aria-hidden="true" viewBox="0 0 448 512"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M48 128c-17.7 0-32 14.3-32 32s14.3 32 32 32H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H48zm0 192c-17.7 0-32 14.3-32 32s14.3 32 32 32H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H48z">
-                                            </path>
+                                <div class="vitruvian-bottom-poles">
+                                    <div class="vitruvian-pole">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--joyu-green)" stroke-width="1.8">
+                                            <circle cx="12" cy="5" r="2.2" />
+                                            <path d="M6 9l6 2 6-2M12 11v5M12 16l-3 5M12 16l3 5" />
                                         </svg>
-                                    </span>
-                                </div>
-                                <div class="elementor-icon-box-content">
-                                    <h3 class="elementor-icon-box-title"><span>4. RÉALIGNER</span></h3>
-                                    <p class="elementor-icon-box-description">Restructurer ses perceptions internes,
-                                        apaiser le système nerveux et créer des perspectives souveraines.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 5. INTERAGIR -->
-                        <div class="elementor-widget-icon-box elementor-view-framed elementor-shape-circle">
-                            <div class="elementor-icon-box-wrapper">
-                                <div class="elementor-icon-box-icon">
-                                    <span class="elementor-icon">
-                                        <svg aria-hidden="true" viewBox="0 0 512 512"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z">
-                                            </path>
+                                        <strong>Corps</strong>
+                                        <span>Ressources neurocorporelles</span>
+                                    </div>
+                                    <div class="vitruvian-pole">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--joyu-green)" stroke-width="1.8">
+                                            <circle cx="12" cy="7" r="3" />
+                                            <circle cx="6" cy="10" r="2.2" />
+                                            <circle cx="18" cy="10" r="2.2" />
+                                            <path d="M7 19c0-2.8 2.2-5 5-5s5 2.2 5 5" />
                                         </svg>
-                                    </span>
-                                </div>
-                                <div class="elementor-icon-box-content">
-                                    <h3 class="elementor-icon-box-title"><span>5. INTERAGIR</span></h3>
-                                    <p class="elementor-icon-box-description">Choisir des réponses alignées avec clarté,
-                                        écoute active et Communication 3.0.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 6. TRANSFORMER -->
-                        <div class="elementor-widget-icon-box elementor-view-framed elementor-shape-circle">
-                            <div class="elementor-icon-box-wrapper">
-                                <div class="elementor-icon-box-icon">
-                                    <span class="elementor-icon">
-                                        <svg aria-hidden="true" viewBox="0 0 352 512"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.988 31.988 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176z">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                </div>
-                                <div class="elementor-icon-box-content">
-                                    <h3 class="elementor-icon-box-title"><span>6. TRANSFORMER</span></h3>
-                                    <p class="elementor-icon-box-description">Vivre un changement durable dans sa
-                                        posture, sa vitalité, ses relations et ses résultats.</p>
+                                        <strong>Interactions</strong>
+                                        <span>Leadership &amp; communication</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -447,846 +263,189 @@
                 </div>
             </section>
 
-            <!-- 4. DOMAINES D'IMPACT (COULEURS IVOIRE & ICÔNES BICOLORES RESTAURÉES) -->
-            <section class="elementor-element-7167631">
+            <!-- 3. OFFRES JOYU SCIENCE (CARROUSEL HORIZONTAL DE 6 CARTES) -->
+            <section class="section-pad-sm">
                 <div class="container">
-                    <div class="section-header-center">
-                        <span class="eyebrow">Domaines d’application</span>
-                        <h2 class="heading-lg">Où notre approche crée de <span class="gold-italic">l’impact</span></h2>
-                        <div class="gold-divider center"></div>
+                    <div class="section-header-center" style="margin-bottom: 34px;">
+                        <h2 class="heading-lg">Offres JoYu Science</h2>
                     </div>
 
-                    <div class="elementor-element-d5cd4d4">
-                        <!-- 1. LEADERSHIP (Entreprises) -->
-                        <div class="elementor-widget-image-box b2b-impact-card">
-                            <div class="elementor-image-box-wrapper">
-                                <figure class="elementor-image-box-img">
-                                    <svg viewBox="0 0 48 48" fill="none" stroke="#452e57" stroke-width="2">
-                                        <path d="M24 6L30 18L43 20L33.5 29L36 42L24 35.5L12 42L14.5 29L5 20L18 18L24 6Z"
-                                            stroke="#b89961" />
-                                    </svg>
-                                </figure>
-                                <div class="elementor-image-box-content">
-                                    <h3 class="elementor-image-box-title">NOUVEAU MANAGEMENT &amp; LEADERSHIP</h3>
-                                    <p class="elementor-image-box-description">Former des leaders conscients et
-                                        autonomes qui inspirent l’engagement plutôt que le contrôle.</p>
+                    <div class="home-carousel-shell">
+                        <span class="carousel-nav-circle left" aria-hidden="true">&lsaquo;</span>
+
+                        <div class="cards-6grid">
+                            <!-- Offre 1 : Formations -->
+                            <a href="entreprises.html" class="compact-card" style="text-decoration:none;">
+                                <div class="compact-card-media">
+                                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&q=80"
+                                        alt="Formations">
                                 </div>
-                            </div>
+                                <div class="compact-card-body">
+                                    <h3 class="compact-card-title">Formations</h3>
+                                    <p class="compact-card-desc">Leadership &bull; Management &bull; Communication</p>
+                                    <span class="compact-card-arrow">&rarr;</span>
+                                </div>
+                            </a>
+
+                            <!-- Offre 2 : Team building -->
+                            <a href="entreprises.html" class="compact-card" style="text-decoration:none;">
+                                <div class="compact-card-media">
+                                    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=500&q=80"
+                                        alt="Team building">
+                                </div>
+                                <div class="compact-card-body">
+                                    <h3 class="compact-card-title">Team building</h3>
+                                    <p class="compact-card-desc">Cohésion &amp; intelligence collective</p>
+                                    <span class="compact-card-arrow">&rarr;</span>
+                                </div>
+                            </a>
+
+                            <!-- Offre 3 : Packages JoYu Coaching -->
+                            <a href="particuliers.html" class="compact-card" style="text-decoration:none;">
+                                <div class="compact-card-media">
+                                    <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=500&q=80"
+                                        alt="Packages JoYu Coaching">
+                                </div>
+                                <div class="compact-card-body">
+                                    <h3 class="compact-card-title">Packages JoYu Coaching</h3>
+                                    <p class="compact-card-desc">Séances individuelles &amp; parcours personnalisés</p>
+                                    <span class="compact-card-arrow">&rarr;</span>
+                                </div>
+                            </a>
+
+                            <!-- Offre 4 : Retraites -->
+                            <a href="particuliers.html" class="compact-card" style="text-decoration:none;">
+                                <div class="compact-card-media">
+                                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=500&q=80"
+                                        alt="Retraites">
+                                </div>
+                                <div class="compact-card-body">
+                                    <h3 class="compact-card-title">Retraites</h3>
+                                    <p class="compact-card-desc">Vitalité &bull; Respiration &bull; Activation énergie vitale</p>
+                                    <span class="compact-card-arrow">&rarr;</span>
+                                </div>
+                            </a>
+
+                            <!-- Offre 5 : iBook JOY FOOD® -->
+                            <a href="boutique.html" class="compact-card" style="text-decoration:none;">
+                                <div class="compact-card-media">
+                                    <img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?auto=format&fit=crop&w=500&q=80"
+                                        alt="iBook JOY FOOD">
+                                </div>
+                                <div class="compact-card-body">
+                                    <h3 class="compact-card-title">iBook JOY FOOD®</h3>
+                                    <p class="compact-card-desc">Nutrition &bull; Vitalité</p>
+                                    <span class="compact-card-arrow">&rarr;</span>
+                                </div>
+                            </a>
+
+                            <!-- Offre 6 : Ateliers & conférences -->
+                            <a href="boutique.html" class="compact-card" style="text-decoration:none;">
+                                <div class="compact-card-media">
+                                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=500&q=80"
+                                        alt="Ateliers et conférences">
+                                </div>
+                                <div class="compact-card-body">
+                                    <h3 class="compact-card-title">Ateliers &amp; conférences</h3>
+                                    <p class="compact-card-desc">Pratiques collectives &amp; découvertes</p>
+                                    <span class="compact-card-arrow">&rarr;</span>
+                                </div>
+                            </a>
                         </div>
 
-                        <!-- 2. COMMUNICATION 3.0 (Entreprises) -->
-                        <div class="elementor-widget-image-box b2b-impact-card">
-                            <div class="elementor-image-box-wrapper">
-                                <figure class="elementor-image-box-img">
-                                    <svg viewBox="0 0 48 48" fill="none" stroke="#452e57" stroke-width="2">
-                                        <path d="M8 12H40V32H18L8 40V12Z" />
-                                        <path d="M16 20H32M16 26H26" stroke="#b89961" />
-                                    </svg>
-                                </figure>
-                                <div class="elementor-image-box-content">
-                                    <h3 class="elementor-image-box-title">COMMUNICATION 3.0</h3>
-                                    <p class="elementor-image-box-description">Réduire les incompréhensions et prévenir
-                                        les conflits en transformant l’écoute avant l’expression.</p>
-                                </div>
-                            </div>
-                        </div>
+                        <span class="carousel-nav-circle right" aria-hidden="true">&rsaquo;</span>
+                    </div>
 
-                        <!-- 3. GESTION DE SOI : STRESS & ÉNERGIE -->
-                        <div class="elementor-widget-image-box">
-                            <div class="elementor-image-box-wrapper">
-                                <figure class="elementor-image-box-img">
-                                    <svg viewBox="0 0 48 48" fill="none" stroke="#0f4a38" stroke-width="2">
-                                        <circle cx="24" cy="24" r="16" />
-                                        <path d="M24 14V24L30 30" stroke="#b89961" />
-                                    </svg>
-                                </figure>
-                                <div class="elementor-image-box-content">
-                                    <h3 class="elementor-image-box-title">GESTION DE SOI : STRESS &amp; ÉNERGIE</h3>
-                                    <p class="elementor-image-box-description">Réguler la charge émotionnelle par la
-                                        respiration, l’attention et la préservation des ressources.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 4. ÉQUIPES & COLLECTIFS (Entreprises) -->
-                        <div class="elementor-widget-image-box b2b-impact-card">
-                            <div class="elementor-image-box-wrapper">
-                                <figure class="elementor-image-box-img">
-                                    <svg viewBox="0 0 48 48" fill="none" stroke="#452e57" stroke-width="2">
-                                        <circle cx="16" cy="18" r="6" />
-                                        <circle cx="32" cy="18" r="6" />
-                                        <path
-                                            d="M6 38C6 31 11 28 16 28C21 28 26 31 26 38M22 38C22 31 27 28 32 28C37 28 42 31 42 38"
-                                            stroke="#b89961" />
-                                    </svg>
-                                </figure>
-                                <div class="elementor-image-box-content">
-                                    <h3 class="elementor-image-box-title">ÉQUIPES &amp; COLLECTIFS</h3>
-                                    <p class="elementor-image-box-description">Améliorer la coopération et la confiance
-                                        mutuelle en restructurant les perceptions collectives.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 5. RETRAITES & VITALITÉ JOY FOOD -->
-                        <div class="elementor-widget-image-box">
-                            <div class="elementor-image-box-wrapper">
-                                <figure class="elementor-image-box-img">
-                                    <svg viewBox="0 0 48 48" fill="none" stroke="#0f4a38" stroke-width="2">
-                                        <path d="M24 8C16 16 14 28 24 40C34 28 32 16 24 8Z" />
-                                        <path d="M24 40C14 34 6 26 8 16C16 18 22 28 24 40Z" stroke="#b89961" />
-                                    </svg>
-                                </figure>
-                                <div class="elementor-image-box-content">
-                                    <h3 class="elementor-image-box-title">RETRAITES &amp; VITALITÉ JOY FOOD</h3>
-                                    <p class="elementor-image-box-description">Séjours haut de gamme à La Réunion et à
-                                        Maurice : pratiques corporelles, alignement et nutrition.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 6. PARTICULIERS & SOUVERAINETÉ -->
-                        <div class="elementor-widget-image-box">
-                            <div class="elementor-image-box-wrapper">
-                                <figure class="elementor-image-box-img">
-                                    <svg viewBox="0 0 48 48" fill="none" stroke="#0f4a38" stroke-width="2">
-                                        <circle cx="24" cy="14" r="7" stroke="#b89961" />
-                                        <path d="M10 40C10 31 16 26 24 26C32 26 38 31 38 40" />
-                                    </svg>
-                                </figure>
-                                <div class="elementor-image-box-content">
-                                    <h3 class="elementor-image-box-title">PARTICULIERS &amp; SOUVERAINETÉ</h3>
-                                    <p class="elementor-image-box-description">Se libérer des schémas émotionnels
-                                        répétitifs pour renforcer estime de soi et clarté intérieure.</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="carousel-dots" aria-hidden="true">
+                        <span class="dot active-green"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
                 </div>
             </section>
 
-            <!-- 5. POURQUOI CETTE APPROCHE FONCTIONNE (CALM DESIGN IVOIRE & VERT PROFOND, SANS VIOLET) -->
-            <section class="calm-reasons-section">
+            <!-- 4. BARRE INFÉRIEURE DE RÉSERVATION (« RÉSERVEZ VOTRE EXPÉRIENCE ») -->
+            <section class="section-pad-sm" style="padding-bottom: 96px;">
                 <div class="container">
-                    <div class="section-header-center">
-                        <span class="eyebrow">Fondements</span>
-                        <h2 class="heading-lg">
-                            Pourquoi cette approche fonctionne <span class="gold-italic">durablement</span>
-                        </h2>
-                        <div class="gold-divider center"></div>
-                    </div>
-
-                    <div class="reason-banners-stack">
-                        <div class="reason-banner-row">
-                            <h3>Les approches classiques se concentrent uniquement sur le changement de comportement en
-                                surface.</h3>
-                        </div>
-                        <div class="reason-banner-row highlight-green">
-                            <h3>JoYu Science agit sur le prisme intérieur (neurosciences, corps, esprit) à l’origine du
-                                comportement.</h3>
-                        </div>
-                        <div class="reason-banner-row">
-                            <h3>Quand la perception intérieure change <span style="color: var(--joyu-gold);">+</span> la
-                                communication change.</h3>
-                        </div>
-                        <div class="reason-banner-row">
-                            <h3>Quand la communication change <span style="color: var(--joyu-gold);">+</span> la qualité
-                                des relations change.</h3>
-                        </div>
-                        <div class="reason-banner-row highlight-green">
-                            <h3>Quand les relations changent <span style="color: var(--joyu-gold);">+</span> la réussite
-                                et la cohésion humaine changent.</h3>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 6. NOTRE IMPACT EN CHIFFRES (4 CARTES AVEC ICÔNES SVG DORÉES SUR FOND IVOIRE) -->
-            <section class="elementor-element-cbf9cfe">
-                <div class="container">
-                    <div class="section-header-center">
-                        <span class="eyebrow">Mesure &amp; Résultats</span>
-                        <h2 class="heading-lg">Notre impact en <span class="gold-italic">chiffres</span></h2>
-                        <div class="gold-divider center"></div>
-                    </div>
-
-                    <div class="elementor-element-39b585d">
-                        <!-- Compteur 1 -->
-                        <div class="counter-card-con">
-                            <div class="elementor-icon">
-                                <svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z">
-                                    </path>
+                    <div class="booking-bar-card b2b-bar">
+                        <div class="booking-bar-intro">
+                            <span class="booking-cal-icon green">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <rect x="3" y="4" width="18" height="18" rx="3" />
+                                    <path d="M16 2v4M8 2v4M3 10h18" />
                                 </svg>
-                            </div>
-                            <div class="elementor-counter-title">Années d’Expérience</div>
-                            <div class="elementor-counter-number-wrapper">
-                                <span>20</span><span class="elementor-counter-number-suffix">+</span>
-                            </div>
-                        </div>
-
-                        <!-- Compteur 2 -->
-                        <div class="counter-card-con">
-                            <div class="elementor-icon">
-                                <svg aria-hidden="true" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="elementor-counter-title">Personnes Accompagnées</div>
-                            <div class="elementor-counter-number-wrapper">
-                                <span>1,500</span><span class="elementor-counter-number-suffix">+</span>
-                            </div>
-                        </div>
-
-                        <!-- Compteur 3 -->
-                        <div class="counter-card-con">
-                            <div class="elementor-icon">
-                                <svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M128 148v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12zm140 12h40c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12zm-128 96h40c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12zm128 0h40c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12zm-76 84v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm76 12h40c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12zm180 124v36H0v-36c0-6.6 5.4-12 12-12h19.5V24c0-13.3 10.7-24 24-24h337c13.3 0 24 10.7 24 24v440H436c6.6 0 12 5.4 12 12zM79.5 463H192v-67c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v67h112.5V49L80 48l-.5 415z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="elementor-counter-title">Entreprises Partenaires</div>
-                            <div class="elementor-counter-number-wrapper">
-                                <span>120</span><span class="elementor-counter-number-suffix">+</span>
-                            </div>
-                        </div>
-
-                        <!-- Compteur 4 -->
-                        <div class="counter-card-con">
-                            <div class="elementor-icon">
-                                <svg aria-hidden="true" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="elementor-counter-title">Retraites &amp; Séminaires</div>
-                            <div class="elementor-counter-number-wrapper">
-                                <span>50</span><span class="elementor-counter-number-suffix">+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 7. TÉMOIGNAGES & RÉUSSITES -->
-            <section class="section-pad">
-                <div class="container">
-                    <div class="section-header-center">
-                        <span class="eyebrow">Retours d’expérience</span>
-                        <h2 class="heading-lg">Ce qu’en disent nos <span class="gold-italic">clients et
-                                partenaires</span></h2>
-                        <div class="gold-divider center"></div>
-                    </div>
-
-                    <div class="testimonials-3grid">
-                        <article class="quote-card">
-                            <p class="quote-text">
-                                « Le séminaire sur le Nouveau Management et la Communication 3.0 a profondément
-                                renouvelé la cohésion de notre comité de direction. Une intervention sobre, structurée
-                                et immédiatement utile. »
-                            </p>
-                            <div class="quote-author">
-                                <span class="quote-name">Claire Fontenay</span>
-                                <span class="quote-role">Directrice des Opérations — Secteur Hôtelier, Océan
-                                    Indien</span>
-                            </div>
-                        </article>
-
-                        <article class="quote-card">
-                            <p class="quote-text">
-                                « Après ma séance découverte, le parcours de 5 séances suivi de la retraite à l’Île
-                                Maurice m’a permis de traverser une période de transition professionnelle avec un calme
-                                et une lucidité que je ne soupçonnais pas. »
-                            </p>
-                            <div class="quote-author">
-                                <span class="quote-name">Marc-Antoine Hoarau</span>
-                                <span class="quote-role">Dirigeant d’entreprise — Saint-Denis, La Réunion</span>
-                            </div>
-                        </article>
-
-                        <article class="quote-card">
-                            <p class="quote-text">
-                                « Les ateliers dédiés à la régulation du stress et de l’énergie ont offert à nos équipes
-                                des clés concrètes pour préserver leur équilibre tout en maintenant un haut niveau
-                                d’exigence. »
-                            </p>
-                            <div class="quote-author">
-                                <span class="quote-name">Sonia Kervadec</span>
-                                <span class="quote-role">Directrice des Ressources Humaines — Groupe de services</span>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 7. VISION FONDATRICE -->
-            <section id="section-fondatrice" class="section-pad bg-ivory">
-                <div class="container">
-                    <div class="split-2col">
-                        <div class="editorial-photo-frame">
-                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=85"
-                                alt="Accompagnement humain et posture juste">
-                        </div>
-
-                        <div>
-                            <span class="eyebrow">La démarche JoYu Science</span>
-                            <h2 class="heading-lg">Relier science de l’esprit, <span class="gold-italic">intelligence du
-                                    corps et leadership</span></h2>
-                            <div class="gold-divider"></div>
-                            <p style="color: var(--text-body); margin-bottom: 18px;">
-                                Née de la rencontre entre les neurosciences appliquées, l’accompagnement des dirigeants
-                                et les pratiques d’alignement corporel, <strong>JoYu Science</strong> s’adresse à celles
-                                et ceux qui souhaitent évoluer en profondeur sans céder aux discours superficiels.
-                            </p>
-                            <p style="color: var(--text-body); margin-bottom: 32px;">
-                                Qu’il s’agisse d’un suivi individuel à distance, d’une retraite dans un lieu de
-                                caractère à La Réunion ou à Maurice, ou d’une formation au sein de votre organisation,
-                                chaque intervention est conçue sur mesure avec exigence et simplicité.
-                            </p>
-                            <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
-                                <label for="page-5" class="btn btn-green">Réserver une séance découverte</label>
-                                <label for="page-3" class="btn btn-plum">Découvrir l’offre Entreprises</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 8. BANDEAU DE CLÔTURE CALM DESIGN (IVOIRE LUMINEUX, VIOLET UNIQUEMENT SUR B2B) -->
-            <section class="closing-calm-section">
-                <div class="container">
-                    <span class="eyebrow">Choisir votre parcours</span>
-                    <h2 class="heading-lg">Prêt à vivre l’expérience <span class="gold-italic">JoYu Science</span> ?
-                    </h2>
-                    <div class="gold-divider center"></div>
-
-                    <div class="closing-pillars-4grid">
-                        <label for="page-3" class="closing-pillar-link b2b-pillar">
-                            <svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M128 148v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12zm140 12h40c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12zm180 316v36H0v-36c0-6.6 5.4-12 12-12h19.5V24c0-13.3 10.7-24 24-24h337c13.3 0 24 10.7 24 24v440H436c6.6 0 12 5.4 12 12z">
-                                </path>
-                            </svg>
-                            <span>Formations Entreprises</span>
-                        </label>
-                        <label for="page-3" class="closing-pillar-link b2b-pillar">
-                            <svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M256 128c35.35 0 64-28.65 64-64S291.35 0 256 0s-64 28.65-64 64 28.65 64 64 64zm-64 192v96c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-96c17.67 0 32-14.33 32-32v-96c0-26.51-21.49-48-48-48h-11.8c-11.07 5.03-23.26 8-36.2 8s-25.13-2.97-36.2-8H208c-26.51 0-48 21.49-48 48v96c0 17.67 14.33 32 32 32z">
-                                </path>
-                            </svg>
-                            <span>Programmes Leadership</span>
-                        </label>
-                        <label for="page-2" class="closing-pillar-link">
-                            <svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z">
-                                </path>
-                            </svg>
-                            <span>Accompagnement 1-to-1</span>
-                        </label>
-                        <label for="page-4" class="closing-pillar-link">
-                            <svg aria-hidden="true" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8L128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 320 32z">
-                                </path>
-                            </svg>
-                            <span>Retraites &amp; Boutique</span>
-                        </label>
-                    </div>
-
-                    <label for="page-5" class="btn btn-green">Réserver une séance découverte &rarr;</label>
-                </div>
-            </section>
-
-        </main>
-
-        <!-- ======================================================================
-         PAGE 2 : UNIVERS PARTICULIERS (100% VERT PROFOND, DORÉ MAT & IVOIRE DOUX)
-         ====================================================================== -->
-        <main id="view-page-2" class="page-view">
-            <section class="page-banner">
-                <div class="container">
-                    <span class="eyebrow">Univers Particuliers</span>
-                    <h1 class="heading-xl">Révéler votre <span class="gold-italic">force intérieure</span></h1>
-                    <div class="gold-divider"></div>
-                    <p style="max-width: 680px; color: var(--text-body); font-size: 1.06rem;">
-                        Alignement, estime de soi, leadership personnel et retraites de ressourcement à La Réunion, à
-                        l’Île Maurice ou à distance.
-                    </p>
-                </div>
-            </section>
-
-            <section class="section-pad">
-                <div class="container">
-
-                    <div class="editorial-notice">
-                        <strong style="color: var(--joyu-green); display: block; margin-bottom: 4px;">Modalité
-                            d’accompagnement individuel</strong>
-                        Après une première séance découverte permettant de faire le point sur vos besoins,
-                        l’accompagnement individuel se déroule sous la forme d’un <strong>package de 5 séances
-                            minimum</strong> afin de garantir un travail de fond durable.
-                    </div>
-
-                    <div class="cards-3grid">
-                        <!-- Offre 1 -->
-                        <article class="offer-card">
-                            <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=800&q=80"
-                                alt="Séance découverte individuelle">
-                            <div class="offer-card-content">
-                                <div>
-                                    <span class="offer-meta">Accompagnement 1-to-1 &bull; 1h00</span>
-                                    <h3 class="heading-md" style="margin-bottom: 10px;">Séance Découverte</h3>
-                                    <p style="font-size: 14.5px; color: var(--text-body);">
-                                        Un premier entretien individuel en visioconférence ou à La Réunion pour
-                                        clarifier votre situation, identifier vos schémas et définir vos objectifs.
-                                    </p>
-                                </div>
-                                <div>
-                                    <div class="offer-price">90 € <small>TTC</small></div>
-                                    <label for="page-5" class="btn btn-green">Réserver et payer &rarr;</label>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- Offre 2 -->
-                        <article class="offer-card highlighted">
-                            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80"
-                                alt="Package de 5 séances individuelles">
-                            <div class="offer-card-content">
-                                <div>
-                                    <span class="offer-meta">Parcours de référence &bull; 5 séances</span>
-                                    <h3 class="heading-md" style="margin-bottom: 10px;">Package Souveraineté (5 séances)
-                                    </h3>
-                                    <p style="font-size: 14.5px; color: var(--text-body);">
-                                        Accompagnement structuré sur mesure : confiance, estime de soi, dépassement des
-                                        blocages émotionnels et posture personnelle.
-                                    </p>
-                                </div>
-                                <div>
-                                    <div class="offer-price">420 € <small>TTC (ou règlement échelonné)</small></div>
-                                    <label for="page-5" class="btn btn-green">Choisir ce parcours &rarr;</label>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- Offre 3 -->
-                        <article class="offer-card">
-                            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80"
-                                alt="Lieu de retraite ouvert sur la nature">
-                            <div class="offer-card-content">
-                                <div>
-                                    <span class="offer-meta">Immersion 5 jours &bull; La Réunion &amp; Maurice</span>
-                                    <h3 class="heading-md" style="margin-bottom: 10px;">Retraite Signature &amp;
-                                        Vitalité</h3>
-                                    <p style="font-size: 14.5px; color: var(--text-body);">
-                                        En petit groupe dans un lieu d’architecture contemporaine ouvert sur la
-                                        végétation : pratiques corporelles, respiration, alignement et jus frais.
-                                    </p>
-                                </div>
-                                <div>
-                                    <div class="offer-price">1 490 € <small>TTC (Acompte 490 €)</small></div>
-                                    <label for="page-5" class="btn btn-outline">Réserver avec acompte &rarr;</label>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="editorial-notice">
-                        <strong style="color: var(--joyu-green); display: block; margin-bottom: 6px;">Encadrement et
-                            information préalable concernant les retraites avec jus</strong>
-                        Les séjours proposant un jeûne hydrique ou une cure de jus frais pressés à froid font l’objet
-                        d’un encadrement attentif et d’un questionnaire de santé préalable. Ils s’adressent
-                        exclusivement aux adultes ne présentant aucune contre-indication médicale (grossesse,
-                        allaitement, insuffisance rénale ou hépatique, diabète insulinodépendant, troubles du
-                        comportement alimentaire). Ces séjours s’inscrivent dans une démarche de bien-être et d’hygiène
-                        de vie, sans promesse médicale ou thérapeutique.
-                    </div>
-
-                </div>
-            </section>
-        </main>
-
-        <!-- ======================================================================
-         PAGE 3 : UNIVERS ENTREPRISES
-         ====================================================================== -->
-        <main id="view-page-3" class="page-view">
-            <section class="page-banner plum-tint">
-                <div class="container">
-                    <span class="eyebrow plum">Univers Entreprises &amp; Organisations</span>
-                    <h1 class="heading-xl" style="color: var(--joyu-plum);">
-                        Leadership personnel, <span class="gold-italic">impact collectif</span>
-                    </h1>
-                    <div class="gold-divider"></div>
-                    <p style="max-width: 700px; color: var(--text-body); font-size: 1.08rem;">
-                        Face aux mutations du travail, à la pression et aux tensions relationnelles, nos formations
-                        relient conscience de soi, qualité de communication et performance durable.
-                    </p>
-                </div>
-            </section>
-
-            <section class="section-pad">
-                <div class="container">
-
-                    <!-- Formation 1 -->
-                    <article class="formation-row green-accent">
-                        <div>
-                            <span class="eyebrow" style="margin-bottom: 6px;">Formation 01 &bull; Posture &amp;
-                                Intelligence émotionnelle</span>
-                            <h2 class="heading-md" style="font-size: 1.55rem; margin-bottom: 12px;">Nouveau Management
-                            </h2>
-                            <p style="color: var(--text-body); font-size: 15px; margin-bottom: 12px;">
-                                <strong>Objectifs :</strong> Incarner une posture managériale juste, développer
-                                l’autonomie et la responsabilisation des collaborateurs, soutenir l’engagement et
-                                intégrer l’intelligence émotionnelle dans la conduite d’équipe.
-                            </p>
-                            <p style="color: var(--text-muted); font-size: 13.5px;">
-                                <strong>Public :</strong> Dirigeants, membres de CODIR, managers de proximité &bull;
-                                <strong>Durée :</strong> 2 jours (14h) &bull; <strong>Modalités :</strong>
-                                Intra-entreprise ou inter-entreprises (La Réunion, Maurice, Distanciel).
-                            </p>
-                        </div>
-                        <div style="display: flex; flex-direction: column; gap: 10px; align-items: flex-end;">
-                            <label for="page-5" class="btn btn-plum">Demander un devis &rarr;</label>
-                            <label for="page-5" class="btn btn-outline">Réserver un échange</label>
-                        </div>
-                    </article>
-
-                    <!-- Formation 2 -->
-                    <article class="formation-row">
-                        <div>
-                            <span class="eyebrow plum" style="margin-bottom: 6px;">Formation 02 &bull; Coopération &amp;
-                                Dialogue</span>
-                            <h2 class="heading-md"
-                                style="font-size: 1.55rem; color: var(--joyu-plum); margin-bottom: 12px;">Relations
-                                professionnelles, cohésion &amp; Communication 3.0</h2>
-                            <p style="color: var(--text-body); font-size: 15px; margin-bottom: 12px;">
-                                <strong>Objectifs :</strong> Pratiquer une écoute active réelle, renforcer la confiance
-                                au sein des collectifs de travail, fluidifier la coopération inter-services et prévenir
-                                les situations conflictuelles.
-                            </p>
-                            <p style="color: var(--text-muted); font-size: 13.5px;">
-                                <strong>Public :</strong> Équipes projets, directions RH, collectifs de travail &bull;
-                                <strong>Durée :</strong> 1 à 2 jours ou format séminaire de cohésion &bull;
-                                <strong>Modalités :</strong> Sur site ou en lieu de séminaire.
-                            </p>
-                        </div>
-                        <div style="display: flex; flex-direction: column; gap: 10px; align-items: flex-end;">
-                            <label for="page-5" class="btn btn-plum">Organiser un atelier &rarr;</label>
-                            <label for="page-5" class="btn btn-outline">Demander un devis</label>
-                        </div>
-                    </article>
-
-                    <!-- Formation 3 -->
-                    <article class="formation-row green-accent">
-                        <div>
-                            <span class="eyebrow" style="margin-bottom: 6px;">Formation 03 &bull; Équilibre &amp;
-                                Ressources</span>
-                            <h2 class="heading-md" style="font-size: 1.55rem; margin-bottom: 12px;">Gestion de soi :
-                                alignement, stress &amp; énergie</h2>
-                            <p style="color: var(--text-body); font-size: 15px; margin-bottom: 12px;">
-                                <strong>Objectifs :</strong> Stabiliser la qualité d’attention, acquérir des outils de
-                                respiration et de régulation émotionnelle face à la pression, et préserver durablement
-                                son énergie professionnelle.
-                            </p>
-                            <p style="color: var(--text-muted); font-size: 13.5px;">
-                                <strong>Public :</strong> Tous collaborateurs, cadres et dirigeants &bull; <strong>Durée
-                                    :</strong> 1 jour (7h) ou atelier collectif d’une demi-journée &bull; <strong>Tarif
-                                    session inter :</strong> 490 € HT / participant.
-                            </p>
-                        </div>
-                        <div style="display: flex; flex-direction: column; gap: 10px; align-items: flex-end;">
-                            <label for="page-5" class="btn btn-plum">Inscrire un participant &rarr;</label>
-                            <label for="page-5" class="btn btn-outline">Demander un devis intra</label>
-                        </div>
-                    </article>
-
-                </div>
-            </section>
-        </main>
-
-        <!-- ======================================================================
-         PAGE 4 : BOUTIQUE & PROGRAMMES NUMÉRIQUES (JOY FOOD)
-         ====================================================================== -->
-        <main id="view-page-4" class="page-view">
-            <section class="page-banner">
-                <div class="container">
-                    <span class="eyebrow">Boutique &amp; Ressources</span>
-                    <h1 class="heading-xl">Éditions <span class="gold-italic">JOY FOOD</span> &amp; Formations en ligne
-                    </h1>
-                    <div class="gold-divider"></div>
-                    <p style="max-width: 660px; color: var(--text-body); font-size: 1.06rem;">
-                        Guides numériques, programmes vidéo autonomes et inscriptions directes aux prochains ateliers
-                        collectifs.
-                    </p>
-                </div>
-            </section>
-
-            <section class="section-pad">
-                <div class="container">
-                    <div class="cards-3grid" style="margin-top: 0;">
-
-                        <!-- Produit 1 -->
-                        <article class="offer-card">
-                            <img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?auto=format&fit=crop&w=800&q=85"
-                                alt="Jus vert frais et ingrédients naturels">
-                            <div class="offer-card-content">
-                                <div>
-                                    <span class="offer-meta">E-book JOY FOOD &bull; Téléchargement immédiat</span>
-                                    <h3 class="heading-md" style="margin-bottom: 10px;">Jus Verts, Vitalité &amp; Clarté
-                                    </h3>
-                                    <p style="font-size: 14.5px; color: var(--text-body);">
-                                        Recettes de jus frais, principes d’alimentation vivante et conseils pratiques
-                                        pour soutenir naturellement votre énergie quotidienne.
-                                    </p>
-                                </div>
-                                <div>
-                                    <div class="offer-price">29 € <small>TTC (Format PDF)</small></div>
-                                    <label for="page-5" class="btn btn-green">Acheter l’e-book &rarr;</label>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- Produit 2 -->
-                        <article class="offer-card highlighted">
-                            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=85"
-                                alt="Programme numérique JoYu Science">
-                            <div class="offer-card-content">
-                                <div>
-                                    <span class="offer-meta">Formation en ligne &bull; Accès immédiat</span>
-                                    <h3 class="heading-md" style="margin-bottom: 10px;">Fondamentaux JoYu Science (6
-                                        modules)</h3>
-                                    <p style="font-size: 14.5px; color: var(--text-body);">
-                                        Parcours vidéo complet, supports écrits et exercices guidés de respiration pour
-                                        intégrer la méthode à votre propre rythme.
-                                    </p>
-                                </div>
-                                <div>
-                                    <div class="offer-price">290 € <small>TTC</small></div>
-                                    <label for="page-5" class="btn btn-green">Acheter la formation &rarr;</label>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- Produit 3 -->
-                        <article class="offer-card">
-                            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=85"
-                                alt="Atelier collectif nutrition et respiration">
-                            <div class="offer-card-content">
-                                <div>
-                                    <span class="offer-meta">Atelier collectif &bull; Prochaine date</span>
-                                    <h3 class="heading-md" style="margin-bottom: 10px;">Atelier Respiration, Énergie
-                                        &amp; Alignement</h3>
-                                    <p style="font-size: 14.5px; color: var(--text-body);">
-                                        Une demi-journée de pratique guidée en petit groupe à La Réunion ou en direct
-                                        par visioconférence.
-                                    </p>
-                                </div>
-                                <div>
-                                    <div class="offer-price">65 € <small>TTC / participant</small></div>
-                                    <label for="page-5" class="btn btn-outline">Réserver ma place &rarr;</label>
-                                </div>
-                            </div>
-                        </article>
-
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- ======================================================================
-         PAGE 5 : RÉSERVATION, CALENDRIER & PAIEMENT INTÉGRÉ
-         ====================================================================== -->
-        <main id="view-page-5" class="page-view">
-            <section class="page-banner">
-                <div class="container">
-                    <span class="eyebrow">Réservation &amp; Règlement</span>
-                    <h1 class="heading-xl">Finaliser votre <span class="gold-italic">réservation</span></h1>
-                    <div class="gold-divider"></div>
-                    <p style="max-width: 660px; color: var(--text-body); font-size: 1.05rem;">
-                        Sélectionnez votre prestation, choisissez votre créneau disponible et réglez en toute sécurité
-                        par Carte Bancaire ou PayPal.
-                    </p>
-                </div>
-            </section>
-
-            <section class=" container">
-                <div class="checkout-layout">
-
-                    <!-- Colonne 1 : Choix de l'offre, du créneau et option facultative -->
-                    <div class="checkout-box ivory">
-                        <h2 class="heading-md" style="margin-bottom: 20px;">1. Prestation &amp; Disponibilités</h2>
-
-                        <div class="field-group">
-                            <label>Offre ou programme sélectionné</label>
-                            <select class="field-input">
-                                <option>Séance Découverte Individuelle (1h00) — 90,00 €</option>
-                                <option>Package Souveraineté (5 séances minimum) — 420,00 €</option>
-                                <option>Acompte Retraite Signature (La Réunion / Maurice) — 490,00 €</option>
-                                <option>Formation en ligne JoYu Science (6 modules) — 290,00 €</option>
-                                <option>E-book JOY FOOD : Jus Verts, Vitalité &amp; Clarté — 29,00 €</option>
-                                <option>Atelier Collectif Respiration &amp; Alignement — 65,00 €</option>
-                            </select>
-                        </div>
-
-                        <div class="field-group">
-                            <label>Prochains créneaux disponibles</label>
-                            <input type="radio" name="booking-slot" id="slot-a" class="css-state-input">
-                            <input type="radio" name="booking-slot" id="slot-b" class="css-state-input" checked>
-                            <input type="radio" name="booking-slot" id="slot-c" class="css-state-input">
-                            <input type="radio" name="booking-slot" id="slot-d" class="css-state-input">
-
-                            <div class="slot-selector-grid">
-                                <label for="slot-a" class="slot-option">Lun. 16 Nov. &bull; 10h00</label>
-                                <label for="slot-b" class="slot-option">Lun. 16 Nov. &bull; 14h30</label>
-                                <label for="slot-c" class="slot-option">Mar. 17 Nov. &bull; 09h30</label>
-                                <label for="slot-d" class="slot-option">Jeu. 19 Nov. &bull; 16h00</label>
-                            </div>
-                        </div>
-
-                        <!-- Proposition complémentaire facultative (jamais cochée par défaut) -->
-                        <div
-                            style="background-color: var(--joyu-white); border: 1px solid var(--border-light); border-radius: var(--radius-md); box-shadow: var(--shadow-ambient); padding: 20px; margin: 24px 0;">
-                            <span
-                                style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--joyu-gold); display: block; margin-bottom: 6px;">
-                                Suggestion complémentaire facultative
                             </span>
-                            <label
-                                style="display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; cursor: pointer;">
-                                <input type="checkbox" style="margin-top: 4px; accent-color: var(--joyu-green);">
-                                <span>
-                                    <strong>Ajouter l’e-book « JOY FOOD : Jus Verts &amp; Vitalité » (+ 24,00
-                                        €)</strong><br>
-                                    <span style="color: var(--text-muted); font-size: 12.5px;">Envoyé immédiatement par
-                                        e-mail avec votre confirmation.</span>
-                                </span>
-                            </label>
-                        </div>
-
-                        <div
-                            style="border-top: 1px solid var(--border-light); padding-top: 16px; display: flex; justify-content: space-between; align-items: baseline;">
-                            <span style="font-weight: 600;">Total TTC à régler</span>
-                            <span
-                                style="font-family: var(--font-heading); font-size: 1.85rem; color: var(--joyu-green);">90,00
-                                €</span>
-                        </div>
-
-                        <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 12px;">
-                            Report sans frais possible jusqu’à 48 heures avant le rendez-vous. Une facture acquittée
-                            ainsi que votre lien de connexion sont envoyés automatiquement dès validation.
-                        </p>
-                    </div>
-
-                    <!-- Colonne 2 : Coordonnées & Paiement Carte Bancaire / PayPal -->
-                    <div class="checkout-box">
-                        <h2 class="heading-md" style="margin-bottom: 20px;">2. Coordonnées &amp; Mode de règlement</h2>
-
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
-                            <div class="field-group">
-                                <label>Prénom et Nom</label>
-                                <input type="text" class="field-input" value="Camille Moreau">
-                            </div>
-                            <div class="field-group">
-                                <label>Téléphone</label>
-                                <input type="tel" class="field-input" value="+262 692 14 28 90">
+                            <div>
+                                <h3 class="heading-md" style="font-size: 1.4rem;">Réservez votre expérience</h3>
                             </div>
                         </div>
 
-                        <div class="field-group">
-                            <label>Adresse e-mail (pour l’envoi de la confirmation et de la facture)</label>
-                            <input type="email" class="field-input" value="camille.moreau@email.fr">
-                        </div>
-
-                        <input type="radio" name="pay-method" id="pay-cb" class="css-state-input" checked>
-                        <input type="radio" name="pay-method" id="pay-paypal" class="css-state-input">
-
-                        <div class="payment-switcher">
-                            <label for="pay-cb" class="pay-method-label">Carte Bancaire (CB / Visa / Mastercard)</label>
-                            <label for="pay-paypal" class="pay-method-label">PayPal (Comptant ou 4x)</label>
-                        </div>
-
-                        <div id="pane-cb" class="pay-pane">
-                            <div class="field-group">
-                                <label>Numéro de carte</label>
-                                <input type="text" class="field-input" value="4970 •••• •••• 4242">
+                        <div class="mini-week-cal">
+                            <div class="mini-cal-header">
+                                <span>&lsaquo;</span>
+                                <strong>Avril 2027</strong>
+                                <span>&rsaquo;</span>
                             </div>
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
-                                <div class="field-group">
-                                    <label>Date d’expiration</label>
-                                    <input type="text" class="field-input" value="09 / 28">
-                                </div>
-                                <div class="field-group">
-                                    <label>Code de sécurité (CVC)</label>
-                                    <input type="text" class="field-input" value="842">
-                                </div>
+                            <div class="mini-cal-days">
+                                <div><span>Lun</span><b>12</b></div>
+                                <div><span>Mar</span><b>13</b></div>
+                                <div><span>Mer</span><b>14</b></div>
+                                <div class="selected-green"><span>Jeu</span><b>15</b></div>
+                                <div><span>Ven</span><b>16</b></div>
+                                <div><span>Sam</span><b>17</b></div>
+                                <div><span>Dim</span><b>18</b></div>
                             </div>
                         </div>
 
-                        <div id="pane-paypal" class="pay-pane">
-                            <div
-                                style="background-color: var(--joyu-ivory); border-radius: var(--radius-sm); padding: 18px; margin-bottom: 18px; font-size: 14px; color: var(--text-body);">
-                                Vous serez redirigé vers votre espace sécurisé PayPal pour valider votre règlement en
-                                une fois ou en 4 échéances.
-                            </div>
+                        <div class="mini-time-slots">
+                            <span class="time-pill">09:00</span>
+                            <span class="time-pill active-green">11:00</span>
+                            <span class="time-pill">14:00</span>
                         </div>
 
-                        <input type="checkbox" id="confirm-order-toggle" class="css-state-input">
-                        <label for="confirm-order-toggle" class="btn btn-green">
-                            Valider et régler 90,00 € &rarr;
-                        </label>
-
-                        <div class="order-confirm-msg">
-                            <strong style="color: var(--joyu-green); display: block; margin-bottom: 4px;">Votre
-                                réservation est confirmée.</strong>
-                            Le créneau du Lundi 16 Novembre à 14h30 vous est réservé. Un e-mail récapitulatif accompagné
-                            de votre reçu vient d’être adressé à <em>camille.moreau@email.fr</em>.
+                        <div style="text-align: right;">
+                            <a href="reservation.html" class="btn btn-green">Réserver &rarr;</a>
                         </div>
                     </div>
-
                 </div>
             </section>
+
         </main>
 
         <!-- ======================================================================
-         PIED DE PAGE (FOOTER)
-         ====================================================================== -->
+             PIED DE PAGE (FOOTER)
+             ====================================================================== -->
         <footer class="site-footer">
             <div class="container">
                 <div class="footer-grid">
                     <div>
                         <div class="footer-logo-box">
-                            <img src="logo.svg" alt="JoYu Science"
-                                onerror="this.onerror=null;this.src='1000008343_2.jpg';">
+                            <img src="logo.svg" alt="JoYu Science" onerror="this.onerror=null;this.src='1000008343_2.jpg';">
                         </div>
                         <p style="font-size: 14px; color: rgba(255, 255, 255, 0.82); max-width: 300px;">
-                            Développer ses capacités, révéler son potentiel. Pour plus de réussite et de cohésion
-                            humaine.
+                            Développer ses capacités, révéler son potentiel. Pour plus de réussite et de cohésion humaine.
                         </p>
                     </div>
 
                     <div>
                         <h4 class="footer-heading">Navigation</h4>
                         <ul class="footer-links">
-                            <li><label for="page-1">Accueil &amp; Méthodologie</label></li>
-                            <li><label for="page-2">Univers Particuliers</label></li>
-                            <li><label for="page-3">Univers Entreprises</label></li>
-                            <li><label for="page-4">Boutique &amp; Éditions JOY FOOD</label></li>
+                            <li><a href="index.html">Accueil &amp; Méthodologie</a></li>
+                            <li><a href="particuliers.html">Univers Particuliers</a></li>
+                            <li><a href="entreprises.html">Univers Entreprises</a></li>
+                            <li><a href="boutique.html">Boutique &amp; Éditions JOY FOOD®</a></li>
                         </ul>
                     </div>
 
                     <div>
                         <h4 class="footer-heading">Accès directs</h4>
                         <ul class="footer-links">
-                            <li><label for="page-5">Réserver une séance découverte</label></li>
-                            <li><label for="page-2">Package 5 séances individuelles</label></li>
-                            <li><label for="page-2">Retraites La Réunion &amp; Maurice</label></li>
-                            <li><label for="page-3">Demander un devis formation</label></li>
+                            <li><a href="reservation.html">Réserver une séance découverte</a></li>
+                            <li><a href="particuliers.html">Packages JoYu Coaching</a></li>
+                            <li><a href="particuliers.html">Retraites La Réunion &amp; Maurice</a></li>
+                            <li><a href="entreprises.html">Formations &amp; Team Building</a></li>
                         </ul>
                     </div>
 
@@ -1303,8 +462,7 @@
 
                 <div class="footer-bottom">
                     <span>&copy; 2026 JoYu Science. Tous droits réservés.</span>
-                    <span>Mentions légales &nbsp;|&nbsp; Conditions générales de vente &nbsp;|&nbsp; Politique de
-                        confidentialité</span>
+                    <span>Mentions légales &nbsp;|&nbsp; Conditions générales de vente &nbsp;|&nbsp; Politique de confidentialité</span>
                 </div>
             </div>
         </footer>
