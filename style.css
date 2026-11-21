@@ -99,7 +99,7 @@ img {
    1. HEADER ÉDITORIAL & NAVIGATION
    -------------------------------------------------------------------------- */
 .site-header {
-    background: rgba(255, 255, 255, 0.94);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(234, 229, 217, 0.75);
@@ -365,10 +365,9 @@ img {
     color: var(--joyu-plum);
 }
 
-/* Taille affinée pour plus de cohérence et de lisibilité */
 .heading-xl {
     font-family: var(--font-heading);
-    font-size: clamp(1.75rem, 3.1vw, 2.55rem);
+    font-size: clamp(1.65rem, 3.1vw, 2.55rem);
     font-weight: 500;
     line-height: 1.24;
     letter-spacing: -0.01em;
@@ -377,7 +376,7 @@ img {
 
 .heading-lg {
     font-family: var(--font-heading);
-    font-size: clamp(1.6rem, 2.5vw, 2.15rem);
+    font-size: clamp(1.5rem, 2.5vw, 2.15rem);
     font-weight: 500;
     line-height: 1.26;
     color: var(--joyu-green);
@@ -385,7 +384,7 @@ img {
 
 .heading-md {
     font-family: var(--font-heading);
-    font-size: 1.3rem;
+    font-size: 1.28rem;
     font-weight: 500;
     line-height: 1.34;
     color: var(--joyu-green);
@@ -496,12 +495,13 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   3. HERO PLEIN ÉCRAN (ACCUEIL) & HEROS PANORAMIQUES (PARTICULIERS / ENTREPRISES)
+   3. HERO PLEIN ÉCRAN (ACCUEIL, PARTICULIERS & ENTREPRISES)
    -------------------------------------------------------------------------- */
 .fullscreen-hero {
     position: relative;
     width: 100%;
     min-height: calc(100vh - 84px);
+    min-height: calc(100svh - 84px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -546,13 +546,12 @@ img {
     margin-bottom: 18px;
 }
 
-/* Sous-titre droit (sans italique) pour une lisibilité optimale */
 .visual-hero-sub,
 .hero-sub-accessible {
     font-family: var(--font-sans);
     font-style: normal;
     font-weight: 400;
-    font-size: clamp(0.98rem, 1.45vw, 1.12rem);
+    font-size: clamp(0.96rem, 1.45vw, 1.12rem);
     line-height: 1.65;
     max-width: 720px;
     margin: 0 auto 28px;
@@ -562,11 +561,10 @@ img {
     color: rgba(255, 255, 255, 0.94);
 }
 
-/* Une seule ligne garantie même sur smartphone */
 .home-pillars-line {
-    font-size: clamp(0.68rem, 2.7vw, 0.88rem);
+    font-size: clamp(0.66rem, 2.6vw, 0.88rem);
     font-weight: 600;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.13em;
     text-transform: uppercase;
     color: var(--joyu-gold-light);
     margin-bottom: 18px;
@@ -575,13 +573,13 @@ img {
 
 .home-pillars-line span {
     color: var(--joyu-gold);
-    margin: 0 6px;
+    margin: 0 5px;
 }
 
 .home-dual-cta {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 14px;
     flex-wrap: wrap;
 }
 
@@ -590,57 +588,6 @@ img {
     padding: 12px 26px;
     font-size: 14.5px;
     font-weight: 600;
-}
-
-/* Heros des pages Particuliers et Entreprises */
-.visual-hero-section {
-    padding: 0 0 36px;
-    width: 100%;
-}
-
-.visual-hero-section > .container {
-    max-width: 100%;
-    padding: 0;
-}
-
-.visual-hero-media {
-    position: relative;
-    width: 100%;
-    height: 440px;
-    overflow: visible;
-    box-shadow: var(--shadow-card);
-    background-color: var(--joyu-ivory);
-}
-
-.visual-hero-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 25%;
-}
-
-.hero-overlap-badge {
-    position: absolute;
-    bottom: -16px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--joyu-green);
-    color: var(--joyu-white);
-    font-size: 11.5px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    padding: 7px 26px;
-    border-radius: var(--radius-pill);
-    box-shadow: 0 6px 18px rgba(15, 74, 56, 0.22);
-    text-transform: uppercase;
-    z-index: 3;
-}
-
-.visual-hero-intro {
-    text-align: center;
-    max-width: 840px;
-    margin: 44px auto 0;
-    padding: 0 32px;
 }
 
 /* --------------------------------------------------------------------------
@@ -658,6 +605,7 @@ img {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
     padding: 8px 4px 16px;
     width: 100%;
     scrollbar-width: thin;
@@ -727,39 +675,8 @@ img {
     border-color: var(--joyu-green);
 }
 
-.carousel-nav-circle.left {
-    left: -18px;
-}
-
-.carousel-nav-circle.right {
-    right: -18px;
-}
-
-/* Grille de 5 cartes (Particuliers & Entreprises) */
-.cards-5grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 18px;
-}
-
-.compact-card {
-    cursor: pointer;
-    background: var(--joyu-white);
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-card);
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: var(--shadow-card);
-    transition: var(--transition);
-}
-
-.compact-card:hover {
-    border-color: var(--joyu-gold);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-hover);
-}
+.carousel-nav-circle.left { left: -18px; }
+.carousel-nav-circle.right { right: -18px; }
 
 .compact-card-media {
     width: 100%;
@@ -807,8 +724,7 @@ img {
     transition: transform 0.25s ease;
 }
 
-.carousel-offer-card:hover .compact-card-arrow,
-.compact-card:hover .compact-card-arrow {
+.carousel-offer-card:hover .compact-card-arrow {
     transform: translateX(4px);
     color: var(--joyu-gold);
 }
@@ -913,22 +829,6 @@ img {
     border-color: var(--joyu-green);
 }
 
-.carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 24px;
-}
-
-.carousel-dots .dot {
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background-color: #dcd6c8;
-}
-
-.carousel-dots .dot.active-green { background-color: var(--joyu-green); }
-
 /* --------------------------------------------------------------------------
    5. ENCADRÉ MÉTHODE JOYU SCIENCE & SCHÉMA AUX 3 CERCLES CHEVAUCHANTS
    -------------------------------------------------------------------------- */
@@ -1012,12 +912,14 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .venn-vitruvian-svg {
     width: 100%;
     max-width: 310px;
     height: auto;
+    margin: 0 auto;
 }
 
 /* Layout Méthode Entreprises : 3 colonnes */
@@ -1091,71 +993,9 @@ img {
     color: var(--text-body);
 }
 
-.vitruvian-diagram {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-}
-
-.vitruvian-pole {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 12px;
-    line-height: 1.3;
-}
-
-.vitruvian-pole svg {
-    width: 22px;
-    height: 22px;
-    margin-bottom: 3px;
-}
-
-.vitruvian-pole strong {
-    color: var(--joyu-green);
-    font-size: 13px;
-}
-
-.vitruvian-pole.plum strong {
-    color: var(--joyu-plum);
-}
-
-.vitruvian-pole span {
-    color: var(--text-muted);
-    font-size: 11.5px;
-}
-
-.vitruvian-center-ring {
-    width: 112px;
-    height: 112px;
-    border-radius: 50%;
-    background: radial-gradient(circle, #0f4a38 42%, rgba(69, 46, 87, 0.28) 100%);
-    padding: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 24px rgba(15, 74, 56, 0.16);
-}
-
-.vitruvian-center-ring.green-core {
-    background: radial-gradient(circle, #0f4a38 55%, rgba(184, 153, 97, 0.35) 100%);
-}
-
-.vitruvian-bottom-poles {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-    width: 100%;
-    max-width: 280px;
-}
-
 /* --------------------------------------------------------------------------
-   6. CHIFFRES CLÉS ANIMÉS & TÉMOIGNAGES DÉFILANTS
+   6. CHIFFRES CLÉS AVEC RECALCUL ANIMÉ & TÉMOIGNAGES DÉFILANTS
    -------------------------------------------------------------------------- */
-
-/* Effet de recalcul dynamique des compteurs à l'arrivée sur la section */
 @property --num-exp {
     syntax: "<integer>";
     initial-value: 0;
@@ -1187,6 +1027,36 @@ img {
 @keyframes countTo120 {
     from { --num-corp: 0; }
     to   { --num-corp: 120; }
+}
+
+@keyframes floatUpFade {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.key-figures-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.key-figure-card {
+    background: var(--joyu-cashmere);
+    border: 1px solid var(--border-light);
+    border-bottom: 3px solid var(--joyu-gold);
+    border-radius: var(--radius-card);
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: var(--shadow-ambient);
+    animation: floatUpFade 0.65s var(--ease-calm) backwards;
+    animation-delay: var(--delay, 0s);
+    transition: var(--transition);
+}
+
+.key-figure-card:hover {
+    background: var(--joyu-white);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
 }
 
 .key-figure-number {
@@ -1229,50 +1099,10 @@ img {
     content: counter(val);
 }
 
-/* Repli automatique si le navigateur ne prend pas encore en charge animation-timeline: view() */
 @supports not (animation-timeline: view()) {
     .recalc-num[data-target="20"] { animation: countTo20 2s ease-out forwards; }
     .recalc-num[data-target="1500"] { animation: countTo1500 2.2s ease-out forwards; }
     .recalc-num[data-target="120"] { animation: countTo120 2s ease-out forwards; }
-}
-@keyframes floatUpFade {
-    from { opacity: 0; transform: translateY(14px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.key-figures-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-
-.key-figure-card {
-    background: var(--joyu-cashmere);
-    border: 1px solid var(--border-light);
-    border-bottom: 3px solid var(--joyu-gold);
-    border-radius: var(--radius-card);
-    padding: 32px 24px;
-    text-align: center;
-    box-shadow: var(--shadow-ambient);
-    animation: floatUpFade 0.65s var(--ease-calm) backwards;
-    animation-delay: var(--delay, 0s);
-    transition: var(--transition);
-}
-
-.key-figure-card:hover {
-    background: var(--joyu-white);
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-}
-
-.key-figure-number {
-    display: block;
-    font-family: var(--font-heading);
-    font-size: clamp(2.2rem, 3.6vw, 2.9rem);
-    font-weight: 600;
-    color: var(--joyu-green);
-    line-height: 1.1;
-    margin-bottom: 8px;
 }
 
 .gold-plus {
@@ -1341,7 +1171,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   7. L'ACCOMPAGNEMENT CHRISTIE, B2B BANNER & CALENDRIER MIS EN VALEUR
+   7. L'ACCOMPAGNEMENT, B2B BANNER & CALENDRIER MIS EN VALEUR
    -------------------------------------------------------------------------- */
 .christie-2col {
     display: grid;
@@ -1352,7 +1182,7 @@ img {
 
 .christie-photo {
     width: 100%;
-    height: 380px;
+    height: 360px;
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-card);
     overflow: hidden;
@@ -1484,7 +1314,7 @@ img {
     padding-left: 0;
 }
 
-/* Barre de réservation standard & version mise en valeur (Vert profond & Or) */
+/* Barre de réservation mise en valeur (Vert profond & Or) */
 .booking-bar-card {
     background: var(--joyu-white);
     border: 1px solid var(--border-light);
@@ -1493,7 +1323,7 @@ img {
     box-shadow: var(--shadow-card);
     display: grid;
     align-items: center;
-    gap: 28px;
+    gap: 24px;
 }
 
 .booking-bar-card.featured-booking-bar {
@@ -1592,16 +1422,6 @@ img {
     color: var(--joyu-white);
 }
 
-.mini-cal-days .selected-green b {
-    background-color: var(--joyu-green);
-    color: var(--joyu-white);
-}
-
-.mini-cal-days .selected-plum b {
-    background-color: var(--joyu-plum);
-    color: var(--joyu-white);
-}
-
 .mini-cal-days .selected-gold b {
     background-color: var(--joyu-gold);
     color: #16221e;
@@ -1625,18 +1445,6 @@ img {
 
 .time-pill.dark {
     border-color: rgba(255, 255, 255, 0.25);
-    color: var(--joyu-white);
-}
-
-.time-pill.active-green {
-    background-color: var(--joyu-green);
-    border-color: var(--joyu-green);
-    color: var(--joyu-white);
-}
-
-.time-pill.active-plum {
-    background-color: var(--joyu-plum);
-    border-color: var(--joyu-plum);
     color: var(--joyu-white);
 }
 
@@ -1930,26 +1738,93 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   10. RESPONSIVE TABLETTE & MOBILE (<= 960PX / 640PX)
+   10. RESPONSIVE TABLETTE (<= 1024PX) & MOBILE (<= 860PX / 540PX)
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
-    .visual-hero-media {
-        height: 360px;
+    .container {
+        padding: 0 24px;
     }
 
-    .cards-5grid {
+    .header-inner {
+        padding: 0 24px;
+    }
+
+    /* Section "La méthode JoYu Science" empilée proprement sur tablette (sans carrousel) */
+    .method-particulier-layout,
+    .method-b2b-3col {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .method-b2b-steps {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid var(--border-light);
+        padding-top: 20px;
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
     }
 
     .carousel-offer-card {
-        flex: 0 0 calc(33.333% - 12px);
+        flex: 0 0 calc(38% - 12px);
+    }
+
+    .carousel-quote-card {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    /* Calendrier de réservation centré et structuré sur tablette */
+    .booking-bar-card.b2b-bar,
+    .booking-bar-card.particulier-bar {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+        gap: 20px;
+        padding: 28px 24px;
+    }
+
+    .booking-bar-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mini-time-slots {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .b2b-results-banner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .b2b-results-metrics {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .result-metric-item {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
     }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 860px) {
     .header-inner {
-        height: 76px;
+        height: 74px;
         padding: 0 20px;
+    }
+
+    .brand-logo-img {
+        height: 44px;
     }
 
     .header-cta-wrap {
@@ -1960,6 +1835,7 @@ img {
         display: inline-flex;
     }
 
+    /* Menu tiroir latéral Mobile */
     .main-nav {
         position: fixed;
         top: 0;
@@ -1967,6 +1843,7 @@ img {
         width: 310px;
         max-width: 86vw;
         height: 100vh;
+        height: 100dvh;
         background-color: var(--joyu-white);
         border-left: 1px solid var(--border-light);
         box-shadow: -16px 0 44px rgba(0, 0, 0, 0.16);
@@ -2058,104 +1935,164 @@ img {
         border-top: 1px solid var(--border-light);
     }
 
+    .drawer-footer-mobile .btn {
+        width: 100%;
+    }
+
+    /* Hero plein écran adapté aux écrans mobiles */
     .fullscreen-hero {
-        min-height: calc(100vh - 76px);
-        padding: 40px 0;
+        min-height: calc(100vh - 74px);
+        min-height: calc(100svh - 74px);
+        padding: 36px 0;
     }
 
-    .visual-hero-media {
-        height: 290px;
+    /* Section "La méthode JoYu Science" : pas de carrousel, placement vertical compact et centré */
+    .method-panel-ivory {
+        padding: 28px 20px;
     }
 
-    /* Sur mobile, les 3 étapes de la méthode défilent horizontalement pour gagner en hauteur */
-    .method-particulier-layout {
-        grid-template-columns: 1fr;
+    .method-particulier-layout > div:first-child {
+        text-align: center;
+        width: 100%;
     }
 
     .method-3steps-flow {
         display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
+        flex-direction: column;
+        align-items: stretch;
         gap: 12px;
-        padding-bottom: 10px;
+        width: 100%;
+        overflow: visible;
     }
 
     .method-step-box {
-        flex: 0 0 82%;
-        scroll-snap-align: start;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 44px 1fr;
+        column-gap: 14px;
+        row-gap: 2px;
+        align-items: center;
+        text-align: left;
+        padding: 16px 18px;
+    }
+
+    .method-step-box .step-icon-circle {
+        grid-row: 1 / 3;
+        margin: 0;
+        width: 42px;
+        height: 42px;
+    }
+
+    .method-step-box h4 {
+        margin-bottom: 2px;
+    }
+
+    .method-step-box p {
+        margin: 0;
     }
 
     .step-flow-arrow {
         display: none;
     }
 
-    .split-2col,
-    .method-b2b-3col,
-    .christie-2col,
-    .b2b-results-banner,
-    .b2b-results-metrics,
-    .booking-bar-card.particulier-bar,
-    .booking-bar-card.b2b-bar,
-    .key-figures-grid,
-    .cards-3grid,
-    .checkout-layout,
-    .footer-grid {
+    .venn-vitruvian-wrapper {
+        margin-top: 8px;
+        padding-top: 12px;
+        border-top: 1px solid var(--border-light);
+    }
+
+    .venn-vitruvian-svg {
+        max-width: 280px;
+    }
+
+    .method-b2b-steps {
         grid-template-columns: 1fr;
     }
 
-    .cards-5grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .carousel-offer-card {
-        flex: 0 0 78%;
+        flex: 0 0 76%;
+        min-width: 240px;
     }
 
     .carousel-quote-card {
         flex: 0 0 84%;
+        min-width: 260px;
     }
 
     .carousel-nav-circle {
         display: none;
     }
 
-    .method-b2b-steps {
-        border-left: none;
-        padding-left: 0;
-        border-top: 1px solid var(--border-light);
-        padding-top: 20px;
+    .split-2col,
+    .christie-2col,
+    .key-figures-grid,
+    .cards-3grid,
+    .checkout-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
 
     .christie-photo {
-        height: 310px;
-    }
-
-    .result-metric-item {
-        border-left: none;
-        padding-left: 0;
+        height: 300px;
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 540px) {
     .container {
-        padding: 0 20px;
+        padding: 0 18px;
     }
 
-    .visual-hero-media {
-        height: 240px;
+    .home-pillars-line {
+        font-size: 0.65rem;
+        letter-spacing: 0.08em;
     }
 
-    .cards-5grid {
+    .home-pillars-line span {
+        margin: 0 4px;
+    }
+
+    .home-dual-cta {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 290px;
+        margin: 0 auto;
+    }
+
+    .home-portal-pill {
+        width: 100%;
+    }
+
+    .b2b-results-metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mini-cal-days {
+        gap: 2px;
+        font-size: 11px;
+    }
+
+    .mini-cal-days b {
+        width: 25px;
+        height: 25px;
+    }
+
+    .booking-bar-card > div:last-child,
+    .booking-bar-card > div:last-child .btn {
+        width: 100%;
+    }
+
+    .slot-selector-grid,
+    .payment-switcher,
+    .footer-grid {
         grid-template-columns: 1fr;
     }
 
-    .compact-card-media,
-    .solution-b2b-media {
-        height: 185px;
+    .checkout-box {
+        padding: 24px 18px;
     }
 
     .christie-photo {
-        height: 260px;
+        height: 250px;
     }
 }
 
