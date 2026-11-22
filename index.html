@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Playfair+Display:wght@500..700&display=swap"
         rel="stylesheet">
 </head>
 
@@ -33,11 +33,11 @@
                 <nav class="main-nav" aria-label="Navigation principale">
                     <div>
                         <div class="drawer-header-mobile">
-                            <span style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--joyu-green);">
-                                JoYu <span style="color: var(--joyu-gold); font-style: italic;">Science</span>
+                            <span style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 600; color: var(--joyu-green);">
+                                JoYu <span style="color: var(--joyu-gold);">Science</span>
                             </span>
                             <label for="mobile-menu-toggle" class="drawer-close-btn" aria-label="Fermer le menu">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M18 6L6 18M6 6l12 12" />
                                 </svg>
                             </label>
@@ -107,7 +107,7 @@
                 </div>
 
                 <label for="mobile-menu-toggle" class="burger-trigger" aria-label="Ouvrir le menu">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M3 7h18M3 12h18M3 17h18" />
                     </svg>
                 </label>
@@ -119,7 +119,7 @@
         <!-- CONTENU ACCUEIL -->
         <main class="page-view">
 
-            <!-- 1. HERO PLEIN ÉCRAN -->
+            <!-- 1. HERO PLEIN ÉCRAN (BOUTON PARTICULIERS EN VERT, ENTREPRISES EN VIOLET) -->
             <section class="fullscreen-hero">
                 <img src="assets/accueil/Hero_accueil.jpg"
                     alt="Échange naturel et souriant en terrasse ouverte sur la nature tropicale"
@@ -137,96 +137,98 @@
                     </h1>
 
                     <p class="visual-hero-sub hero-sub-accessible">
-                        Face à l’accélération du monde, à la <strong>pression</strong> et à la <strong>perte de repères</strong>, il devient essentiel de renforcer nos ressources intérieures pour mieux <strong>vivre</strong>, <strong>agir</strong> et <strong>interagir</strong>.
+                        Face à l’accélération du monde, à la <strong>pression</strong> et à la <strong>perte de repères</strong>, il devient essentiel de renforcer nos ressources intérieures pour mieux vivre, agir et interagir.
                     </p>
 
                     <div class="home-dual-cta">
-                        <a href="particuliers.html" class="btn btn-green home-portal-pill">Particuliers &rarr;</a>
-                        <a href="entreprises.html" class="btn btn-plum home-portal-pill">Entreprises &rarr;</a>
+                        <a href="particuliers.html" class="btn btn-hero-particuliers home-portal-pill">Particuliers &rarr;</a>
+                        <a href="entreprises.html" class="btn btn-hero-entreprises home-portal-pill">Entreprises &rarr;</a>
                     </div>
                 </div>
             </section>
 
-            <!-- 2. ENCADRÉ MÉTHODE JOYU SCIENCE -->
+            <!-- 2. SECTION MÉTHODE JOYU SCIENCE -->
             <section id="section-methode" class="section-pad-sm" style="padding-top: 56px;">
                 <div class="container">
                     <div class="method-panel-ivory">
-                        <div class="method-particulier-layout">
-                            <div>
-                                <div style="margin-bottom: 20px;">
-                                    <h2 class="heading-lg" style="margin-bottom: 4px;">La méthode JoYu Science</h2>
-                                    <p style="font-size: 15px; color: var(--text-body);">Et si le changement commençait de l’intérieur ?</p>
-                                </div>
+                        <div class="section-header-center" style="margin-bottom: 28px;">
+                            <span class="eyebrow-strong">Architecture intégrative</span>
+                            <h2 class="heading-lg" style="margin-bottom: 8px;">La méthode JoYu Science</h2>
+                            <p style="font-size: 15.5px; color: var(--text-dark); max-width: 780px; margin: 0 auto;">
+                                Et si le changement commençait de l’intérieur ? Face à la <strong>pression</strong>, la <strong>perte de repères</strong>, la <strong>surcharge mentale</strong>, les <strong>tensions relationnelles</strong>, le <strong>désengagement</strong> ou le <strong>turnover</strong>, notre méthode relie <strong>ressources neurocorporelles</strong> et <strong>leadership personnel</strong>.
+                            </p>
+                        </div>
 
+                        <div class="method-schema-first-layout">
+                            <div class="venn-vitruvian-wrapper" aria-label="Schéma des 3 piliers : Cerveau, Corps et Interactions">
+                                <svg class="venn-vitruvian-svg" viewBox="0 0 360 325" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="180" cy="112" r="92" fill="rgba(69, 46, 87, 0.22)" stroke="#452e57" stroke-width="1.8" />
+                                    <circle cx="122" cy="206" r="92" fill="rgba(15, 74, 56, 0.22)" stroke="#0f4a38" stroke-width="1.8" />
+                                    <circle cx="238" cy="206" r="92" fill="rgba(184, 153, 97, 0.26)" stroke="#9a7b42" stroke-width="1.8" />
+
+                                    <circle cx="180" cy="174" r="48" fill="#0f4a38" stroke="#b89961" stroke-width="2.5" />
+                                    <circle cx="180" cy="174" r="41" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1" />
+                                    <circle cx="180" cy="151" r="6" fill="#d4bc8b" />
+                                    <path d="M148 163 L180 169 L212 163 M154 154 L180 167 L206 154 M180 167 V190 M180 190 L163 212 M180 190 L197 212"
+                                        stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" fill="none" />
+
+                                    <text x="180" y="66" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#311f3f">Cerveau</text>
+                                    <text x="180" y="83" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="11.5" font-weight="600" fill="#1b2622">Neurosciences</text>
+
+                                    <text x="94" y="228" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#093124">Corps</text>
+                                    <text x="94" y="244" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="11" font-weight="600" fill="#1b2622">Ressources</text>
+                                    <text x="94" y="257" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="11" font-weight="600" fill="#1b2622">neurocorporelles</text>
+
+                                    <text x="266" y="228" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="14" font-weight="700" fill="#311f3f">Interactions</text>
+                                    <text x="266" y="244" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="11" font-weight="600" fill="#1b2622">Leadership &amp;</text>
+                                    <text x="266" y="257" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="11" font-weight="600" fill="#1b2622">communication</text>
+                                </svg>
+                            </div>
+
+                            <div>
                                 <div class="method-3steps-flow">
                                     <div class="method-step-box">
                                         <span class="step-icon-circle green">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                                 <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.54Z" />
                                                 <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.54Z" />
                                             </svg>
                                         </span>
-                                        <h4>Discerner</h4>
-                                        <p>Affiner ses perceptions et développer sa lucidité.</p>
+                                        <h4>1. Discerner</h4>
+                                        <p>Affiner ses perceptions et développer sa lucidité face à la <strong>pression</strong>.</p>
                                     </div>
 
                                     <span class="step-flow-arrow">&rarr;</span>
 
                                     <div class="method-step-box">
                                         <span class="step-icon-circle gold">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                                 <path d="M3 8c3-2 6 2 9 0s6 2 9 0M3 12c3-2 6 2 9 0s6 2 9 0M3 16c3-2 6 2 9 0s6 2 9 0" />
                                             </svg>
                                         </span>
-                                        <h4>Aligner &amp; Ancrer</h4>
-                                        <p>Mobiliser ses ressources neurocorporelles et renforcer sa présence.</p>
+                                        <h4>2. Aligner &amp; Ancrer</h4>
+                                        <p>Mobiliser ses <strong>ressources neurocorporelles</strong> et apaiser la <strong>surcharge mentale</strong>.</p>
                                     </div>
 
                                     <span class="step-flow-arrow">&rarr;</span>
 
                                     <div class="method-step-box">
                                         <span class="step-icon-circle green">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                                 <circle cx="12" cy="7" r="3" />
                                                 <circle cx="6" cy="10" r="2.2" />
                                                 <circle cx="18" cy="10" r="2.2" />
                                                 <path d="M7 19c0-2.8 2.2-5 5-5s5 2.2 5 5" />
                                             </svg>
                                         </span>
-                                        <h4>Transformer &amp; Interagir</h4>
-                                        <p>Développer son leadership personnel et son impact relationnel.</p>
+                                        <h4>3. Transformer &amp; Interagir</h4>
+                                        <p>Développer son <strong>leadership personnel</strong> et son impact relationnel.</p>
                                     </div>
                                 </div>
 
-                                <div style="text-align: center; margin-top: 22px;">
-                                    <a href="methode.html" class="btn btn-outline">Découvrir la méthode &rarr;</a>
+                                <div style="text-align: center; margin-top: 26px;">
+                                    <a href="methode.html" class="btn btn-method-highlight">Découvrir la méthode &rarr;</a>
                                 </div>
-                            </div>
-
-                            <!-- Schéma aux 3 cercles colorés chevauchants + Homme de Vitruve -->
-                            <div class="venn-vitruvian-wrapper" aria-label="Schéma des 3 piliers : Cerveau, Corps et Interactions">
-                                <svg class="venn-vitruvian-svg" viewBox="0 0 340 310" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="170" cy="106" r="88" fill="rgba(69, 46, 87, 0.14)" stroke="rgba(69, 46, 87, 0.35)" stroke-width="1.2" />
-                                    <circle cx="116" cy="196" r="88" fill="rgba(15, 74, 56, 0.16)" stroke="rgba(15, 74, 56, 0.35)" stroke-width="1.2" />
-                                    <circle cx="224" cy="196" r="88" fill="rgba(184, 153, 97, 0.18)" stroke="rgba(184, 153, 97, 0.45)" stroke-width="1.2" />
-
-                                    <circle cx="170" cy="166" r="46" fill="#0f4a38" stroke="#b89961" stroke-width="2" />
-                                    <circle cx="170" cy="166" r="40" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1" />
-                                    <circle cx="170" cy="144" r="5.5" fill="#b89961" />
-                                    <path d="M140 156 L170 161 L200 156 M146 147 L170 159 L194 147 M170 159 V181 M170 181 L154 202 M170 181 L186 202"
-                                        stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none" />
-
-                                    <text x="170" y="64" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="13" font-weight="700" fill="#452e57">Cerveau</text>
-                                    <text x="170" y="80" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="11" fill="#485450">Neurosciences</text>
-
-                                    <text x="92" y="218" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="13" font-weight="700" fill="#0f4a38">Corps</text>
-                                    <text x="92" y="233" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="10.5" fill="#485450">Ressources</text>
-                                    <text x="92" y="245" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="10.5" fill="#485450">neurocorporelles</text>
-
-                                    <text x="248" y="218" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="13" font-weight="700" fill="#452e57">Interactions</text>
-                                    <text x="248" y="233" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="10.5" fill="#485450">Leadership &amp;</text>
-                                    <text x="248" y="245" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="10.5" fill="#485450">communication</text>
-                                </svg>
                             </div>
                         </div>
                     </div>
@@ -316,6 +318,47 @@
                 </div>
             </section>
 
+            <!-- 4. SECTION : L'ACCOMPAGNEMENT JOYU SCIENCE -->
+            <section class="section-pad-sm">
+                <div class="container">
+                    <div class="method-panel-ivory" style="background: var(--joyu-cashmere);">
+                        <div class="christie-2col">
+                            <div class="christie-photo">
+                                <img src="assets/Section_Accompagnement_Christie/accueil-apropos.jpg"
+                                    alt="L’accompagnement JoYu Science"
+                                    onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=85';">
+                            </div>
+
+                            <div>
+                                <span class="eyebrow-strong">Expertise &amp; Présence</span>
+                                <h2 class="heading-lg" style="margin-bottom: 20px;">L’accompagnement JoYu Science By Christie & Co</h2>
+
+                                <ul class="christie-checklist">
+                                    <li>
+                                        <span class="check-badge-green">&#10003;</span>
+                                        <span>Plus de <strong>20 ans d’expérience</strong> dans l’accompagnement humain, enrichis par des formations en coaching, neurosciences appliquées, nutrition et pratiques neurocorporelles.</span>
+                                    </li>
+                                    <li>
+                                        <span class="check-badge-green">&#10003;</span>
+                                        <span>Une <strong>approche intégrative, perspicace et innovante</strong>, associant rigueur, intuition et compréhension profonde des mécanismes humains.</span>
+                                    </li>
+                                    <li>
+                                        <span class="check-badge-green">&#10003;</span>
+                                        <span>Une <strong>présence authentique</strong>, une écoute fine où les transformations se vivent avec une étonnante fluidité, tout en étant profondes et durables.</span>
+                                    </li>
+                                </ul>
+
+                                <div style="margin-top: 22px;">
+                                    <a href="accompagnement.html" class="text-arrow-link" style="text-decoration: none;">
+                                        En découvrir davantage &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- 5. CHIFFRES CLÉS AVEC EFFET DE RECALCUL ANIMÉ -->
             <section id="section-chiffres" class="section-pad-sm">
                 <div class="container">
@@ -347,11 +390,11 @@
                 </div>
             </section>
 
-            <!-- 6. TÉMOIGNAGES CLIENTS (ENCADRÉS DÉFILANTS HORIZONTALEMENT) -->
+            <!-- 6. TÉMOIGNAGES CLIENTS -->
             <section class="section-pad-sm">
                 <div class="container">
                     <div class="section-header-center" style="margin-bottom: 26px;">
-                        <span class="eyebrow">Retours d’expérience</span>
+                        <span class="eyebrow-strong">Retours d’expérience</span>
                         <h2 class="heading-lg">Témoignages clients</h2>
                     </div>
 
@@ -417,7 +460,7 @@
                                 </svg>
                             </span>
                             <div>
-                                <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--joyu-gold); font-weight: 600; display: block; margin-bottom: 2px;">Disponibilités en direct</span>
+                                <span style="font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--joyu-gold-light); font-weight: 700; display: block; margin-bottom: 2px;">Disponibilités en direct</span>
                                 <h3 class="heading-md" style="font-size: 1.45rem; color: var(--joyu-white);">Réservez votre expérience</h3>
                             </div>
                         </div>
@@ -462,7 +505,7 @@
                         <div class="footer-logo-box">
                             <img src="logo.svg" alt="JoYu Science" onerror="this.onerror=null;this.src='1000008343_2.jpg';">
                         </div>
-                        <p style="font-size: 14px; color: rgba(255, 255, 255, 0.82); max-width: 300px;">
+                        <p style="font-size: 14px; color: rgba(255, 255, 255, 0.9); max-width: 300px;">
                             Développer ses capacités, révéler son potentiel. Pour plus de réussite et de cohésion humaine.
                         </p>
                     </div>
@@ -491,10 +534,10 @@
 
                     <div>
                         <h4 class="footer-heading">Informations</h4>
-                        <p style="font-size: 13.5px; color: rgba(255, 255, 255, 0.8); margin-bottom: 10px;">
+                        <p style="font-size: 13.5px; color: rgba(255, 255, 255, 0.9); margin-bottom: 10px;">
                             Interventions à La Réunion, à l’Île Maurice et à distance en visioconférence.
                         </p>
-                        <p style="font-size: 13px; color: var(--joyu-gold);">
+                        <p style="font-size: 13.5px; color: var(--joyu-gold-light); font-weight: 600;">
                             Paiements sécurisés par Carte Bancaire &amp; PayPal.
                         </p>
                     </div>
