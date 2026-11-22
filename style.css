@@ -1413,6 +1413,11 @@ img {
 .check-badge-plum { background-color: var(--joyu-plum); }
 
 .calm-accordion {
+    padding-top: 14px;
+    margin-top: 8px;
+}
+
+.calm-accordion-1 {
     border-top: 1px solid var(--border-light);
     padding-top: 14px;
     margin-top: 8px;
