@@ -574,13 +574,26 @@ img {
 }
 
 .home-pillars-line {
-    font-size: 0.88rem;
+    /*font-size: 0.88rem;
     font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--joyu-gold-light);
     margin-bottom: 18px;
-    white-space: nowrap;
+    white-space: nowrap;*/
+
+    display: inline-block;
+    font-size: clamp(0.68rem, 2.8vw, 0.82rem);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--joyu-white);
+    background: rgba(9, 49, 36, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(229, 207, 158, 0.6);
+    padding: 6px 14px;
+    border-radius: var(--radius-pill);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
 }
 
 .home-pillars-line span {
