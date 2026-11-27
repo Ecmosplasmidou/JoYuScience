@@ -131,11 +131,10 @@ img {
 }
 
 .brand-logo-img {
+    height: 100px;
     width: auto;
-    height: 50px;
-    max-width: 220px;
+    max-width: 195px;
     object-fit: contain;
-    display: block;
     mix-blend-mode: multiply;
 }
 
@@ -337,11 +336,11 @@ img {
 }
 
 .section-pad {
-    padding: 88px 0;
+    padding: 112px 0;
 }
 
 .section-pad-sm {
-    padding: 38px 0;
+    padding: 64px 0;
 }
 
 .bg-ivory {
@@ -574,14 +573,6 @@ img {
 }
 
 .home-pillars-line {
-    /*font-size: 0.88rem;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--joyu-gold-light);
-    margin-bottom: 18px;
-    white-space: nowrap;*/
-
     display: inline-block;
     font-size: clamp(0.68rem, 2.8vw, 0.82rem);
     font-weight: 700;
@@ -594,6 +585,8 @@ img {
     padding: 6px 14px;
     border-radius: var(--radius-pill);
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+    margin-bottom: 18px;
+    white-space: nowrap;
 }
 
 .home-pillars-line span {
@@ -1750,68 +1743,163 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   8. PAGES BOUTIQUE (SYSTÈME DE FILTRAGE), MÉTHODE & RÉSERVATION
+   8. BOUTIQUE CONTEMPORAINE (FILTRAGE & ENCADRÉS HAUTE LISIBILITÉ)
    -------------------------------------------------------------------------- */
 .shop-filter-bar {
+    position: sticky;
+    top: 84px;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 16px;
+    margin-bottom: 42px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(223, 217, 202, 0.9);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 10px 30px -10px rgba(15, 74, 56, 0.08);
+}
+
+.filter-primary-group {
     display: flex;
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
-    padding-bottom: 24px;
-    margin-bottom: 32px;
-    border-bottom: 1px solid var(--border-light);
 }
 
 .filter-pill {
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 7px;
     padding: 9px 18px;
     border-radius: var(--radius-pill);
-    border: 1.5px solid var(--border-light);
-    background-color: var(--joyu-white);
+    border: 1px solid var(--border-light);
+    background-color: var(--joyu-cashmere);
     color: var(--text-dark);
     font-size: 13.5px;
     font-weight: 600;
+    letter-spacing: 0.01em;
     white-space: nowrap;
-    transition: var(--transition-fast);
+    transition: all 0.25s var(--ease-calm);
 }
 
 .filter-pill:hover {
     border-color: var(--joyu-gold-bright);
-    background-color: var(--joyu-ivory);
+    background-color: var(--joyu-white);
+    transform: translateY(-1px);
 }
 
-/* État actif des pilules de filtre */
+/* Menu déroulant "Par catégorie" sur Desktop */
+.shop-cat-dropdown {
+    position: relative;
+}
+
+.filter-dropdown-trigger {
+    list-style: none;
+    background-color: var(--joyu-white);
+    border-color: var(--joyu-gold-bright);
+}
+
+.filter-dropdown-trigger::-webkit-details-marker {
+    display: none;
+}
+
+.shop-cat-dropdown[open] .filter-dropdown-trigger svg {
+    transform: rotate(180deg);
+}
+
+.shop-cat-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    min-width: 260px;
+    background: var(--joyu-white);
+    border: 1px solid var(--border-light);
+    border-top: 2.5px solid var(--joyu-gold-bright);
+    border-radius: var(--radius-md);
+    box-shadow: 0 18px 42px -8px rgba(15, 74, 56, 0.16);
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 120;
+}
+
+.shop-cat-option {
+    cursor: pointer;
+    display: block;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: var(--transition-fast);
+}
+
+.shop-cat-option:hover {
+    background-color: var(--joyu-ivory);
+    color: var(--joyu-green);
+}
+
+/* États actifs Desktop (Pilules principales + Sous-menu déroulant) */
 #filter-all:checked ~ .shop-filter-bar label[for="filter-all"],
+#filter-particuliers:checked ~ .shop-filter-bar label[for="filter-particuliers"] {
+    background: linear-gradient(135deg, #0f4a38 0%, #16634b 100%);
+    border-color: var(--joyu-green);
+    color: var(--joyu-white);
+    box-shadow: 0 6px 16px rgba(15, 74, 56, 0.22);
+}
+
+#filter-entreprises:checked ~ .shop-filter-bar label[for="filter-entreprises"] {
+    background: linear-gradient(135deg, #452e57 0%, #5b3d73 100%);
+    border-color: var(--joyu-plum);
+    color: var(--joyu-white);
+    box-shadow: 0 6px 16px rgba(69, 46, 87, 0.25);
+}
+
+/* Quand une sous-catégorie du menu déroulant est active */
+#filter-ibooks:checked ~ .shop-filter-bar .filter-dropdown-trigger,
+#filter-retraites:checked ~ .shop-filter-bar .filter-dropdown-trigger,
+#filter-coaching:checked ~ .shop-filter-bar .filter-dropdown-trigger,
+#filter-ateliers:checked ~ .shop-filter-bar .filter-dropdown-trigger {
+    background: linear-gradient(135deg, #0f4a38 0%, #16634b 100%);
+    border-color: var(--joyu-green);
+    color: var(--joyu-white);
+}
+
 #filter-ibooks:checked ~ .shop-filter-bar label[for="filter-ibooks"],
 #filter-retraites:checked ~ .shop-filter-bar label[for="filter-retraites"],
 #filter-coaching:checked ~ .shop-filter-bar label[for="filter-coaching"],
 #filter-ateliers:checked ~ .shop-filter-bar label[for="filter-ateliers"] {
     background-color: var(--joyu-green);
-    border-color: var(--joyu-green);
     color: var(--joyu-white);
 }
 
-#filter-particuliers:checked ~ .shop-filter-bar label[for="filter-particuliers"] {
-    background-color: var(--joyu-green);
-    border-color: var(--joyu-green);
-    color: var(--joyu-white);
+/* Sélecteur Mobile masqué sur Desktop */
+.shop-mobile-dropdown {
+    display: none;
+    width: 100%;
 }
 
-#filter-entreprises:checked ~ .shop-filter-bar label[for="filter-entreprises"] {
-    background-color: var(--joyu-plum);
-    border-color: var(--joyu-plum);
-    color: var(--joyu-white);
-}
+/* Affichage dynamique du libellé actif dans le sélecteur mobile */
+#filter-all:checked ~ .shop-filter-bar .active-filter-name::after { content: "Tout le catalogue"; }
+#filter-particuliers:checked ~ .shop-filter-bar .active-filter-name::after { content: "Particuliers"; color: var(--joyu-green); }
+#filter-entreprises:checked ~ .shop-filter-bar .active-filter-name::after { content: "Entreprises"; color: var(--joyu-plum); }
+#filter-ibooks:checked ~ .shop-filter-bar .active-filter-name::after { content: "iBooks & JOY FOOD®"; }
+#filter-retraites:checked ~ .shop-filter-bar .active-filter-name::after { content: "Retraites & Séminaires"; }
+#filter-coaching:checked ~ .shop-filter-bar .active-filter-name::after { content: "Coaching & Formations"; }
+#filter-ateliers:checked ~ .shop-filter-bar .active-filter-name::after { content: "Ateliers & Conférences"; }
 
 .shop-category-block {
-    margin-bottom: 54px;
-    animation: calmFadeIn 0.35s var(--ease-calm);
+    margin-top: 24px;
+    margin-bottom: 92px;
+    animation: calmFadeIn 0.4s var(--ease-calm);
 }
 
-/* Logique de filtrage CSS sans JavaScript */
 #filter-particuliers:checked ~ .shop-category-block:not(.cat-particuliers),
 #filter-entreprises:checked ~ .shop-category-block:not(.cat-entreprises),
 #filter-ibooks:checked ~ .shop-category-block:not(.cat-ibooks),
@@ -1821,6 +1909,355 @@ img {
     display: none;
 }
 
+/* En-tête de section boutique */
+.shop-section-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 1.5px solid var(--border-light);
+}
+
+.shop-num-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background-color: var(--joyu-green);
+    color: var(--joyu-white);
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1.5px solid var(--joyu-gold-bright);
+}
+
+.shop-num-badge.plum {
+    background-color: var(--joyu-plum);
+}
+
+.shop-section-sub {
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--text-body);
+    margin-top: 2px;
+}
+
+/* Encadré vedette (Spotlight Card) */
+.shop-spotlight-card {
+    background: linear-gradient(155deg, #fbf9f4 0%, #f5efe0 100%);
+    border: 2px solid var(--joyu-gold-bright);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(15, 74, 56, 0.1);
+    margin-bottom: 22px;
+}
+
+.shop-spotlight-card.plum-spotlight {
+    background: linear-gradient(155deg, #fbf9fc 0%, #f3edf7 100%);
+    border-color: var(--joyu-plum);
+    box-shadow: 0 16px 40px rgba(69, 46, 87, 0.12);
+}
+
+.shop-spotlight-ribbon {
+    background-color: var(--joyu-green);
+    color: var(--joyu-gold-light);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 8px 16px;
+}
+
+.shop-spotlight-ribbon.plum {
+    background-color: var(--joyu-plum);
+    color: var(--joyu-gold-light);
+}
+
+.shop-spotlight-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: stretch;
+}
+
+.shop-spotlight-media {
+    min-height: 250px;
+    background-color: var(--joyu-cashmere);
+    overflow: hidden;
+}
+
+.shop-spotlight-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+.shop-spotlight-body {
+    padding: 30px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.shop-spotlight-footer {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Grilles et encadrés horizontaux compacts */
+.shop-2col-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.shop-cards-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.shop-row-card {
+    position: relative;
+    background-color: var(--joyu-white);
+    border: 1.5px solid var(--border-light);
+    border-radius: var(--radius-card);
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 112px 1fr auto;
+    gap: 18px;
+    align-items: center;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+.shop-row-card:hover {
+    border-color: var(--joyu-gold-bright);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.shop-row-card.highlighted-gold {
+    border: 2px solid var(--joyu-gold-bright);
+    background-color: var(--joyu-cashmere);
+}
+
+.shop-row-card.highlighted-green {
+    border: 2px solid var(--joyu-green);
+    background-color: var(--joyu-cashmere);
+}
+
+.shop-row-card.plum-card {
+    border-left: 4px solid var(--joyu-plum);
+}
+
+.shop-row-media {
+    width: 112px;
+    height: 112px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: var(--joyu-cashmere);
+}
+
+.shop-row-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+.shop-row-body {
+    min-width: 0;
+}
+
+.shop-row-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 16px;
+    border-left: 1px solid var(--border-light);
+    min-width: 155px;
+    text-align: right;
+}
+
+/* Cartes grand format (Retraites & Séminaires) */
+.shop-feature-box {
+    position: relative;
+    background-color: var(--joyu-white);
+    border: 1.5px solid var(--border-light);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+.shop-feature-box:hover {
+    border-color: var(--joyu-gold-bright);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.shop-feature-box.plum-box {
+    border-top: 4px solid var(--joyu-plum);
+}
+
+.shop-feature-media {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.shop-feature-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+.shop-feature-body {
+    padding: 26px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.shop-feature-footer {
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+/* Badges, Titres, Prix & Boutons haute lisibilité */
+.shop-corner-badge {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    z-index: 2;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: var(--radius-pill);
+}
+
+.shop-corner-badge.gold {
+    background-color: var(--joyu-gold-light);
+    color: #141f1b;
+    border: 1px solid var(--joyu-gold-bright);
+}
+
+.shop-corner-badge.green {
+    background-color: var(--joyu-green);
+    color: var(--joyu-white);
+}
+
+.shop-corner-badge.plum {
+    background-color: var(--joyu-plum);
+    color: var(--joyu-white);
+}
+
+.shop-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.shop-tag.green { color: var(--joyu-green); }
+.shop-tag.plum { color: var(--joyu-plum); }
+
+.shop-card-title {
+    font-family: var(--font-heading);
+    font-size: 1.24rem;
+    font-weight: 700;
+    line-height: 1.28;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.shop-card-title-lg {
+    font-family: var(--font-heading);
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--joyu-green);
+    margin-bottom: 10px;
+}
+
+.plum-text {
+    color: var(--joyu-plum) !important;
+}
+
+.shop-card-desc {
+    font-size: 15px;
+    line-height: 1.58;
+    color: var(--text-dark);
+}
+
+.shop-price-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-price-value {
+    font-family: var(--font-heading);
+    font-size: 1.65rem;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--joyu-green);
+}
+
+.shop-price-meta {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-body);
+    margin-top: 2px;
+}
+
+.shop-btn-lg {
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.shop-btn-md {
+    padding: 12px 24px;
+    font-size: 14.5px;
+    font-weight: 700;
+}
+
+.shop-btn-sm {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   8B. BOUTIQUE CLASSIQUE, BANNIÈRES & RÉSERVATION (CHECKOUT)
+   -------------------------------------------------------------------------- */
 .page-banner {
     background: var(--joyu-calm-banner);
     border-bottom: 1px solid var(--border-light);
@@ -2051,11 +2488,12 @@ img {
     border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 
-.footer-logo-box {
-    display: inline-block;
-    background-color: var(--joyu-white);
-    padding: 10px 18px;
-    border-radius: var(--radius-md);
+.site-footer .footer-grid > div:first-child img,
+.footer-logo-box img {
+    height: 48px;
+    width: auto;
+    max-width: 210px;
+    object-fit: contain;
     margin-bottom: 16px;
 }
 
@@ -2103,7 +2541,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   10. RESPONSIVE TABLETTE (<= 1024PX) & MOBILE (<= 860PX / 540PX)
+   10. RESPONSIVE TABLETTE (<= 1024PX) & MOBILE (<= 860PX / 540PX / 420PX)
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
     .container {
@@ -2227,10 +2665,6 @@ img {
     .header-inner {
         height: 74px;
         padding: 0 20px;
-    }
-
-    .brand-logo-img {
-        height: 44px;
     }
 
     .header-cta-wrap {
@@ -2415,14 +2849,6 @@ img {
         grid-template-columns: 1fr;
     }
 
-    /* Barre de filtres boutique défilante horizontalement sur mobile */
-    .shop-filter-bar {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 14px;
-    }
-
     .carousel-offer-card {
         flex: 0 0 76%;
         min-width: 240px;
@@ -2449,6 +2875,239 @@ img {
 
     .christie-photo {
         height: 300px;
+    }
+
+    /* --- BOUTIQUE SUR MOBILE & TABLETTE (<= 860PX) --- */
+    .boutique-filter-shell,
+    .shop-category-block {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+/* Respiration harmonieuse des sections sur mobile */
+    .section-pad {
+        padding: 76px 0;
+    }
+
+    .section-pad-sm {
+        padding: 46px 0;
+    }
+
+    .shop-category-block {
+        margin-top: 12px;
+        margin-bottom: 64px;
+    }
+
+    /* Barre de filtres remontée et détachée de la première carte sur mobile */
+    .boutique-filter-shell {
+        padding-top: 0;
+        margin-top: -14px;
+    }
+
+    .shop-filter-bar {
+        position: relative;
+        top: auto;
+        z-index: 20;
+        padding: 10px 12px;
+        margin-bottom: 34px;
+        border-radius: var(--radius-md);
+        display: block;
+    }
+
+    .filter-primary-group,
+    .shop-cat-dropdown {
+        display: none;
+    }
+
+    .shop-mobile-dropdown {
+        display: block;
+        width: 100%;
+    }
+
+    .shop-mobile-trigger {
+        list-style: none;
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 10px 14px;
+        background-color: var(--joyu-cashmere);
+        border: 1.5px solid var(--joyu-gold-bright);
+        border-radius: var(--radius-sm);
+        font-size: 14px;
+        color: var(--text-dark);
+    }
+
+    .shop-mobile-trigger::-webkit-details-marker {
+        display: none;
+    }
+
+    .mobile-filter-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--joyu-green);
+    }
+
+    .mobile-filter-status span {
+        font-weight: 600;
+        color: var(--text-muted);
+    }
+
+    .shop-mobile-dropdown[open] .mobile-chev {
+        transform: rotate(180deg);
+    }
+
+    .shop-mobile-menu {
+        margin-top: 8px;
+        padding: 8px;
+        background-color: var(--joyu-white);
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-sm);
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .mobile-filter-sep {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--joyu-gold);
+        padding: 8px 12px 4px;
+    }
+
+    .mobile-filter-opt {
+        cursor: pointer;
+        display: block;
+        padding: 10px 12px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-dark);
+    }
+
+    .mobile-filter-opt.green-opt { color: var(--joyu-green); }
+    .mobile-filter-opt.plum-opt { color: var(--joyu-plum); }
+
+    #filter-all:checked ~ .shop-filter-bar .mobile-filter-opt[for="filter-all"],
+    #filter-particuliers:checked ~ .shop-filter-bar .mobile-filter-opt[for="filter-particuliers"],
+    #filter-ibooks:checked ~ .shop-filter-bar .mobile-filter-opt[for="filter-ibooks"],
+    #filter-retraites:checked ~ .shop-filter-bar .mobile-filter-opt[for="filter-retraites"],
+    #filter-coaching:checked ~ .shop-filter-bar .mobile-filter-opt[for="filter-coaching"],
+    #filter-ateliers:checked ~ .shop-filter-bar .mobile-filter-opt[for="filter-ateliers"] {
+        background-color: var(--joyu-green);
+        color: var(--joyu-white);
+    }
+
+    #filter-entreprises:checked ~ .shop-filter-bar .mobile-filter-opt[for="filter-entreprises"] {
+        background-color: var(--joyu-plum);
+        color: var(--joyu-white);
+    }
+
+    /* Grilles et encadrés boutique alignés proprement sans débordement à droite */
+    .shop-spotlight-grid,
+    .shop-2col-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        width: 100%;
+    }
+
+    .shop-spotlight-media {
+        width: 100%;
+        height: 210px;
+        min-height: 210px;
+    }
+
+    .shop-spotlight-media img,
+    .shop-feature-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 25%;
+    }
+
+    .shop-spotlight-body {
+        padding: 22px 18px;
+    }
+
+    /* Passage des .shop-row-card (y compris .plum-card) en carte verticale harmonieuse */
+    .shop-row-card,
+    .shop-row-card.plum-card {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .shop-row-media {
+        width: 100%;
+        height: 185px;
+        border-radius: 0;
+        flex-shrink: 0;
+    }
+
+    .shop-row-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 25%;
+    }
+
+    .shop-row-body {
+        padding: 18px 18px 14px;
+        width: 100%;
+        min-width: 0;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    .shop-row-card .shop-corner-badge {
+        top: 12px;
+        right: 12px;
+    }
+
+    .shop-row-action,
+    .shop-spotlight-footer,
+    .shop-feature-footer {
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        border-left: none;
+        border-top: 1px solid var(--border-light);
+        padding: 14px 18px 18px;
+        margin-top: auto;
+        text-align: left;
+    }
+
+    .shop-spotlight-footer,
+    .shop-feature-footer {
+        padding: 16px 0 0;
+    }
+
+    .shop-price-value {
+        font-size: 1.48rem;
+    }
+
+    .shop-btn-lg,
+    .shop-btn-md,
+    .shop-btn-sm {
+        padding: 11px 18px;
+        font-size: 13.5px;
+        flex-shrink: 0;
     }
 }
 
@@ -2514,6 +3173,23 @@ img {
 
     .christie-photo {
         height: 250px;
+    }
+}
+
+@media (max-width: 420px) {
+    .shop-row-action,
+    .shop-spotlight-footer,
+    .shop-feature-footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .shop-row-action .btn,
+    .shop-spotlight-footer .btn,
+    .shop-feature-footer .btn {
+        width: 100%;
+        text-align: center;
     }
 }
 

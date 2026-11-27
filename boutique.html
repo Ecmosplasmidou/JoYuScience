@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boutique &amp; Éditions JOY FOOD® — JoYu Science</title>
-    <meta name="description"content="Catalogue complet JoYu Science : iBooks Joy Food®, Retraites JoYu Premium, Formations en ligne, JoYu Innov Coaching, Breathwork, Formations professionnelles et Séminaires.">
+    <meta name="description"
+        content="Boutique officielle JoYu Science : iBooks Joy Food®, Retraites JoYu Premium, Formations en ligne, JoYu Innov Coaching, Breathwork, Formations professionnelles et Séminaires.">
 
     <link rel="icon" type="image/svg+xml" href="assets/Logo-svg/favicon.svg">
     <link rel="stylesheet" href="style.css">
@@ -27,7 +28,7 @@
             <div class="header-inner">
                 <a href="index.html" class="brand-logo-link" title="JoYu Science — Accueil">
                     <img src="logo.svg" alt="JoYu Science — Neuroscience • Leadership • Corps • Esprit"
-                        class="brand-logo-img" onerror="this.onerror=null;this.src='1000008343_2.jpg';">
+                        class="brand-logo-img brand-logo-desktop">
                 </a>
 
                 <nav class="main-nav" aria-label="Navigation principale">
@@ -54,21 +55,21 @@
                                 <a href="entreprises.html" class="nav-link nav-link-entreprises">Entreprises</a>
                             </li>
                             <li class="nav-item nav-item-dropdown">
-                                <span class="nav-link">
+                                <a href="boutique.html" class="nav-link">
                                     Offres
                                     <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2">
                                         <path d="M6 9l6 6 6-6" />
                                     </svg>
-                                </span>
+                                </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="particuliers.html" class="dropdown-link">
+                                        <a href="particuliers.html#section-offres-particuliers" class="dropdown-link">
                                             <span class="dropdown-title">Accompagnements &amp; Retraites</span>
                                             <span class="dropdown-sub">Packages JoYu Coaching, Retraites, Breathwork</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="entreprises.html" class="dropdown-link plum-item">
+                                        <a href="entreprises.html#section-solutions-b2b" class="dropdown-link plum-item">
                                             <span class="dropdown-title">Solutions Entreprises</span>
                                             <span class="dropdown-sub">Formations, Team Building, Séminaires &amp; QVT</span>
                                         </a>
@@ -119,23 +120,25 @@
             <label for="mobile-menu-toggle" class="mobile-backdrop" aria-label="Fermer le menu"></label>
         </header>
 
-        <!-- CONTENU BOUTIQUE AVEC FILTRAGE -->
+        <!-- CONTENU BOUTIQUE LUMINEUSE & STRUCTURÉE -->
         <main class="page-view">
-            <section class="page-banner" style="padding-bottom: 44px;">
+
+            <!-- BANNIÈRE D'ENTRÉE -->
+            <section class="page-banner" style="padding: 56px 0 42px;">
                 <div class="container">
-                    <span class="eyebrow-strong">Boutique &amp; Ressources</span>
+                    <span class="eyebrow-strong">Boutique Officielle &amp; Ressources</span>
                     <h1 class="heading-xl">Boutique JoYu Science &amp; Éditions <span style="color: var(--joyu-gold);">JOY FOOD®</span></h1>
                     <div class="gold-divider"></div>
-                    <p style="max-width: 720px; color: var(--text-dark); font-size: 1.06rem;">
-                        Filtrez par univers ou catégorie pour accéder directement aux iBooks, retraites immersives, formations, accompagnements et ateliers.
+                    <p style="max-width: 740px; color: var(--text-dark); font-size: 1.08rem; line-height: 1.7;">
+                        Des ressources claires et immédiatement accessibles pour nourrir votre vitalité, affiner votre leadership personnel et accompagner vos équipes.
                     </p>
                 </div>
             </section>
 
-            <section class="section-pad-sm" style="padding-top: 36px; padding-bottom: 92px;">
+            <section class="section-pad-sm" style="padding-top: 32px; padding-bottom: 92px;">
                 <div class="container boutique-filter-shell">
 
-                    <!-- États radio du filtre CSS -->
+                    <!-- États radio du filtrage -->
                     <input type="radio" name="shop-filter" id="filter-all" class="css-state-input" checked>
                     <input type="radio" name="shop-filter" id="filter-particuliers" class="css-state-input">
                     <input type="radio" name="shop-filter" id="filter-entreprises" class="css-state-input">
@@ -144,597 +147,763 @@
                     <input type="radio" name="shop-filter" id="filter-coaching" class="css-state-input">
                     <input type="radio" name="shop-filter" id="filter-ateliers" class="css-state-input">
 
-                    <!-- Barre de filtres interactive -->
+                    <!-- Barre de filtres hybride : Accès directs + Menu déroulant Catégories (Desktop) & Accordéon sélecteur (Mobile) -->
                     <div class="shop-filter-bar" role="tablist" aria-label="Filtrer les offres de la boutique">
-                        <label for="filter-all" class="filter-pill">Tout le catalogue</label>
-                        <label for="filter-particuliers" class="filter-pill green-pill">Particuliers</label>
-                        <label for="filter-entreprises" class="filter-pill plum-pill">Entreprises</label>
-                        <label for="filter-ibooks" class="filter-pill">iBooks &amp; <span style="color: var(--joyu-gold); font-weight: 700;">JOY FOOD®</span></label>
-                        <label for="filter-retraites" class="filter-pill">Retraites &amp; Séminaires</label>
-                        <label for="filter-coaching" class="filter-pill">Coaching &amp; Formations</label>
-                        <label for="filter-ateliers" class="filter-pill">Ateliers &amp; Conférences</label>
+
+                        <!-- 1. Filtres principaux toujours visibles sur Desktop -->
+                        <div class="filter-primary-group">
+                            <label for="filter-all" class="filter-pill">Tout le catalogue</label>
+                            <label for="filter-particuliers" class="filter-pill green-pill">Particuliers</label>
+                            <label for="filter-entreprises" class="filter-pill plum-pill">Entreprises</label>
+                        </div>
+
+                        <!-- 2. Menu déroulant "Par catégorie" sur Desktop -->
+                        <details class="shop-cat-dropdown">
+                            <summary class="filter-pill filter-dropdown-trigger">
+                                <span>Par catégorie</span>
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </summary>
+                            <div class="shop-cat-menu">
+                                <label for="filter-ibooks" class="shop-cat-option">iBooks &amp; <strong style="color: var(--joyu-gold);">JOY FOOD®</strong></label>
+                                <label for="filter-retraites" class="shop-cat-option">Retraites &amp; Séminaires</label>
+                                <label for="filter-coaching" class="shop-cat-option">Coaching &amp; Formations</label>
+                                <label for="filter-ateliers" class="shop-cat-option">Ateliers &amp; Conférences</label>
+                            </div>
+                        </details>
+
+                        <!-- 3. Sélecteur déroulant complet optimisé pour Mobile (<= 860px) -->
+                        <details class="shop-mobile-dropdown">
+                            <summary class="shop-mobile-trigger">
+                                <span class="mobile-filter-status">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                        <path d="M4 6h16M7 12h10M10 18h4" />
+                                    </svg>
+                                    <span>Filtrer :</span>
+                                    <strong class="active-filter-name"></strong>
+                                </span>
+                                <svg class="mobile-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </summary>
+
+                            <div class="shop-mobile-menu">
+                                <label for="filter-all" class="mobile-filter-opt">Tout le catalogue</label>
+                                <label for="filter-particuliers" class="mobile-filter-opt green-opt">Univers Particuliers</label>
+                                <label for="filter-entreprises" class="mobile-filter-opt plum-opt">Univers Entreprises</label>
+                                <div class="mobile-filter-sep">Par thématique</div>
+                                <label for="filter-ibooks" class="mobile-filter-opt">iBooks &amp; <span style="color: var(--joyu-gold); font-weight: 700;">JOY FOOD®</span></label>
+                                <label for="filter-retraites" class="mobile-filter-opt">Retraites &amp; Séminaires</label>
+                                <label for="filter-coaching" class="mobile-filter-opt">Coaching &amp; Formations</label>
+                                <label for="filter-ateliers" class="mobile-filter-opt">Ateliers &amp; Conférences</label>
+                            </div>
+                        </details>
+
                     </div>
 
-                    <!-- 1. iBooks -->
+                    <!-- =========================================================
+                         1. IBOOKS
+                         ========================================================= -->
                     <div class="shop-category-block cat-particuliers cat-ibooks">
-                        <h2 class="heading-lg" style="margin-bottom: 8px;">1. iBooks</h2>
-                        <div class="gold-divider"></div>
+                        <div class="shop-section-head">
+                            <span class="shop-num-badge">01</span>
+                            <div>
+                                <h2 class="heading-lg">iBooks &amp; Guides Numériques</h2>
+                                <p class="shop-section-sub">Accès immédiat par téléchargement &bull; Lecture libre sur tous vos écrans</p>
+                            </div>
+                        </div>
 
-                        <div class="cards-3grid" style="margin-top: 24px;">
-                            <article class="offer-card highlighted">
-                                <img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?auto=format&fit=crop&w=800&q=85"
-                                    alt="70 Clés Healthy Joy Food">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">iBook <span style="color: var(--joyu-gold);">JOY FOOD®</span> &bull; Lecture libre</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">70 Clés Healthy <span style="color: var(--joyu-gold);">Joy Food®</span></h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Nutrition, silhouette, vitalité : 70 recettes de jus frais, principes d’alimentation vivante et rituels quotidiens.
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <div class="offer-price">29,96 € <small>TTC &bull; Lecture libre</small></div>
-                                        <a href="reservation.html" class="btn btn-green">Commander &rarr;</a>
+                        <article class="shop-spotlight-card">
+                            <div class="shop-spotlight-ribbon">Édition Phare &bull; Accès immédiat</div>
+                            <div class="shop-spotlight-grid">
+                                <div class="shop-spotlight-media">
+                                    <img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?auto=format&fit=crop&w=800&q=85"
+                                        alt="70 Clés Healthy Joy Food">
+                                </div>
+                                <div class="shop-spotlight-body">
+                                    <span class="shop-tag green">iBook <span style="color: var(--joyu-gold);">JOY FOOD®</span> &bull; Lecture libre</span>
+                                    <h3 class="shop-card-title-lg">70 Clés Healthy <span style="color: var(--joyu-gold);">Joy Food®</span></h3>
+                                    <p class="shop-card-desc">
+                                        Nutrition, silhouette, vitalité : 70 recettes de jus frais, principes d’alimentation vivante et rituels quotidiens pour soutenir votre énergie physique et mentale.
+                                    </p>
+                                    <div class="shop-spotlight-footer">
+                                        <div class="shop-price-block">
+                                            <span class="shop-price-value">29,96 €</span>
+                                            <span class="shop-price-meta">TTC &bull; Lecture libre</span>
+                                        </div>
+                                        <a href="reservation.html" class="btn btn-green shop-btn-lg">Commander l’iBook &rarr;</a>
                                     </div>
                                 </div>
-                            </article>
+                            </div>
+                        </article>
 
-                            <article class="offer-card">
-                                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=85"
-                                    alt="Autres iBooks Bien-être">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">iBook &bull; Lecture libre</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">Autres iBooks Bien-être</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Bien-être, leadership, développement personnel : guides pratiques numériques pour nourrir votre évolution au quotidien.
-                                        </p>
+                        <div class="shop-cards-stack">
+                            <article class="shop-row-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=85"
+                                        alt="Autres iBooks Bien-être">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag green">iBook &bull; Lecture libre</span>
+                                    <h3 class="shop-card-title">Autres iBooks Bien-être &amp; Leadership</h3>
+                                    <p class="shop-card-desc">
+                                        Bien-être, leadership, développement personnel : guides pratiques numériques pour nourrir votre clarté au quotidien.
+                                    </p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value">19,97 €</span>
+                                        <span class="shop-price-meta">TTC &bull; Lecture libre</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price">19,97 € <small>TTC &bull; Lecture libre</small></div>
-                                        <a href="reservation.html" class="btn btn-green">Commander &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-outline shop-btn-md">Commander &rarr;</a>
                                 </div>
                             </article>
                         </div>
                     </div>
 
-                    <!-- 2. Retraites JoYu Premium -->
+                    <!-- =========================================================
+                         2. RETRAITES JOYU PREMIUM
+                         ========================================================= -->
                     <div class="shop-category-block cat-particuliers cat-retraites">
-                        <h2 class="heading-lg" style="margin-bottom: 8px;">2. Retraites JoYu Premium</h2>
-                        <div class="gold-divider"></div>
+                        <div class="shop-section-head">
+                            <span class="shop-num-badge">02</span>
+                            <div>
+                                <h2 class="heading-lg">Retraites JoYu Premium</h2>
+                                <p class="shop-section-sub">Immersions de 7 jours &bull; Régénération, respiration et alignement</p>
+                            </div>
+                        </div>
 
-                        <div class="cards-3grid" style="margin-top: 24px;">
-                            <article class="offer-card highlighted">
-                                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=85"
-                                    alt="JoYu Reset">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">Retraite &bull; 7 jours</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">JoYu Reset</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Jeûne au jus, respiration, bains sonores, vitalité : une immersion complète pour régénérer le corps et apaiser l’esprit.
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <div class="offer-price">1 520 € <small>TTC &bull; 7 jours</small></div>
-                                        <a href="reservation.html" class="btn btn-green">Réserver &rarr;</a>
+                        <div class="shop-2col-grid">
+                            <article class="shop-feature-box">
+                                <span class="shop-corner-badge gold">Immersion 7 jours</span>
+                                <div class="shop-feature-media">
+                                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=85"
+                                        alt="JoYu Reset">
+                                </div>
+                                <div class="shop-feature-body">
+                                    <span class="shop-tag green">Retraite Vitalité &bull; 7 jours</span>
+                                    <h3 class="shop-card-title-lg">JoYu Reset</h3>
+                                    <p class="shop-card-desc">
+                                        Jeûne au jus, respiration, bains sonores, vitalité : une immersion complète pour régénérer le corps et apaiser l’esprit.
+                                    </p>
+                                    <div class="shop-feature-footer">
+                                        <div class="shop-price-block">
+                                            <span class="shop-price-value">1 520 €</span>
+                                            <span class="shop-price-meta">TTC &bull; 7 jours</span>
+                                        </div>
+                                        <a href="reservation.html" class="btn btn-green shop-btn-md">Réserver &rarr;</a>
                                     </div>
                                 </div>
                             </article>
 
-                            <article class="offer-card">
-                                <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=800&q=85"
-                                    alt="JoYu Core Énergie">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">Retraite &bull; 7 jours</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">JoYu Core Énergie</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Force vitale, énergie créatrice, alignement, rayonnement : réveillez votre potentiel et votre présence intérieure.
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <div class="offer-price">1 520 € <small>TTC &bull; 7 jours</small></div>
-                                        <a href="reservation.html" class="btn btn-green">Réserver &rarr;</a>
+                            <article class="shop-feature-box">
+                                <span class="shop-corner-badge green">Alignement 7 jours</span>
+                                <div class="shop-feature-media">
+                                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=800&q=85"
+                                        alt="JoYu Core Énergie">
+                                </div>
+                                <div class="shop-feature-body">
+                                    <span class="shop-tag green">Retraite Présence &bull; 7 jours</span>
+                                    <h3 class="shop-card-title-lg">JoYu Core Énergie</h3>
+                                    <p class="shop-card-desc">
+                                        Force vitale, énergie créatrice, alignement, rayonnement : réveillez votre potentiel et votre présence intérieure.
+                                    </p>
+                                    <div class="shop-feature-footer">
+                                        <div class="shop-price-block">
+                                            <span class="shop-price-value">1 520 €</span>
+                                            <span class="shop-price-meta">TTC &bull; 7 jours</span>
+                                        </div>
+                                        <a href="reservation.html" class="btn btn-green shop-btn-md">Réserver &rarr;</a>
                                     </div>
                                 </div>
                             </article>
                         </div>
                     </div>
 
-                    <!-- 3. Formations en ligne JoYu Science -->
+                    <!-- =========================================================
+                         3. FORMATIONS EN LIGNE JOYU SCIENCE
+                         ========================================================= -->
                     <div class="shop-category-block cat-particuliers cat-coaching">
-                        <h2 class="heading-lg" style="margin-bottom: 8px;">3. Formations en ligne JoYu Science</h2>
-                        <div class="gold-divider"></div>
+                        <div class="shop-section-head">
+                            <span class="shop-num-badge">03</span>
+                            <div>
+                                <h2 class="heading-lg">Formations en ligne JoYu Science</h2>
+                                <p class="shop-section-sub">Quatre parcours progressifs pour ancrer la méthode à votre rythme</p>
+                            </div>
+                        </div>
 
-                        <div class="cards-3grid" style="margin-top: 24px;">
-                            <article class="offer-card">
-                                <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=800&q=85"
-                                    alt="JoYu Découverte">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">Programme en ligne &bull; 4 semaines</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">JoYu Découverte</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Initiation, outils pratiques pour poser les bases de votre alignement au quotidien.
-                                        </p>
+                        <div class="shop-2col-grid">
+                            <article class="shop-row-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=600&q=85"
+                                        alt="JoYu Découverte">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag green">Programme &bull; 4 semaines</span>
+                                    <h3 class="shop-card-title">JoYu Découverte</h3>
+                                    <p class="shop-card-desc">Initiation, outils pratiques pour poser les bases de votre alignement au quotidien.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value">269 €</span>
+                                        <span class="shop-price-meta">TTC &bull; 4 semaines</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price">269 € <small>TTC &bull; 4 semaines</small></div>
-                                        <a href="reservation.html" class="btn btn-green">S’inscrire &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-green shop-btn-sm">S’inscrire &rarr;</a>
                                 </div>
                             </article>
 
-                            <article class="offer-card">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=85"
-                                    alt="JoYu Évolution">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">Programme en ligne &bull; 2 mois</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">JoYu Évolution</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Leadership personnel, alignement et consolidation de vos ressources intérieures.
-                                        </p>
+                            <article class="shop-row-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=85"
+                                        alt="JoYu Évolution">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag green">Programme &bull; 2 mois</span>
+                                    <h3 class="shop-card-title">JoYu Évolution</h3>
+                                    <p class="shop-card-desc">Leadership personnel, alignement et consolidation de vos ressources intérieures.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value">548 €</span>
+                                        <span class="shop-price-meta">TTC &bull; 2 mois</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price">548 € <small>TTC &bull; 2 mois</small></div>
-                                        <a href="reservation.html" class="btn btn-green">S’inscrire &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-green shop-btn-sm">S’inscrire &rarr;</a>
                                 </div>
                             </article>
 
-                            <article class="offer-card highlighted">
-                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=85"
-                                    alt="JoYu Transformation">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">Programme en ligne &bull; 4 mois</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">JoYu Transformation</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Méthode complète, suivi collectif pour ancrer durablement de nouvelles postures.
-                                        </p>
+                            <article class="shop-row-card highlighted-gold">
+                                <span class="shop-corner-badge gold">Méthode complète</span>
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=85"
+                                        alt="JoYu Transformation">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag green">Programme &bull; 4 mois</span>
+                                    <h3 class="shop-card-title">JoYu Transformation</h3>
+                                    <p class="shop-card-desc">Méthode complète, suivi collectif pour ancrer durablement de nouvelles postures.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value">998 €</span>
+                                        <span class="shop-price-meta">TTC &bull; 4 mois</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price">998 € <small>TTC &bull; 4 mois</small></div>
-                                        <a href="reservation.html" class="btn btn-green">S’inscrire &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-green shop-btn-sm">S’inscrire &rarr;</a>
                                 </div>
                             </article>
 
-                            <article class="offer-card">
-                                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=85"
-                                    alt="JoYu Premium">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">Programme en ligne &bull; 6 mois</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">JoYu Premium</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Transformation approfondie, suivi individuel sur mesure sur six mois.
-                                        </p>
+                            <article class="shop-row-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=85"
+                                        alt="JoYu Premium">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag green">Programme &bull; 6 mois</span>
+                                    <h3 class="shop-card-title">JoYu Premium</h3>
+                                    <p class="shop-card-desc">Transformation approfondie, suivi individuel sur mesure sur six mois.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value">2 600 €</span>
+                                        <span class="shop-price-meta">TTC &bull; 6 mois</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price">2 600 € <small>TTC &bull; 6 mois</small></div>
-                                        <a href="reservation.html" class="btn btn-green">S’inscrire &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-green shop-btn-sm">S’inscrire &rarr;</a>
                                 </div>
                             </article>
                         </div>
                     </div>
 
-                    <!-- 4. JoYu Innov Coaching -->
+                    <!-- =========================================================
+                         4. JOYU INNOV COACHING
+                         ========================================================= -->
                     <div class="shop-category-block cat-particuliers cat-coaching">
-                        <h2 class="heading-lg" style="margin-bottom: 8px;">4. JoYu Innov Coaching</h2>
-                        <div class="gold-divider"></div>
+                        <div class="shop-section-head">
+                            <span class="shop-num-badge">04</span>
+                            <div>
+                                <h2 class="heading-lg">JoYu Innov Coaching</h2>
+                                <p class="shop-section-sub">Accompagnement individuel sur mesure &bull; En visioconférence ou présentiel</p>
+                            </div>
+                        </div>
 
-                        <div class="cards-3grid" style="margin-top: 24px;">
-                            <article class="offer-card highlighted">
-                                <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=800&q=85"
-                                    alt="Séance découverte">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">Coaching individuel &bull; 1 h*</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">Séance découverte</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Bilan des besoins et objectifs pour définir votre feuille de route personnalisée.
-                                        </p>
+                        <div class="shop-2col-grid">
+                            <article class="shop-row-card highlighted-green">
+                                <span class="shop-corner-badge green">Premier pas</span>
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=600&q=85"
+                                        alt="Séance découverte">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag green">Individuel &bull; 1 h*</span>
+                                    <h3 class="shop-card-title">Séance découverte</h3>
+                                    <p class="shop-card-desc">Bilan des besoins et objectifs pour définir votre feuille de route personnalisée.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value">89 €</span>
+                                        <span class="shop-price-meta">TTC &bull; 1 h*</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price">89 € <small>TTC &bull; 1 h*</small></div>
-                                        <a href="reservation.html" class="btn btn-green">Réserver &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-green shop-btn-sm">Réserver &rarr;</a>
                                 </div>
                             </article>
 
-                            <article class="offer-card">
-                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=85"
-                                    alt="Coaching individuel">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">Coaching individuel &bull; 1 h à 1 h 30</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">Coaching individuel</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Clarté, leadership, alignement : séance dédiée à votre évolution personnelle et relationnelle.
-                                        </p>
+                            <article class="shop-row-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=85"
+                                        alt="Coaching individuel">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag green">Individuel &bull; 1 h à 1 h 30</span>
+                                    <h3 class="shop-card-title">Coaching individuel</h3>
+                                    <p class="shop-card-desc">Clarté, leadership, alignement : séance dédiée à votre évolution personnelle et relationnelle.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value">125 €</span>
+                                        <span class="shop-price-meta">TTC &bull; 1 h à 1 h 30</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price">125 € <small>TTC &bull; 1 h à 1 h 30</small></div>
-                                        <a href="reservation.html" class="btn btn-green">Réserver &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-green shop-btn-sm">Réserver &rarr;</a>
                                 </div>
                             </article>
 
-                            <article class="offer-card">
-                                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=85"
-                                    alt="Package coaching 5 séances">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">Forfait &bull; 5 séances</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">Package coaching</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Accompagnement personnalisé sur 5 séances pour ancrer vos nouvelles ressources.
-                                        </p>
+                            <article class="shop-row-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&q=85"
+                                        alt="Package coaching 5 séances">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag green">Forfait &bull; 5 séances</span>
+                                    <h3 class="shop-card-title">Package coaching</h3>
+                                    <p class="shop-card-desc">Accompagnement personnalisé sur 5 séances pour ancrer vos nouvelles ressources.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value">548 €</span>
+                                        <span class="shop-price-meta">TTC &bull; 5 séances</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price">548 € <small>TTC &bull; 5 séances</small></div>
-                                        <a href="reservation.html" class="btn btn-green">Réserver &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-green shop-btn-sm">Réserver &rarr;</a>
                                 </div>
                             </article>
 
-                            <article class="offer-card">
-                                <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=85"
-                                    alt="Package approfondi 10 séances">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">Forfait &bull; 10 séances</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">Package approfondi</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Transformation durable sur 10 séances pour un déploiement complet de votre leadership.
-                                        </p>
+                            <article class="shop-row-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=85"
+                                        alt="Package approfondi 10 séances">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag green">Forfait &bull; 10 séances</span>
+                                    <h3 class="shop-card-title">Package approfondi</h3>
+                                    <p class="shop-card-desc">Transformation durable sur 10 séances pour un déploiement complet de votre leadership.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value">998 €</span>
+                                        <span class="shop-price-meta">TTC &bull; 10 séances</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price">998 € <small>TTC &bull; 10 séances</small></div>
-                                        <a href="reservation.html" class="btn btn-green">Réserver &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-green shop-btn-sm">Réserver &rarr;</a>
                                 </div>
                             </article>
                         </div>
                     </div>
 
-                    <!-- 5. Breathwork, Force Vitale & Kundalini -->
+                    <!-- =========================================================
+                         5. BREATHWORK, FORCE VITALE & KUNDALINI
+                         ========================================================= -->
                     <div class="shop-category-block cat-particuliers cat-ateliers">
-                        <h2 class="heading-lg" style="margin-bottom: 8px;">5. Breathwork, Force Vitale &amp; Kundalini</h2>
-                        <div class="gold-divider"></div>
+                        <div class="shop-section-head">
+                            <span class="shop-num-badge">05</span>
+                            <div>
+                                <h2 class="heading-lg">Breathwork, Force Vitale &amp; Kundalini</h2>
+                                <p class="shop-section-sub">Pratiques neurocorporelles &bull; Régulation du système nerveux et vitalité</p>
+                            </div>
+                        </div>
 
-                        <div class="cards-3grid" style="margin-top: 24px;">
-                            <article class="offer-card">
-                                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=85"
-                                    alt="Séance individuelle Breathwork">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">Pratique neurocorporelle &bull; 1 h 30*</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">Séance individuelle</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Respiration, régulation, énergie : libération des tensions et rééquilibrage du système nerveux.
-                                        </p>
+                        <div class="shop-2col-grid">
+                            <article class="shop-row-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=85"
+                                        alt="Séance individuelle Breathwork">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag green">Individuel &bull; 1 h 30*</span>
+                                    <h3 class="shop-card-title">Séance individuelle</h3>
+                                    <p class="shop-card-desc">Respiration, régulation, énergie : libération des tensions et rééquilibrage profond.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value">125 €</span>
+                                        <span class="shop-price-meta">TTC &bull; 1 h 30*</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price">125 € <small>TTC &bull; 1 h 30*</small></div>
-                                        <a href="reservation.html" class="btn btn-green">Réserver &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-green shop-btn-sm">Réserver &rarr;</a>
                                 </div>
                             </article>
 
-                            <article class="offer-card highlighted">
-                                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=85"
-                                    alt="Atelier collectif Breathwork">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">Atelier collectif &bull; 2 h*</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">Atelier collectif</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Respiration et pratiques corporelles en groupe pour stimuler votre vitalité et votre clarté.
-                                        </p>
+                            <article class="shop-row-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=85"
+                                        alt="Atelier collectif Breathwork">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag green">Collectif &bull; 2 h*</span>
+                                    <h3 class="shop-card-title">Atelier collectif</h3>
+                                    <p class="shop-card-desc">Respiration et pratiques corporelles en groupe pour stimuler votre vitalité et votre clarté.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value">53 €</span>
+                                        <span class="shop-price-meta">/ pers. &bull; 2 h*</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price">53 € <small>TTC / pers. &bull; 2 h*</small></div>
-                                        <a href="reservation.html" class="btn btn-outline">Réserver ma place &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-outline shop-btn-sm">Réserver &rarr;</a>
                                 </div>
                             </article>
                         </div>
                     </div>
 
-                    <!-- 6. Joy Food® & Détox -->
+                    <!-- =========================================================
+                         6. JOY FOOD® & DÉTOX
+                         ========================================================= -->
                     <div class="shop-category-block cat-particuliers cat-ibooks cat-ateliers">
-                        <h2 class="heading-lg" style="margin-bottom: 8px;">6. <span style="color: var(--joyu-gold);">Joy Food®</span> &amp; Détox</h2>
-                        <div class="gold-divider"></div>
+                        <div class="shop-section-head">
+                            <span class="shop-num-badge">06</span>
+                            <div>
+                                <h2 class="heading-lg"><span style="color: var(--joyu-gold);">Joy Food®</span> &amp; Détox</h2>
+                                <p class="shop-section-sub">Alimentation vivante, jus frais et hygiène vitale</p>
+                            </div>
+                        </div>
 
-                        <div class="cards-3grid" style="margin-top: 24px;">
-                            <article class="offer-card">
-                                <img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?auto=format&fit=crop&w=800&q=85"
-                                    alt="Accompagnement nutritionnel Joy Food">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">Individuel &bull; 1 h*</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">Accompagnement nutritionnel</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Vitalité, silhouette, alimentation : conseils personnalisés pour optimiser votre énergie au quotidien.
-                                        </p>
+                        <div class="shop-2col-grid">
+                            <article class="shop-row-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?auto=format&fit=crop&w=600&q=85"
+                                        alt="Accompagnement nutritionnel Joy Food">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag green">Individuel &bull; 1 h*</span>
+                                    <h3 class="shop-card-title">Accompagnement nutritionnel</h3>
+                                    <p class="shop-card-desc">Vitalité, silhouette, alimentation : conseils personnalisés pour optimiser votre énergie.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value">98 €</span>
+                                        <span class="shop-price-meta">TTC &bull; 1 h*</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price">98 € <small>TTC &bull; 1 h*</small></div>
-                                        <a href="reservation.html" class="btn btn-green">Réserver &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-green shop-btn-sm">Réserver &rarr;</a>
                                 </div>
                             </article>
 
-                            <article class="offer-card">
-                                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=85"
-                                    alt="Atelier Joy Food Nutrition">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">Atelier collectif &bull; 2 h*</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">Atelier <span style="color: var(--joyu-gold);">Joy Food®</span></h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Nutrition, alimentation saine : découverte pratique des jus frais et clés d’alimentation vivante.
-                                        </p>
+                            <article class="shop-row-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=85"
+                                        alt="Atelier Joy Food Nutrition">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag green">Atelier &bull; 2 h*</span>
+                                    <h3 class="shop-card-title">Atelier <span style="color: var(--joyu-gold);">Joy Food®</span></h3>
+                                    <p class="shop-card-desc">Nutrition, alimentation saine : découverte pratique des jus frais et clés d’alimentation vivante.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value">89 €</span>
+                                        <span class="shop-price-meta">/ pers. &bull; 2 h*</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price">89 € <small>TTC / pers. &bull; 2 h*</small></div>
-                                        <a href="reservation.html" class="btn btn-outline">Réserver ma place &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-outline shop-btn-sm">Réserver &rarr;</a>
                                 </div>
                             </article>
                         </div>
                     </div>
 
-                    <!-- 7. Formations professionnelles (Univers Entreprises -> Violet Prune) -->
+                    <!-- =========================================================
+                         7. FORMATIONS PROFESSIONNELLES (UNIVERS ENTREPRISES -> VIOLET PRUNE)
+                         ========================================================= -->
                     <div class="shop-category-block cat-entreprises cat-coaching">
-                        <span class="eyebrow-strong plum">Solutions Entreprises</span>
-                        <h2 class="heading-lg" style="color: var(--joyu-plum); margin-bottom: 8px;">7. Formations professionnelles</h2>
-                        <div class="gold-divider"></div>
+                        <div class="shop-section-head">
+                            <span class="shop-num-badge plum">07</span>
+                            <div>
+                                <span class="eyebrow-strong plum" style="margin-bottom: 2px;">Solutions Entreprises</span>
+                                <h2 class="heading-lg" style="color: var(--joyu-plum);">Formations professionnelles</h2>
+                                <p class="shop-section-sub">Programmes intra-entreprise d’une journée &bull; Dirigeants, managers et équipes</p>
+                            </div>
+                        </div>
 
-                        <div class="cards-3grid" style="margin-top: 24px;">
-                            <article class="offer-card" style="border-top: 3px solid var(--joyu-plum);">
-                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=85"
-                                    alt="Leadership et Management 3.0">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta" style="color: var(--joyu-plum);">Formation Entreprise &bull; 1 jour</span>
-                                        <h3 class="heading-md" style="color: var(--joyu-plum); margin-bottom: 10px;">Leadership &amp; Management 3.0</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Management, leadership personnel pour fédérer les équipes et responsabiliser les collaborateurs.
-                                        </p>
+                        <div class="shop-2col-grid">
+                            <article class="shop-row-card plum-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=85"
+                                        alt="Leadership et Management 3.0">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag plum">Formation &bull; 1 jour</span>
+                                    <h3 class="shop-card-title plum-text">Leadership &amp; Management 3.0</h3>
+                                    <p class="shop-card-desc">Management, leadership personnel pour fédérer les équipes et responsabiliser les collaborateurs.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value plum-text">1 493 €</span>
+                                        <span class="shop-price-meta">HT &bull; 1 jour</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price" style="color: var(--joyu-plum);">1 493 € <small>HT &bull; 1 jour</small></div>
-                                        <a href="reservation.html" class="btn btn-plum">Demander un devis &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-plum shop-btn-sm">Réserver &rarr;</a>
                                 </div>
                             </article>
 
-                            <article class="offer-card" style="border-top: 3px solid var(--joyu-plum);">
-                                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=85"
-                                    alt="Stress et Ressources neurocorporelles">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta" style="color: var(--joyu-plum);">Formation Entreprise &bull; 1 jour</span>
-                                        <h3 class="heading-md" style="color: var(--joyu-plum); margin-bottom: 10px;">Stress &amp; Ressources neurocorporelles</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Régulation, prévention des risques psychosociaux et maîtrise de soi sous pression.
-                                        </p>
+                            <article class="shop-row-card plum-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=85"
+                                        alt="Stress et Ressources neurocorporelles">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag plum">Formation &bull; 1 jour</span>
+                                    <h3 class="shop-card-title plum-text">Stress &amp; Ressources neurocorporelles</h3>
+                                    <p class="shop-card-desc">Régulation, prévention des risques psychosociaux et maîtrise de soi sous pression.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value plum-text">998 €</span>
+                                        <span class="shop-price-meta">HT &bull; 1 jour</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price" style="color: var(--joyu-plum);">998 € <small>HT &bull; 1 jour</small></div>
-                                        <a href="reservation.html" class="btn btn-plum">Demander un devis &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-plum shop-btn-sm">Réserver &rarr;</a>
                                 </div>
                             </article>
 
-                            <article class="offer-card" style="border-top: 3px solid var(--joyu-plum);">
-                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=85"
-                                    alt="Communication et Cohésion">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta" style="color: var(--joyu-plum);">Formation Entreprise &bull; 1 jour</span>
-                                        <h3 class="heading-md" style="color: var(--joyu-plum); margin-bottom: 10px;">Communication &amp; Cohésion</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Coopération, relations humaines et écoute constructive au sein des collectifs.
-                                        </p>
+                            <article class="shop-row-card plum-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=85"
+                                        alt="Communication et Cohésion">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag plum">Formation &bull; 1 jour</span>
+                                    <h3 class="shop-card-title plum-text">Communication &amp; Cohésion</h3>
+                                    <p class="shop-card-desc">Coopération, relations humaines et écoute constructive au sein des collectifs.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value plum-text">1 295 €</span>
+                                        <span class="shop-price-meta">HT &bull; 1 jour</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price" style="color: var(--joyu-plum);">1 295 € <small>HT &bull; 1 jour</small></div>
-                                        <a href="reservation.html" class="btn btn-plum">Demander un devis &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-plum shop-btn-sm">Réserver &rarr;</a>
                                 </div>
                             </article>
 
-                            <article class="offer-card" style="border-top: 3px solid var(--joyu-plum);">
-                                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=85"
-                                    alt="Officines et Équipes commerciales">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta" style="color: var(--joyu-plum);">Formation Spécialisée &bull; 1 jour</span>
-                                        <h3 class="heading-md" style="color: var(--joyu-plum); margin-bottom: 10px;">Officines &amp; Équipes commerciales</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Vente, conseil, management : posture relationnelle, qualité de conseil et cohésion d’équipe.
-                                        </p>
+                            <article class="shop-row-card plum-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=85"
+                                        alt="Officines et Équipes commerciales">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag plum">Spécialisé &bull; 1 jour</span>
+                                    <h3 class="shop-card-title plum-text">Officines &amp; Équipes commerciales</h3>
+                                    <p class="shop-card-desc">Vente, conseil, management : posture relationnelle, qualité de conseil et cohésion d’équipe.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value plum-text">1 295 €</span>
+                                        <span class="shop-price-meta">HT &bull; 1 jour</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price" style="color: var(--joyu-plum);">1 295 € <small>HT &bull; 1 jour</small></div>
-                                        <a href="reservation.html" class="btn btn-plum">Demander un devis &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-plum shop-btn-sm">Réserver &rarr;</a>
                                 </div>
                             </article>
                         </div>
                     </div>
 
-                    <!-- 8. Team Building JoYu Science -->
+                    <!-- =========================================================
+                         8. TEAM BUILDING JOYU SCIENCE
+                         ========================================================= -->
                     <div class="shop-category-block cat-entreprises cat-retraites">
-                        <h2 class="heading-lg" style="color: var(--joyu-plum); margin-bottom: 8px;">8. Team Building JoYu Science</h2>
-                        <div class="gold-divider"></div>
+                        <div class="shop-section-head">
+                            <span class="shop-num-badge plum">08</span>
+                            <div>
+                                <h2 class="heading-lg" style="color: var(--joyu-plum);">Team Building JoYu Science</h2>
+                                <p class="shop-section-sub">Journée collective pour fédérer et stimuler l’intelligence d’équipe</p>
+                            </div>
+                        </div>
 
-                        <div class="cards-3grid" style="margin-top: 24px;">
-                            <article class="offer-card" style="border-top: 3px solid var(--joyu-plum);">
-                                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=85"
-                                    alt="Team Building Expérience collective">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta" style="color: var(--joyu-plum);">Entreprise &bull; 1 journée*</span>
-                                        <h3 class="heading-md" style="color: var(--joyu-plum); margin-bottom: 10px;">Expérience collective</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Cohésion, confiance, coopération : une journée immersive pour renforcer l’intelligence collective.
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <div class="offer-price" style="color: var(--joyu-plum);">1 799 € <small>HT &bull; 1 journée*</small></div>
-                                        <a href="reservation.html" class="btn btn-plum">Planifier &rarr;</a>
+                        <article class="shop-spotlight-card plum-spotlight">
+                            <div class="shop-spotlight-ribbon plum">Cohésion &amp; Intelligence Collective</div>
+                            <div class="shop-spotlight-grid">
+                                <div class="shop-spotlight-media">
+                                    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=85"
+                                        alt="Team Building Expérience collective">
+                                </div>
+                                <div class="shop-spotlight-body">
+                                    <span class="shop-tag plum">Team Building &bull; 1 journée*</span>
+                                    <h3 class="shop-card-title-lg plum-text">Expérience collective JoYu Science</h3>
+                                    <p class="shop-card-desc">
+                                        Cohésion, confiance, coopération : une journée immersive alliant dynamiques neurocorporelles et intelligence collective pour renforcer durablement les liens de votre équipe.
+                                    </p>
+                                    <div class="shop-spotlight-footer">
+                                        <div class="shop-price-block">
+                                            <span class="shop-price-value plum-text">1 799 €</span>
+                                            <span class="shop-price-meta">HT &bull; 1 journée*</span>
+                                        </div>
+                                        <a href="reservation.html" class="btn btn-plum shop-btn-lg">Planifier la journée &rarr;</a>
                                     </div>
                                 </div>
-                            </article>
-                        </div>
+                            </div>
+                        </article>
                     </div>
 
-                    <!-- 9. Ateliers & Conférences -->
+                    <!-- =========================================================
+                         9. ATELIERS & CONFÉRENCES
+                         ========================================================= -->
                     <div class="shop-category-block cat-particuliers cat-entreprises cat-ateliers">
-                        <h2 class="heading-lg" style="margin-bottom: 8px;">9. Ateliers &amp; Conférences</h2>
-                        <div class="gold-divider"></div>
+                        <div class="shop-section-head">
+                            <span class="shop-num-badge">09</span>
+                            <div>
+                                <h2 class="heading-lg">Ateliers &amp; Conférences</h2>
+                                <p class="shop-section-sub">Formats collectifs courts et interventions inspirantes</p>
+                            </div>
+                        </div>
 
-                        <div class="cards-3grid" style="margin-top: 24px;">
-                            <article class="offer-card">
-                                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=85"
-                                    alt="Atelier collectif découverte">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">Atelier &bull; 1 h à 1 h 30</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">Atelier collectif découverte</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Initiation pratique aux outils JoYu Science en petit groupe.
-                                        </p>
+                        <div class="shop-2col-grid">
+                            <article class="shop-row-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=85"
+                                        alt="Atelier collectif découverte">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag green">Atelier &bull; 1 h à 1 h 30</span>
+                                    <h3 class="shop-card-title">Atelier collectif découverte</h3>
+                                    <p class="shop-card-desc">Initiation pratique aux outils JoYu Science en petit groupe.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value">89 €</span>
+                                        <span class="shop-price-meta">/ pers. &bull; 1 h à 1 h 30</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price">89 € <small>/ pers. &bull; 1 h à 1 h 30</small></div>
-                                        <a href="reservation.html" class="btn btn-green">Réserver &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-green shop-btn-sm">Réserver &rarr;</a>
                                 </div>
                             </article>
 
-                            <article class="offer-card">
-                                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=85"
-                                    alt="Atelier collectif approfondi">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">Atelier &bull; 2 à 3 h</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">Atelier collectif approfondi</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Exploration approfondie des ressources neurocorporelles et de l’alignement.
-                                        </p>
+                            <article class="shop-row-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=85"
+                                        alt="Atelier collectif approfondi">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag green">Atelier &bull; 2 à 3 h</span>
+                                    <h3 class="shop-card-title">Atelier collectif approfondi</h3>
+                                    <p class="shop-card-desc">Exploration approfondie des ressources neurocorporelles et de l’alignement.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value">125 €</span>
+                                        <span class="shop-price-meta">/ pers. &bull; 2 à 3 h</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price">125 € <small>/ pers. &bull; 2 à 3 h</small></div>
-                                        <a href="reservation.html" class="btn btn-green">Réserver &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-green shop-btn-sm">Réserver &rarr;</a>
                                 </div>
                             </article>
 
-                            <article class="offer-card" style="border-top: 3px solid var(--joyu-plum);">
-                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=85"
-                                    alt="Atelier entreprise">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta" style="color: var(--joyu-plum);">Entreprise &bull; 1 h 30 à 2 h</span>
-                                        <h3 class="heading-md" style="color: var(--joyu-plum); margin-bottom: 10px;">Atelier entreprise</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Atelier thématique sur site pour dynamiser la qualité de vie au travail.
-                                        </p>
+                            <article class="shop-row-card plum-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=85"
+                                        alt="Atelier entreprise">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag plum">Entreprise &bull; 1 h 30 à 2 h</span>
+                                    <h3 class="shop-card-title plum-text">Atelier entreprise</h3>
+                                    <p class="shop-card-desc">Atelier thématique sur site pour dynamiser la qualité de vie au travail.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value plum-text">179 €</span>
+                                        <span class="shop-price-meta">HT &bull; 1 h 30 à 2 h</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price" style="color: var(--joyu-plum);">179 € <small>HT &bull; 1 h 30 à 2 h</small></div>
-                                        <a href="reservation.html" class="btn btn-plum">Réserver &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-plum shop-btn-sm">Réserver &rarr;</a>
                                 </div>
                             </article>
 
-                            <article class="offer-card">
-                                <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=85"
-                                    alt="Conférence courte">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">Conférence &bull; 45 min à 1 h</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">Conférence courte</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Leadership, neurosciences appliquées : intervention inspirante pour vos événements.
-                                        </p>
+                            <article class="shop-row-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=85"
+                                        alt="Conférence courte">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag green">Conférence &bull; 45 min à 1 h</span>
+                                    <h3 class="shop-card-title">Conférence courte</h3>
+                                    <p class="shop-card-desc">Leadership, neurosciences appliquées : intervention inspirante pour vos événements.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value">269 €</span>
+                                        <span class="shop-price-meta">HT &bull; 45 min à 1 h</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price">269 € <small>HT &bull; 45 min à 1 h</small></div>
-                                        <a href="reservation.html" class="btn btn-green">Réserver &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-green shop-btn-sm">Réserver &rarr;</a>
                                 </div>
                             </article>
 
-                            <article class="offer-card">
-                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=85"
-                                    alt="Conférence approfondie">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta">Conférence &bull; 1 h 30 à 2 h</span>
-                                        <h3 class="heading-md" style="margin-bottom: 10px;">Conférence approfondie</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Conférence interactive suivie d’un temps d’échanges et d’applications concrètes.
-                                        </p>
+                            <article class="shop-row-card">
+                                <div class="shop-row-media">
+                                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=85"
+                                        alt="Conférence approfondie">
+                                </div>
+                                <div class="shop-row-body">
+                                    <span class="shop-tag green">Conférence &bull; 1 h 30 à 2 h</span>
+                                    <h3 class="shop-card-title">Conférence approfondie</h3>
+                                    <p class="shop-card-desc">Conférence interactive suivie d’un temps d’échanges et d’applications concrètes.</p>
+                                </div>
+                                <div class="shop-row-action">
+                                    <div class="shop-price-block">
+                                        <span class="shop-price-value">359 €</span>
+                                        <span class="shop-price-meta">HT &bull; 1 h 30 à 2 h</span>
                                     </div>
-                                    <div>
-                                        <div class="offer-price">359 € <small>HT &bull; 1 h 30 à 2 h</small></div>
-                                        <a href="reservation.html" class="btn btn-green">Réserver &rarr;</a>
-                                    </div>
+                                    <a href="reservation.html" class="btn btn-green shop-btn-sm">Réserver &rarr;</a>
                                 </div>
                             </article>
                         </div>
                     </div>
 
-                    <!-- 10. Séminaires & Coaching Entreprises -->
+                    <!-- =========================================================
+                         10. SÉMINAIRES & COACHING ENTREPRISES
+                         ========================================================= -->
                     <div class="shop-category-block cat-entreprises cat-retraites cat-coaching">
-                        <span class="eyebrow-strong plum">Accompagnement Dirigeants &amp; Équipes</span>
-                        <h2 class="heading-lg" style="color: var(--joyu-plum); margin-bottom: 8px;">10. Séminaires &amp; Coaching Entreprises</h2>
-                        <div class="gold-divider"></div>
+                        <div class="shop-section-head">
+                            <span class="shop-num-badge plum">10</span>
+                            <div>
+                                <span class="eyebrow-strong plum" style="margin-bottom: 2px;">Accompagnement Dirigeants &amp; CODIR</span>
+                                <h2 class="heading-lg" style="color: var(--joyu-plum);">Séminaires &amp; Coaching Entreprises</h2>
+                                <p class="shop-section-sub">Dispositifs sur mesure pour les décideurs et comités de direction</p>
+                            </div>
+                        </div>
 
-                        <div class="cards-3grid" style="margin-top: 24px;">
-                            <article class="offer-card" style="border-top: 3px solid var(--joyu-plum);">
-                                <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=85"
-                                    alt="Séminaire JoYu Science">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta" style="color: var(--joyu-plum);">Séminaire &bull; 1 journée*</span>
-                                        <h3 class="heading-md" style="color: var(--joyu-plum); margin-bottom: 10px;">Séminaire JoYu Science</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Immersion, leadership, cohésion pour aligner vos équipes dirigeantes et opérationnelles.
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <div class="offer-price" style="color: var(--joyu-plum);">Dès 2 492 € <small>HT &bull; 1 journée*</small></div>
-                                        <a href="reservation.html" class="btn btn-plum">Planifier un échange &rarr;</a>
+                        <div class="shop-2col-grid">
+                            <article class="shop-feature-box plum-box">
+                                <span class="shop-corner-badge plum">Immersion CODIR</span>
+                                <div class="shop-feature-media">
+                                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=85"
+                                        alt="Séminaire JoYu Science">
+                                </div>
+                                <div class="shop-feature-body">
+                                    <span class="shop-tag plum">Séminaire &bull; 1 journée*</span>
+                                    <h3 class="shop-card-title-lg plum-text">Séminaire JoYu Science</h3>
+                                    <p class="shop-card-desc">
+                                        Immersion, leadership, cohésion pour aligner vos équipes dirigeantes et opérationnelles.
+                                    </p>
+                                    <div class="shop-feature-footer">
+                                        <div class="shop-price-block">
+                                            <span class="shop-price-value plum-text">Dès 2 492 €</span>
+                                            <span class="shop-price-meta">HT &bull; 1 journée*</span>
+                                        </div>
+                                        <a href="reservation.html" class="btn btn-plum shop-btn-md">Planifier &rarr;</a>
                                     </div>
                                 </div>
                             </article>
 
-                            <article class="offer-card" style="border-top: 3px solid var(--joyu-plum);">
-                                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=85"
-                                    alt="Coaching dirigeant manager">
-                                <div class="offer-card-content">
-                                    <div>
-                                        <span class="offer-meta" style="color: var(--joyu-plum);">Exécutif &bull; 1 h à 1 h 30*</span>
-                                        <h3 class="heading-md" style="color: var(--joyu-plum); margin-bottom: 10px;">Coaching dirigeant / manager</h3>
-                                        <p style="font-size: 14.5px; color: var(--text-dark);">
-                                            Leadership et accompagnement individuel pour soutenir la prise de décision et la posture managériale.
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <div class="offer-price" style="color: var(--joyu-plum);">179 € <small>HT &bull; 1 h à 1 h 30*</small></div>
-                                        <a href="reservation.html" class="btn btn-plum">Réserver &rarr;</a>
+                            <article class="shop-feature-box plum-box">
+                                <span class="shop-corner-badge gold">Exécutif</span>
+                                <div class="shop-feature-media">
+                                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=85"
+                                        alt="Coaching dirigeant manager">
+                                </div>
+                                <div class="shop-feature-body">
+                                    <span class="shop-tag plum">Individuel &bull; 1 h à 1 h 30*</span>
+                                    <h3 class="shop-card-title-lg plum-text">Coaching dirigeant / manager</h3>
+                                    <p class="shop-card-desc">
+                                        Leadership et accompagnement individuel pour soutenir la prise de décision et la posture managériale.
+                                    </p>
+                                    <div class="shop-feature-footer">
+                                        <div class="shop-price-block">
+                                            <span class="shop-price-value plum-text">179 €</span>
+                                            <span class="shop-price-meta">HT &bull; 1 h à 1 h 30*</span>
+                                        </div>
+                                        <a href="reservation.html" class="btn btn-plum shop-btn-md">Réserver &rarr;</a>
                                     </div>
                                 </div>
                             </article>
@@ -754,7 +923,7 @@
                 <div class="footer-grid">
                     <div>
                         <div class="footer-logo-box">
-                            <img src="logo.svg" alt="JoYu Science" onerror="this.onerror=null;this.src='1000008343_2.jpg';">
+                            <img src="assets/Logo-svg/Logo_footer.svg" alt="JoYu Science">
                         </div>
                         <p style="font-size: 14px; color: rgba(255, 255, 255, 0.9); max-width: 300px;">
                             Développer ses capacités, révéler son potentiel. Pour plus de réussite et de cohésion humaine.
@@ -777,7 +946,7 @@
                         <h4 class="footer-heading">Accès directs</h4>
                         <ul class="footer-links">
                             <li><a href="reservation.html">Réserver une séance découverte</a></li>
-                            <li><a href="accompagnement.html">L’accompagnement JoYu Science</a></li>
+                            <li><a href="a-propos.html">L’accompagnement JoYu Science</a></li>
                             <li><a href="particuliers.html">Packages JoYu Coaching</a></li>
                             <li><a href="particuliers.html">Retraites La Réunion &amp; Maurice</a></li>
                             <li><a href="entreprises.html">Formations &amp; Team Building</a></li>
